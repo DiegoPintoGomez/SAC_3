@@ -21,7 +21,7 @@
                
                 <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ef384c" uk-scroll="offset:100" stile="fomt" href="/presentation/ListaEncuestas.jsp">Lista Encuestas</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ef384c" uk-scroll="offset:50" href="/presentation/BarraLateral.jsp">Barra Lateral</a></li>
-                 <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ef384c" uk-scroll="offset:50" href="/presentation/Operadoras.jsp">Operadoras Telefonicas</a></li>
+                 <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ef384c" uk-scroll="offset:50" href="/presentation/Operadoras.jsp">Operadoras</a></li>
   
             </ul>
         </div>

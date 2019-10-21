@@ -53,10 +53,8 @@
             </div>
             <div class="modal-footer">
                 <form action="creaBancos" method="post">
-
-                    <button type="button" class="btn btn-secondary" style="border-color: #ef384c" data-dismiss="modal">Close</button>
-
                     <button class="btn btn-light text-left" style="border-color: #ef384c" type="submit">Generar Bancos</button>
+                    <button type="button" class="btn btn-secondary" style="border-color: #ef384c" data-dismiss="modal">Close</button>
                     <input type="text" name="cbe"style=" display:none;" value="">
                 </form>
 

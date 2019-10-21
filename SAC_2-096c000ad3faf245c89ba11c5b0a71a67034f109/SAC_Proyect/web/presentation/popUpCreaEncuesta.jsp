@@ -15,12 +15,8 @@
 
                     </div>
                     <div class="modal-footer">
-
-
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-
                         <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" type="submit" style="">Crear</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <input type="text" name="cbe"style=" display:none;" value="">
 
                     </div>

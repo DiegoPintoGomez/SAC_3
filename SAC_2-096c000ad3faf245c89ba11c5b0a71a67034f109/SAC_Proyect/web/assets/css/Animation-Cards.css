@@ -19,11 +19,13 @@
 }
 
 .card-text.sub-text-color {
-  color: #8c8c8c;
+  color: #595959;
+  font-size: 30px;
+  text-align: center;
 }
 
 .card-text:last-child {
-  font-size: auto;
+  font-size: 30px;;
   color: #595959;
   text-align: center;
 }

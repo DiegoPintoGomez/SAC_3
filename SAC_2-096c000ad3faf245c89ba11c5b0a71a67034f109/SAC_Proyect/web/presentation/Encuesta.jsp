@@ -53,8 +53,8 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text sub-text-color"></p>
-                            <p class="card-text cardbody-sub-text" id="totalBancos"><%=encuesta.getListaBancosTelefonicos().size()%></p>
+                            <p class="card-text sub-text-color"><%=encuesta.getListaBancosTelefonicos().size()%></p>
+                            <p class="card-text cardbody-sub-text" id="totalBancos"></p>
                         </div>
                     </div>
                 </div>
@@ -67,8 +67,8 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text sub-text-color"></p>
-                            <p class="card-text cardbody-sub-text" id="bancosActivos"><%=BancosActivos(encuesta)%></p>
+                            <p class="card-text sub-text-color"><%=BancosActivos(encuesta)%></p>
+                            <p class="card-text cardbody-sub-text" id="bancosActivos"></p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text sub-text-color"></p>
-                            <p class="card-text cardbody-sub-text" id="bancosInactivos"><%=BancosInactivos(encuesta)%></p>
+                            <p class="card-text sub-text-color"><%=BancosInactivos(encuesta)%></p>
+                            <p class="card-text cardbody-sub-text" id="bancosInactivos"></p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text sub-text-color"></p>
+                            <p class="card-text sub-text-color">???</p>
                             <p class="card-text cardbody-sub-text" id="turnos"></p>
                         </div>
                     </div>

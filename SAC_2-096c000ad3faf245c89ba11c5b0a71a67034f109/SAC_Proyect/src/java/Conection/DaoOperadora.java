@@ -149,11 +149,11 @@ public class DaoOperadora {
     } 
   
     public static void deleteOperadora(Operadora op){
-        String SQL = "Delete from Operadora where Id_operador = ?";
+        String SQL = "Delete from encuesta where nombre = ?";
         
         try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-                pstmt.setString(1, String.valueOf(op.getId()));
+                pstmt.setString(1, String.valueOf(op.getNombre()));
                 pstmt.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(DaoContacto.class.getName()).log(Level.SEVERE, null, ex);

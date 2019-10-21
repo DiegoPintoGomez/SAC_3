@@ -56,7 +56,7 @@
                             <td><%= e.getRangoMenor() %> </td>
                             <td><%= e.getRangoMayor() %> </td>
                             <td>
-                                <form method="GET" action="">
+                                <form method="GET" action="elimnaOperadora">
                                      <input type="text" name="DeleteOperadora"style=" display:none;" value="<%= e.getNombre() %>">
 
                                     <button type="submit" class="btn btn-default"><img  src="/assets/img/delete.png" style=" width: 45px; height: 45px"></button>

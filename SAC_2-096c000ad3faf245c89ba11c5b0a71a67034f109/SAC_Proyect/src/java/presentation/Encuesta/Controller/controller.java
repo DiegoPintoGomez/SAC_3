@@ -32,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Chris
  */
-@WebServlet(name = "controller", urlPatterns = {"/controller", "/inicio", "/encuesta", "/creaBancos", "/EliminaBancos", "/perfilEncuesta","/eliEncuesPeril"})
+@WebServlet(name = "controller", urlPatterns = {"/controller", "/inicio", "/encuesta", "/creaBancos", "/EliminaBancos", "/perfilEncuesta","/eliEncuesPeril" , "/buscaBancos"})
 public class controller extends HttpServlet {
 
     /**
@@ -53,15 +53,20 @@ public class controller extends HttpServlet {
             
         }
         
+       
+        
+        
+        
         
         if (request.getServletPath().equals("/encuesta")) {
             System.out.println("Llega al controller Encuesta");
             this.creaEncuesta(request, response);
 
         }
-          if (request.getServletPath().equals("/creaBancos")) {
+          if (request.getServletPath().equals("/buscaBancos")) {
             System.out.println("Llega al controller Encuesta");
-            this.GenerarBancos(request, response);
+            this.buscaEncuesta(request, response);
+
 
         }
          
@@ -87,8 +92,7 @@ public class controller extends HttpServlet {
     }
     
     
-    
-    protected void eliEncuesPeril(HttpServletRequest request,
+     protected void eliEncuesPeril(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException, SQLException {
             System.out.print("Elimina   Encuesta");
@@ -96,6 +100,26 @@ public class controller extends HttpServlet {
  
             Model.Model.instance().deleteAllEncuesta(encuesta);
             request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
+    }
+
+    
+    
+    protected void buscaEncuesta(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+     
+        String s=request.getParameter("buscador");
+          if(request.getParameter("buscador")==""){
+          this.listadoEncuestas(request, response);
+          }
+          else{
+           request.setAttribute("listaEncuestas", Model.Model.instance().FiltroBusquedaEncuesta(request.getParameter("buscador")));
+           request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
+
+          
+          }
+ 
+           
     }
 
     

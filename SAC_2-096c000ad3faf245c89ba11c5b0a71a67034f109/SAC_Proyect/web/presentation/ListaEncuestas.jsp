@@ -20,23 +20,16 @@
         
         <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
 
-             
+        <div style=" " style="margin-top:10px">
+         <form method="GET" action="buscaBancos">
 
-       
-        
-        
-
-        <div style=" " style="margin-top: 200px">
-       
-                <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
+          <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
            
             <div class="input-group mb-2" style="margin-right: 200px; margin-left: 200px">
-
-                <input type="text" size="40" maxhigth="3" id="" style="align-content: center; margin-left: 350px; margin-right: 50px; border-color:#ef384c"  placeholder="Nombre Encuesta">
                 <div>
-                <form method="GET" action="eliminaBancos">
-                    <button type="submit" class="btn btn-default" id="ButtonCrearEncuesta"> Buscar</button>
-                </form>
+
+                <input type="text" size="40" name="buscador" maxhigth="3" id="" style="align-content: center; margin-left: 350px; margin-right: 50px; border-color:#ef384c"  placeholder="Nombre Encuesta">
+                <button type="submit" class="btn btn-default" id="ButtonCrearEncuesta"> Buscar</button>
                 </div>
                 
                    <div>
@@ -97,7 +90,7 @@
                 </table>
                  
             </div>
-                      
+            </form>       
         </div>
 
 

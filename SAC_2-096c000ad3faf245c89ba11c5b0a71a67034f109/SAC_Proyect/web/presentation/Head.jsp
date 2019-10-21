@@ -14,6 +14,12 @@
 <link rel="stylesheet" href="/assets/css/Login-FormDark.css.css">
 <link rel="stylesheet" href="/assets/css/styles.min.css">
 <link rel="stylesheet" href="/assets/css/styles_1.css">
+<link rel="stylesheet" href="/assets/fonts/ionicons.eot">
+<link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+<link rel="stylesheet" href="/assets/fonts/ionicons.ttf">
+<link rel="stylesheet" href="/assets/fonts/ionicons.woff">
+
+
 
 
 

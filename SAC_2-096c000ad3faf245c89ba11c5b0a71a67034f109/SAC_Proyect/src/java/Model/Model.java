@@ -77,5 +77,9 @@ public class Model {
     public boolean encuestaExciste(String nom) {
         return DaoEncuesta.EncuestaExciste(nom);
     }
+    
+    public boolean OperadoraExciste(String nom){
+    return DaoOperadora.OperadoraExciste(nom);
+    }
 
 }

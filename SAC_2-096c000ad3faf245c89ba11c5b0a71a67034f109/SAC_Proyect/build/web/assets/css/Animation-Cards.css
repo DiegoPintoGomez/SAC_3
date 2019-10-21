@@ -1,0 +1,66 @@
+.card-header {
+  height:  150px;
+  background-color: #293352;
+}
+
+#download-icon {
+  font-size: 30px;
+  color: black;
+  opacity: 0.4;
+}
+
+#heading-card {
+  margin-top: auto;
+  font-size: 43px;
+}
+
+.cardheader-text {
+  color: #fff;
+}
+
+.card-text.sub-text-color {
+  color: #8c8c8c;
+}
+
+.card-text:last-child {
+  font-size: auto;
+  color: #595959;
+  text-align: center;
+}
+
+#cardheader-subtext {
+  font-size: 30px;
+}
+
+.card.cards-shadown {
+  box-shadow: 2px 2px 30px #aaaaaa;
+}
+
+.col {
+  padding: 20px 7px 0px 7px;
+}
+
+.card.cards-shadown.cards-hover:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  z-index: 99;
+}
+
+.card-header:first-child:hover {
+  background-color: #293352;
+}
+
+#RowCards {
+  width: auto;
+  height: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#columna {
+  width: auto;
+}

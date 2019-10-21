@@ -140,6 +140,7 @@ protected void eliminaEncuesta(HttpServletRequest request,
         System.out.print("Entra al Metodo crearEncuesta");
          
         String nombre = (String) request.getParameter("NombreEncuesta");
+        if(!Model.Model.instance().encuestaExciste(nombre)){
         System.out.print("nombre Encuesta" + nombre);
 
         String muestra = (String) request.getParameter("TamMuestra");
@@ -150,8 +151,9 @@ protected void eliminaEncuesta(HttpServletRequest request,
          request.getSession(true).setAttribute("encuestaActual", encuesta);
         DaoEncuesta.insertEncuesta(encuesta);
         System.out.print("nueva Encuesta");
+        
+        }
         request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
-
     }
     
     void GenerarBancos(HttpServletRequest request,

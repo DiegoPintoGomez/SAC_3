@@ -70,10 +70,12 @@ public class controllerOperadora extends HttpServlet {
             throws ServletException, IOException, SQLException {
             System.out.print("Elimina Encuesta");
             String nomOpe = request.getParameter("NombreOperadora");
+            if(!Model.Model.instance().OperadoraExciste(nomOpe)){
             String rMenor = request.getParameter("RangoMenor");
             String rMayor = request.getParameter("RangoMayor");
             Operadora operadora= new Operadora(nomOpe,rMenor,rMayor);
             Model.Model.instance().insertarOperadora(operadora); 
+            }
             request.getRequestDispatcher("/presentation/Operadoras.jsp").forward(request, response);
     }
     

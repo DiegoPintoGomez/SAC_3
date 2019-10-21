@@ -85,5 +85,8 @@ public class Model {
     public List<Encuesta> FiltroBusquedaEncuesta(String nom){
         return DaoEncuesta.getListEncuesta(nom);
     }
-
+    
+    public Bancos_Telefonicos getBanco(String nom){
+    return DaoBanco.findByID(nom);
+    }
 }

@@ -52,7 +52,7 @@
 
                         <tr>
                             <td> <%= i%>   </td>
-                            <td> <%= e.getId() %> </td>
+                            <td> <%= e.getNombre() %> </td>
                             <td><%= e.getRangoMenor() %> </td>
                             <td><%= e.getRangoMayor() %> </td>
                             <td>

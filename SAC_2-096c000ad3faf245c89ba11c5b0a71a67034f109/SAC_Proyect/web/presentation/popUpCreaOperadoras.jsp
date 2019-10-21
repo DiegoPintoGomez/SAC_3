@@ -11,8 +11,8 @@
                     </div>
                     <div class="modal-body" id="modBody">
                         <div class="form-group"><label>Nombre Operadora</label><input class="form-control" onkeypress="return validar(event, this);" name="NombreOperadora" type="text" style="border-color: #ef384c" id="PlaceNameOperadora" placeholder=""></div>
-                        <div class="form-group"><label>Rango Menor</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra"style="border-color: #ef384c" id="PlaceRmenor" placeholder=""></div>
-                        <div class="form-group"><label>Rango Mayor</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra"style="border-color: #ef384c" id="PlaceRmayor" placeholder=""></div>
+                        <div class="form-group"><label>Rango Menor</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="RangoMenor"style="border-color: #ef384c" id="PlaceRmenor" placeholder=""></div>
+                        <div class="form-group"><label>Rango Mayor</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="RangoMayor"style="border-color: #ef384c" id="PlaceRmayor" placeholder=""></div>
 
 
                     </div>

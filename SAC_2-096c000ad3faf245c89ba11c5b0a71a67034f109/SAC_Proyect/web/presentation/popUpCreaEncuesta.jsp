@@ -18,10 +18,10 @@
 
 
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                       
+
 
                         <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" type="submit" style="">Crear</button>
-                         <input type="text" name="cbe"style=" display:none;" value="">
+                        <input type="text" name="cbe"style=" display:none;" value="">
 
                     </div>
                 </div>
@@ -32,27 +32,31 @@
 </div>
 <script language="javascript" type="text/javascript">
     function Solo_Numerico(variable) {
-    Numer = parseInt(variable);
-    if (isNaN(Numer)) {
-    return "";
-    }
-    return Numer;
+        Numer = parseInt(variable);
+        if (isNaN(Numer)) {
+            return "";
+        }
+        return Numer;
     }
     function ValNumero(Control) {
-    Control.value = Solo_Numerico(Control.value);
-    Control.placeholder = "Ingrese un numero";
+        Control.value = Solo_Numerico(Control.value);
+        Control.placeholder = "Ingrese un numero";
     }
     function validar(e, Control) { // 1
-    cambiaHolder(Control);
-    tecla = (document.all) ? e.keyCode : e.which; // 2
-    if (tecla === 8)
-    return true; // 3
-    patron = /[A-Za-z\s]/; // 4
-    te = String.fromCharCode(tecla); // 5
-    return patron.test(te); // 6
-    
+        cambiaHolder(Control);
+        tecla = (document.all) ? e.keyCode : e.which; // 2
+        if (tecla === 8)
+            return true; // 3
+        patron = /[A-Za-z\s]/; // 4
+        te = String.fromCharCode(tecla); // 5
+        return patron.test(te); // 6
+
     }
-    function cambiaHolder(Control){
-    Control.placeholder = "Ingrese Letras";
+    function cambiaHolder(Control) {
+        Control.placeholder = "Ingrese Letras";
+      //  if (document.Model.encuestaExciste(Control.value.toString())) {
+      //      Control.placeholder = "Encuesta ya existe";
+      //      Control.value = "";
+      //  }
     }
 </script>

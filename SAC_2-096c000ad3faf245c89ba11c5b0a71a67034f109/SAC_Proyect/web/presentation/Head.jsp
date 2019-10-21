@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="/assets/css/CrearEncuesta.css">
 <link rel="stylesheet" href="/assets/css/Encuesta.css">
 <link rel="stylesheet" href="/assets/css/tableLista.css">
+<link rel="stylesheet" href="/assets/css/Login-FormDark.css.css">
+<link rel="stylesheet" href="/assets/css/styles.min.css">
+<link rel="stylesheet" href="/assets/css/styles_1.css">
 
 
 

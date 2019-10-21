@@ -22,56 +22,60 @@ import sac.Logic.Encuesta.Encuesta;
  * @author Chris
  */
 public class Model {
-    
+
     private static Model uniqueInstance;
-    
+
     public static Model instance() {
         if (uniqueInstance == null) {
             uniqueInstance = new Model();
         }
         return uniqueInstance;
     }
-    
-    public void insertarBanco(Bancos_Telefonicos BT,Encuesta Encu) throws SQLException{
+
+    public void insertarBanco(Bancos_Telefonicos BT, Encuesta Encu) throws SQLException {
         DaoBanco.insertBanco(BT, Encu);
     }
-    
-    public void insertarEncuesta(Encuesta Encu) throws SQLException{
+
+    public void insertarEncuesta(Encuesta Encu) throws SQLException {
         DaoEncuesta.insertEncuesta(Encu);
     }
-    
-    public void insertarMuestra(Encuesta encu) throws SQLException{
+
+    public void insertarMuestra(Encuesta encu) throws SQLException {
         DaoBanco.insertarLista(encu);
         DaoContacto.insertarContactosBancos(encu);
     }
-    
-    public void insertarOperadora(Operadora Ope) throws SQLException{
+
+    public void insertarOperadora(Operadora Ope) throws SQLException {
         DaoOperadora.insertOperadora(Ope);
     }
-    
-    public Encuesta getEncuesta(String Nom  ){
-         Encuesta encu = null;
-         encu = DaoEncuesta.findByName(Nom);
-         encu.setListaBancosTelefonicos((ArrayList<Bancos_Telefonicos>) DaoBanco.getAllBanco(Nom));
+
+    public Encuesta getEncuesta(String Nom) {
+        Encuesta encu = null;
+        encu = DaoEncuesta.findByName(Nom);
+        encu.setListaBancosTelefonicos((ArrayList<Bancos_Telefonicos>) DaoBanco.getAllBanco(Nom));
         return encu;
     }
-    
-   public void deleteAllEncuesta(Encuesta EX){
-       DaoContacto.deletenumero_emcuesta(EX);
-       DaoBanco.deletebanco_encuesta(EX);
-       DaoEncuesta.delete_encuesta(EX);
-   }
-    
-   public void deleteOperadora(Operadora op){
-       DaoOperadora.deleteOperadora(op);
-   }     
-        
-  
-    public  List<Operadora> getAllOperadora(){
-    return DaoOperadora.getAlloperadora();
+
+    public void deleteAllEncuesta(Encuesta EX) {
+        DaoContacto.deletenumero_emcuesta(EX);
+        DaoBanco.deletebanco_encuesta(EX);
+        DaoEncuesta.delete_encuesta(EX);
     }
-    
-    public List<Encuesta> getAllEncuesta(){
-    return DaoEncuesta.getListEncuesta();
+
+    public void deleteOperadora(Operadora op) {
+        DaoOperadora.deleteOperadora(op);
     }
+
+    public List<Operadora> getAllOperadora() {
+        return DaoOperadora.getAlloperadora();
+    }
+
+    public List<Encuesta> getAllEncuesta() {
+        return DaoEncuesta.getListEncuesta();
+    }
+
+    public boolean encuestaExciste(String nom) {
+        return DaoEncuesta.EncuestaExciste(nom);
+    }
+
 }

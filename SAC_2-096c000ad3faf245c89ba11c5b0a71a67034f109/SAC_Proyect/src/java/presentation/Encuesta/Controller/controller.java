@@ -131,7 +131,7 @@ protected void eliminaEncuesta(HttpServletRequest request,
             System.out.print("Elimina Encuesta");
             Encuesta encuesta= Model.Model.instance().getEncuesta(request.getParameter("DeleteEncuesta"));
             Model.Model.instance().deleteAllEncuesta(encuesta);
-            request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
+           this.listadoEncuestas(request, response);
  }
 
     protected void creaEncuesta(HttpServletRequest request,
@@ -141,19 +141,20 @@ protected void eliminaEncuesta(HttpServletRequest request,
          
         String nombre = (String) request.getParameter("NombreEncuesta");
         if(!Model.Model.instance().encuestaExciste(nombre)){
-        System.out.print("nombre Encuesta" + nombre);
+        System.out.print("Nombre Encuesta" + nombre);
 
         String muestra = (String) request.getParameter("TamMuestra");
-        System.out.print("Tamanoo Muestra" + muestra);
+        System.out.print("Tamano Muestra" + muestra);
 
         Encuesta encuesta = new Encuesta(nombre, Integer.parseInt(muestra));
         request.setAttribute("encuestaActual", encuesta);
          request.getSession(true).setAttribute("encuestaActual", encuesta);
         DaoEncuesta.insertEncuesta(encuesta);
-        System.out.print("nueva Encuesta");
+        System.out.print("Nueva Encuesta");
         
         }
-        request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
+                  this.listadoEncuestas(request, response);
+
     }
     
     void GenerarBancos(HttpServletRequest request,

@@ -73,6 +73,7 @@ public class DaoOperadora {
     public static Operadora getOperadora(ResultSet rs){
         try{
             Operadora op = new Operadora();
+            op.setId(Integer.valueOf(rs.getString("Id_Operador")));
             op.setNombre(rs.getString("nombre"));
             op.setRangoMayor(rs.getString("rangoMayor"));
             op.setRangoMenor(rs.getString("rangoMenor"));
@@ -132,7 +133,7 @@ public class DaoOperadora {
     public static List<Operadora> getAlloperadora(){
         List<Operadora> op = new ArrayList<Operadora>();
         
-         String sql = "select nombre, rangoMenor, rangoMayor from operadora";
+         String sql = "select Id_Operador,nombre, rangoMenor, rangoMayor from operadora";
        
          try (Connection conn =connect();
                  Statement stmt = conn.createStatement();

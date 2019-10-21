@@ -11,13 +11,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Idespo_copy </title>
+        <% Encuesta encuesta = (Encuesta) session.getAttribute("encuestaActual");%>  
+        <title><%= encuesta.getNombreEncuesta()%> </title>
         <%@include file="/presentation/Head.jsp"%>
 
     </head>
 
     <body>
-        <% Encuesta encuesta = (Encuesta) session.getAttribute("encuestaActual");%>  
+       
         <%@ include file="/presentation/Header.jsp" %>
 
 

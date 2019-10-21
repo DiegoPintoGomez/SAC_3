@@ -89,7 +89,7 @@ public class controller extends HttpServlet {
     protected void eliEncuesPeril(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException, SQLException {
-            System.out.print("Elimina Encuesta");
+            System.out.print("Elimina   Encuesta");
             Encuesta encuesta= (Encuesta) request.getSession(true).getAttribute("encuestaActual");
  
             Model.Model.instance().deleteAllEncuesta(encuesta);

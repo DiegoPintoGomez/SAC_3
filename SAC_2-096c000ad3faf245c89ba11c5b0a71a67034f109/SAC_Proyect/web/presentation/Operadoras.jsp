@@ -15,11 +15,13 @@
 
     <body>
         <%@ include file="/presentation/Header.jsp" %>
+      <%@include file="/presentation/popUpCreaOperadoras.jsp" %>
+
 
         <div style=" ">
        
                 <h1 id="TituloEncuesta" style=" margin-top:0px">Operadoras</h1> 
-                <button  data-toggle="modal"  type="button" data-target="#Modall" class="btn btn-default" id="ButtonCrearEncuesta "><img  src="/assets/img/addd.png" style="  margin-left: 120px; width: 40px; height: 40px"></button>
+                <button  data-toggle="modal"  type="button" data-target="#ModalOperadora" class="btn btn-default" id="ButtonCrearOperadora"><img  src="/assets/img/addd.png" style="  margin-left: 120px; width: 40px; height: 40px"></button>
                 
 
            

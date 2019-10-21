@@ -1,6 +1,6 @@
 <div class="container container-fluid" id="containerCrearEncuesta">
     <form action="encuesta" method="post">
-        <div class="modal fade" id="Modall" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal fade" id="ModalOperadora" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

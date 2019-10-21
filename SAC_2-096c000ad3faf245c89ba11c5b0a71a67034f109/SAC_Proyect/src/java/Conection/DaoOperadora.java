@@ -149,7 +149,7 @@ public class DaoOperadora {
     } 
   
     public static void deleteOperadora(Operadora op){
-        String SQL = "Delete from encuesta where nombre = ?";
+        String SQL = "Delete from operadora where nombre = ?";
         
         try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(SQL)) {

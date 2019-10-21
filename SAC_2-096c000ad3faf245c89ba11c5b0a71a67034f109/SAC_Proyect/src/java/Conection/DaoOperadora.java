@@ -161,5 +161,35 @@ public class DaoOperadora {
         }
     }
     
+     public static Operadora findByNombre(String id){
+        //busca las operadoras por su id
+        String SQL ="SELECT id_operador,nombre,rangoMenor,rangoMayor   "
+                + "FROM operadora "
+                + "WHERE nombre = ?";
+                
+        try(Connection conn = connect();
+                PreparedStatement pstmt = conn.prepareStatement(SQL)){
+            
+            pstmt.setString(1, id);
+            ResultSet rs = pstmt.executeQuery();
+            if(rs.next()){
+           return getOperadora(rs);
+            }   
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
+        }       
+        return new Operadora();
+    }
+    
+    
+    public static Boolean EncuestaExciste(String Nombre){
+        Operadora ope= new Operadora();
+        ope= findByNombre(Nombre);
+        if(ope.getId()== 0){
+        return false;
+        }
+        return true;
+    }
+    
 }
 

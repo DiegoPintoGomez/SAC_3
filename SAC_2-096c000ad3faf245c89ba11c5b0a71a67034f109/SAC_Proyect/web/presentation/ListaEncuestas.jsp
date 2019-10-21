@@ -26,7 +26,7 @@
         
         
 
-        <div style=" ">
+        <div style=" " style="margin-top: 200px">
        
                 <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
            
@@ -49,7 +49,7 @@
                 
             <div class="table-wrapper-scroll-y my-custom-scrollbar" style=" margin-top: 0px;  margin-left: 30px; margin-right: 30px; ">
 
-                <%List<Encuesta> list = (List<Encuesta>) Model.Model.instance().getAllEncuesta();%>
+                <%List<Encuesta> list = (List<Encuesta>) request.getAttribute("listaEncuestas");%>
                                
 
                 <table class="table table-bordered table-striped mb-0 " style=" ">

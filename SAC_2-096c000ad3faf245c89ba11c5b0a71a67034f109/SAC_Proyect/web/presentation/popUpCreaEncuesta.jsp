@@ -15,8 +15,11 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" type="submit" style="">Crear</button>
+                        <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" onclick="return carga();" type="submit" style="">Crear</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <div id="cargando" style="visibility: hidden" class="spinner-grow text-danger" role="status">
+                            <span class="sr-only"></span>
+                        </div>
                         <input type="text" name="cbe"style=" display:none;" value="">
 
                     </div>
@@ -50,9 +53,13 @@
     }
     function cambiaHolder(Control) {
         Control.placeholder = "Ingrese Letras";
-      //  if (document.Model.encuestaExciste(Control.value.toString())) {
-      //      Control.placeholder = "Encuesta ya existe";
-      //      Control.value = "";
-      //  }
+        //  if (document.Model.encuestaExciste(Control.value.toString())) {
+        //      Control.placeholder = "Encuesta ya existe";
+        //      Control.value = "";
+        //  }
+    }
+    function carga(){
+        control = document.getElementById("cargando");
+        control.style = "visibility: visible";
     }
 </script>

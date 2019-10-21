@@ -45,7 +45,7 @@ public class controllerOperadora extends HttpServlet {
         } 
           if (request.getServletPath().equals("/addOperadora")) {
             System.out.println("Llega al controller  agregar Operadora");
-//            this.PerfilEncuesta(request, response);
+            this.addOperadora(request, response);
 
         } 
           
@@ -63,6 +63,22 @@ public class controllerOperadora extends HttpServlet {
             DaoOperadora.deleteOperadora(operadora);
             request.getRequestDispatcher("/presentation/Operadoras.jsp").forward(request, response);
     }
+    
+    
+     protected void addOperadora(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+            System.out.print("Elimina Encuesta");
+            String nomOpe = request.getParameter("NombreOperadora");
+            String rMenor = request.getParameter("RangoMenor");
+            String rMayor = request.getParameter("RangoMayor");
+            Operadora operadora= new Operadora(nomOpe,rMenor,rMayor);
+            Model.Model.instance().insertarOperadora(operadora); 
+            request.getRequestDispatcher("/presentation/Operadoras.jsp").forward(request, response);
+    }
+    
+    
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

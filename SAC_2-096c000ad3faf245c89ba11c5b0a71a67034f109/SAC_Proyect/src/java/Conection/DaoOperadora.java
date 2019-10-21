@@ -27,6 +27,10 @@ public class DaoOperadora {
     
     public static long  insertOperadora(Operadora Ope) throws SQLException{
         //este inserta el operador ya creado 
+        if(Ope.getNombre()==""){
+            return 0;
+        }
+        
         String SQL ="INSERT INTO OPERADORA (NOMBRE, RANGOMAYOR, RANGOMENOR ) "
                 + "VALUES(?,?,?)";
          long id = 0;

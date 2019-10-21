@@ -81,5 +81,9 @@ public class Model {
     public boolean OperadoraExciste(String nom){
     return DaoOperadora.OperadoraExciste(nom);
     }
+    
+    public List<Encuesta> FiltroBusquedaEncuesta(String nom){
+        return DaoEncuesta.getListEncuesta(nom);
+    }
 
 }

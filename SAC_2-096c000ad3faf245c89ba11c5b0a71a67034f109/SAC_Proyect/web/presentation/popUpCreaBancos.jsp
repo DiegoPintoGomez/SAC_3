@@ -53,8 +53,11 @@
             </div>
             <div class="modal-footer">
                 <form action="creaBancos" method="post">
-                    <button class="btn btn-light text-left" style="border-color: #ef384c" type="submit">Generar Bancos</button>
+                    <button class="btn btn-light text-left" onclick="return carga();" style="border-color: #ef384c" type="submit">Generar Bancos</button>
                     <button type="button" class="btn btn-secondary" style="border-color: #ef384c" data-dismiss="modal">Close</button>
+                    <div class="spinner-grow text-danger" id="cargando" style="visibility: hidden" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
                     <input type="text" name="cbe"style=" display:none;" value="">
                 </form>
 
@@ -65,22 +68,26 @@
 </div>
 <script language="javascript" type="text/javascript">
     function Solo_Numerico(variable) {
-    Numer = parseInt(variable);
-    if (isNaN(Numer)) {
-    return "";
-    }
-    return Numer;
+        Numer = parseInt(variable);
+        if (isNaN(Numer)) {
+            return "";
+        }
+        return Numer;
     }
     function ValNumero(Control) {
-    Control.value = Solo_Numerico(Control.value);
-    Control.placeholder = "Ingrese un numero";
+        Control.value = Solo_Numerico(Control.value);
+        Control.placeholder = "Ingrese un numero";
     }
     function validar(e) { // 1
-    tecla = (document.all) ? e.keyCode : e.which; // 2
-    if (tecla === 8)
-    return true; // 3
-    patron = /[A-Za-z\s]/; // 4
-    te = String.fromCharCode(tecla); // 5
-    return patron.test(te); // 6
+        tecla = (document.all) ? e.keyCode : e.which; // 2
+        if (tecla === 8)
+            return true; // 3
+        patron = /[A-Za-z\s]/; // 4
+        te = String.fromCharCode(tecla); // 5
+        return patron.test(te); // 6
+    }
+    function carga(){
+        control = document.getElementById("cargando");
+        control.style = "visibility: visible";
     }
 </script>

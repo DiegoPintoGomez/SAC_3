@@ -132,7 +132,9 @@ public class DaoEncuesta {
         List<Encuesta> op;
         op = new ArrayList<Encuesta>();
 
-        String sql = "select nombreEncuesta, muestra from Encuesta ORDER BY nombreEncuesta ASC";
+        String sql = "select nombreEncuesta, muestra "
+                + "from Encuesta "
+                + "ORDER BY nombreEncuesta ASC";
 
         try (Connection conn = connect();
                 Statement stmt = conn.createStatement();
@@ -152,5 +154,29 @@ public class DaoEncuesta {
             return false;
         }
         return true;
+    }
+    
+     public static List<Encuesta> getListEncuesta(String nom) {
+        List<Encuesta> op;
+        op = new ArrayList<Encuesta>();
+
+        String sql = "Select nombreEncuesta "
+                + "from Encuesta " 
+                +"where nombreEncuesta like ?"
+                + " order by nombreEncuesta ASC";
+                
+        try (Connection conn = connect();
+            PreparedStatement pstmt = conn.prepareStatement(sql)){
+            pstmt.setString(1,"%"+nom+"%");
+            
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                op.add(getEncuesta(rs));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return op;
     }
 }

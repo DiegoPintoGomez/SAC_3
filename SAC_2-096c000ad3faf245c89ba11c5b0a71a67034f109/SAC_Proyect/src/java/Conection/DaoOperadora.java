@@ -182,7 +182,7 @@ public class DaoOperadora {
     }
     
     
-    public static Boolean EncuestaExciste(String Nombre){
+    public static Boolean OperadoraExciste(String Nombre){
         Operadora ope= new Operadora();
         ope= findByNombre(Nombre);
         if(ope.getId()== 0){

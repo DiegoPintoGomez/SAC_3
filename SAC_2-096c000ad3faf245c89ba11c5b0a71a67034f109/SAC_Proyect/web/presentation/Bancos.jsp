@@ -9,7 +9,7 @@
         <meta charset="utf-8" />
         <title></title>
             <%@include file="/presentation/Head.jsp"%>
-            <% Encuesta encuesta = (Encuesta) session.getAttribute("encuestaActual"); List<Bancos_Telefonicos> Bancos= DaoBanco.getAllBanco(encuesta.getNombreEncuesta()); %>  
+            <% Encuesta encuesta = (Encuesta) session.getAttribute("encuestaActual"); List<Contacto> Bancos= Model.Model.instance().getContacto_Encuesta(encuesta.getNombreEncuesta()); %>  
 
 
     </head>
@@ -19,7 +19,7 @@
         
         
                     <div class="container container-fluid" id="containerCrearEncuesta" style="height: 300px ">
-                                        <h1 id="TituloEncuesta"> Bancos de <%= encuesta.getNombreEncuesta() %></h1>
+                    <h1 id="TituloEncuesta"> Bancos de <%= encuesta.getNombreEncuesta() %></h1>
 
 
         <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -35,22 +35,21 @@
             </tr>
         </thead>
         <tbody>
-            <%for(Bancos_Telefonicos banco: Bancos){ for(Contacto contacto: banco.getListaContacos()){ %>
+            <%for(Contacto banco: Bancos){  %>
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
+                <td><%= banco.getBase()%></td>
+                <td><%= banco.getNumero_Telefono() %></td>
+                <td>0</td>
+                <td><%= banco.getEstado() %></td>
+                <td> </td>
               
             </tr>
-           <%}}%>
            
         </tbody>
         <tfoot>
             <tr>
-                <th>Usuario</th>
-                <th>Hora Inicio</th>
+                <th>Banco Telefonico</th>
+                <th><%= banco.getNumero_Telefono() %></th>
                 <th>Hora Inicio Pausa</th>
                 <th>Hora Fin Pausa</th>
                 <th>Hora Final</th>
@@ -58,6 +57,8 @@
             </tr>
         </tfoot>
     </table>
+                           <%}%>
+
                     </div>
     </body>
 </html>

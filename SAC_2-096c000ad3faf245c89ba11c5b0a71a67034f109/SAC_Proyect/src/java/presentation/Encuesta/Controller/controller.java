@@ -54,7 +54,13 @@ public class controller extends HttpServlet {
         }
         
        
-        
+         if (request.getServletPath().equals("/creaBancos")) {
+            System.out.println("Llega al controller Encuesta");
+            this.GenerarBancos(request, response);
+        request.getRequestDispatcher("/presentation/Principal.jsp").forward(request, response);
+
+
+        }
         
         
         
@@ -84,7 +90,7 @@ public class controller extends HttpServlet {
          
          if (request.getServletPath().equals("/eliEncuesPeril")) {
             System.out.println("Llega al controller  PerfilEncuesta");
-            this.eliEncuesPeril(request, response);
+            this.PerfilEncuesta(request, response);
 
         } 
           
@@ -99,8 +105,7 @@ public class controller extends HttpServlet {
             Encuesta encuesta= (Encuesta) request.getSession(true).getAttribute("encuestaActual");
  
             Model.Model.instance().deleteAllEncuesta(encuesta);
-            this.listadoEncuestas(request, response);
-          
+            request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
     }
 
     
@@ -189,7 +194,6 @@ protected void eliminaEncuesta(HttpServletRequest request,
 
         Random r = new Random();
         Encuesta encuesta= (Encuesta)request.getSession(true).getAttribute("encuestaActual");// seteaa encuesta en sesion
-
          int numeroBancos=0;
          String n=request.getParameter("NumerosPorBanco");
          if(n!=null){

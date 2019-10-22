@@ -156,7 +156,7 @@ public class Random {
             contador = 0;   // reinicia contador cada vez que aumenta el ciclo del for
             ArrayList<Integer> Listxxx = aleatorio(cantidad, 0, 999); // crea Lista de los 3 numeros restantes de manera Aleaoria
 
-            while (contador <= cantidad) {
+            while (contador < cantidad) {
 
                 int numeroTelefonico = numBanco_8digitos + Listxxx.get(contador); // se crea el numero telefonico final
                 //suma del banco (5 inicial*1000 )+ 3 restantes
@@ -207,6 +207,7 @@ public class Random {
             rangoMayor = Integer.parseInt(operadora.getRangoMayor()); //Guarda dato Rango Mayor
             rangoMenor = Integer.parseInt(operadora.getRangoMenor()); //Guarda dato Rango Mayor
             ListaBancoInicial = this.aleatorio(cantidadBancosparaCrear, rangoMenor, rangoMayor); //Se genera Lista con los 5 nueros inciales del Banco a crear
+            ArrayList<Bancos_Telefonicos> ll = this.generaBancosTeleFonicos(ListaBancoInicial, telefonosPorBanco);
             encuesta.getListaBancosTelefonicos().addAll(this.generaBancosTeleFonicos(ListaBancoInicial, telefonosPorBanco)); // Se Crean los bancos y se guardan en la Encuesta, Generando a cada banco de 5 Numeros
             // los 3 numeros restantes, segun la cantidad de numeros por Banco 
             // deseada. En este caso 10, puede variar segu desea el usuario

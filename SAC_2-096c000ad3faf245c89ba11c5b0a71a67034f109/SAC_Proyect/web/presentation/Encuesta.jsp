@@ -20,10 +20,10 @@
     <body>
        
         <%@ include file="/presentation/Header.jsp" %>
+                <%@include file="/presentation/popUpCreaBancos.jsp" %>
 
 
         <div class="  container-fluid">  
-                   <form method="GET" action="eliEncuesPeril">
 
 
 
@@ -110,7 +110,6 @@
 
                 <% if(encuesta.getListaBancosTelefonicos().isEmpty()){ %>
                 <button class="btn btn-primary" data-toggle="modal" id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
-                <%@include file="/presentation/popUpCreaBancos.jsp" %>
                                      <%} else{ %>
                        <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
                                      <%}%>
@@ -123,7 +122,7 @@
                   
 
                     </div>
-                   </form>
+                   
        </div>
 
 

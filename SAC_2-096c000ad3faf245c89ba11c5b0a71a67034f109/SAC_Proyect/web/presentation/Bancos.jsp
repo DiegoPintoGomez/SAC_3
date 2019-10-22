@@ -15,7 +15,7 @@
     <%@ include file="/presentation/Header.jsp" %>
         
         <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
-        <%List<Bancos_Telefonicos> list = (List<Bancos_Telefonicos>) DaoBanco.getAllBanco("33"); %>      
+        <%List<Bancos_Telefonicos> list = (List<Bancos_Telefonicos>) DaoBanco.getAllBanco("OO"); %>      
         <%Vector<Contacto> c= list.get(0).getListaContacos();%>      
 
         

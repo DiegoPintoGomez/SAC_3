@@ -27,7 +27,7 @@
         <thead>
             <tr>
                 <th>Banco Telefonico</th>
-                <th>Contacto</th>
+                <th>Numero de Contacto</th>
                 <th>Intentos</th>
                 <th>Estado de Llamada</th>
                 <th>Observaciones</th>
@@ -50,7 +50,7 @@
         <tfoot>
             <tr>
                 <th>Banco Telefonico</th>
-                <th><%= banco.getNumero_Telefono() %></th>
+                <th>Numero de Contacto</th>
                 <th>Hora Inicio Pausa</th>
                 <th>Hora Fin Pausa</th>
                 <th>Hora Final</th>

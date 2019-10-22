@@ -86,7 +86,7 @@ public class Model {
         return DaoEncuesta.getListEncuesta(nom);
     }
     
-    public Bancos_Telefonicos getBanco(String nom){
-    return DaoBanco.findByID(nom);
+    public Bancos_Telefonicos getBanco(String nom, String Encuesta){
+    return DaoBanco.findByID(nom,Encuesta);
     }
 }

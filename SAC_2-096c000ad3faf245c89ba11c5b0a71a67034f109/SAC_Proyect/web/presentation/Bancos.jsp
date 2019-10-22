@@ -15,15 +15,15 @@
     <%@ include file="/presentation/Header.jsp" %>
         
         <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
-        <%List<Bancos_Telefonicos> list = (List<Bancos_Telefonicos>) DaoBanco.getAllBanco("OO"); %>      
-        <%Vector<Contacto> c= list.get(0).getListaContacos();%>      
+             
+        <% Bancos_Telefonicos  Banco = (Bancos_Telefonicos) request.getAttribute("BancoActual");  %>      
 
         
 
-        <div style=" " style="margin-top:0px; overflow-y:  ">
+        <div style=" " style="margin-top:0px; overflow-y:  "  id="xx">
          <form method="GET" action="buscaBancos">
 
-          <h1 id="TituloEncuesta" style=" margin-top:0px">Banco:  <%= list.get(0).getNombreBanco() %> </h1>
+          <h1 id="TituloEncuesta" style=" margin-top:0px">Banco:  <%= Banco.getNombreBanco() %>  </h1>
            
             <div class="input-group mb-2" style="margin-right: 200px; margin-left: 200px">
                 <div>
@@ -54,7 +54,7 @@
                     <tbody>
                         <% int i = 0;%>
 
-                        <%   for(Contacto contacto: c){ %>
+                        <%   for(Contacto contacto: Banco.getListaContacos()){ %>
                         <% i++;%>
 
 
@@ -74,9 +74,10 @@
                 
                  
             </div>
-                                <div class="col text-center">
-           <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" type="submit" style="">Anterior</button>
-            <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" type="submit" style="">Siguiente</button>
+          <div class="col text-center">
+           <button  class="btn  text-left" id="ButtonCrearEncuesta" type="submit" ><a class="" href="AnteriorPagina" style="" uk-scroll="offset:50">Anterior</a></button>
+           <button  class="btn text-left" id="ButtonCrearEncuesta" type="submit" ><a class="" href="SiguientePagina" style="" uk-scroll="offset:50">Siguiente</a></button>
+
 
                       </div> 
             </form>       
@@ -89,6 +90,10 @@
 </html>
 
 <script>
+    
+    
+    
+    
 $(document).ready(function() {
     $('#example').DataTable();
 } );

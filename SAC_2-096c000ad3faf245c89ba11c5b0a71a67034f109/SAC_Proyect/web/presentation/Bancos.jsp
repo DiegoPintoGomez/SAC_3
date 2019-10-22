@@ -18,7 +18,7 @@
  
         
         
-                    <div class="container container-fluid" id="containerCrearEncuesta" style="height: 600px ">
+                    <div class="container container-fluid" id="containerCrearEncuesta" style="height: 500px ">
                     <h1 id="TituloEncuesta"> Bancos de <%= encuesta.getNombreEncuesta() %></h1>
 
 
@@ -70,8 +70,8 @@
 
                     </div>
                
-                   <%@ include file="/presentation/Footer.jsp" %>
-               
+                                  <%@ include file="/presentation/Footer.jsp" %>
+
     </body>
     
 </html>

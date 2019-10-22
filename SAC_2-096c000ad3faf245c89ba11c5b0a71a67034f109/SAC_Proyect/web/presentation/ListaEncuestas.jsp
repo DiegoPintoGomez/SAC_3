@@ -27,11 +27,6 @@
           <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
            
             <div class="input-group mb-2" style="margin-right: 200px; margin-left: 200px">
-                <div>
-
-                <input type="text" size="40" name="buscador" maxhigth="3" id="" style="align-content: center; margin-left: 350px; margin-right: 50px; border-color:#ef384c"  placeholder="Nombre Encuesta">
-                <button type="submit" class="btn btn-default" id="ButtonCrearEncuesta"> Buscar</button>
-                </div>
                 
                    <div>
                    
@@ -41,12 +36,9 @@
                
             </div>
                 
-            <div class="table-wrapper-scroll-y my-custom-scrollbar" style=" margin-top: 0px;  margin-left: 30px; margin-right: 30px; ">
+            <div class="" style=" margin-top: 0px;  margin-left: 30px; margin-right: 30px; ">      
 
-               
-                               
-
-                <table class="table table-bordered table-striped mb-0 " style=" ">
+                <table class="table table-bordered table-striped mb-0 " id="example"style=" ">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -65,7 +57,7 @@
                         <% i++;%>
 
 
-                        <tr>
+                        <tr style="height: 10px">
                             <td> <%= i%>   </td>
                             <td> <%= e.getNombreEncuesta()%> </td>
                             <td><%= e.getMuestra()%> </td>
@@ -101,3 +93,15 @@
     </body>
 
 </html>
+
+<script>
+$(document).ready(function() {
+    $('#example').DataTable({
+        pageLength: 10,
+      responsive: true,
+      lengthMenu: [[10,20,100,-1],["10","20","100","Todos"]],
+        
+        
+    });
+} );
+</script>

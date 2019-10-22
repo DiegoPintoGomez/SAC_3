@@ -20,21 +20,20 @@
 
         <div style=" ">
        
-                <h1 id="TituloEncuesta" style=" margin-top:0px">Operadoras</h1> 
+                <h1 id="TituloEncuesta" style=" margin-top:10px">Operadoras</h1> 
                 <button  data-toggle="modal"  type="button" data-target="#ModalOperadora" class="btn btn-default" id="ButtonCrearOperadora"><img  src="/assets/img/addd.png" style="  margin-left: 120px; width: 40px; height: 40px"></button>
                 
 
            
            
                 
-            <div class="table-wrapper-scroll-y my-custom-scrollbar" style=" margin-top: 0px;  margin-left: 30px; margin-right: 30px; ">
+           
 
                 <%List<Operadora> list = (List<Operadora>) Model.Model.instance().getAllOperadora();%>
                                
-
-                <table class="table table-bordered table-striped mb-0 " style=" ">
+                <table class="table" id="example" style="  ">
                     <thead>
-                        <tr>
+                        <tr style="">
                              <th scope="col">#</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Rango Menor</th>
@@ -71,7 +70,7 @@
                     </tbody>
                 </table>
                  
-            </div>
+           
                       
         </div>
 
@@ -82,3 +81,18 @@
     </body>
 
 </html>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable({
+        pageLength: 10,
+      responsive: true,
+      lengthMenu: [[10,20,100,-1],["10","20","100","Todos"]],
+     fixedColumns: true
+        
+        
+    });
+} );
+
+
+ 
+</script>

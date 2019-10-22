@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import sac.Logic.Bancos.Bancos_Telefonicos;
+import sac.Logic.Bancos.Contacto;
 import sac.Logic.Bancos.Operadora;
 import sac.Logic.Bancos.Random;
 import sac.Logic.Encuesta.Encuesta;
@@ -88,5 +89,9 @@ public class Model {
     
     public Bancos_Telefonicos getBanco(String nom, String Encuesta){
     return DaoBanco.findByID(nom,Encuesta);
+    }
+    
+    public ArrayList<Contacto> getContacto_Encuesta(String encu){
+    return DaoContacto.getAllContacto_Encuesta(encu);
     }
 }

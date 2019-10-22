@@ -140,7 +140,7 @@ public class Random {
     // Resultado del metodo: LISTABANCOS: [55555123,55555897,555000..n]->[33333123,33333897,33333000..n]->n
     public ArrayList<Bancos_Telefonicos> generaBancosTeleFonicos(ArrayList<Integer> lista_5_NumerosDelBanco, int cantidad) {
 
-        System.out.println("Crando lista de Bancos completa");
+        System.out.println("Creando lista de Bancos completa");
         ArrayList<Bancos_Telefonicos> ListaBancos = new ArrayList<>(); //Esta Lista guarda los bancos Telefonicos que se van a crear
         int contador = 0;                                               //contador del ciclo While
 
@@ -156,7 +156,7 @@ public class Random {
             contador = 0;   // reinicia contador cada vez que aumenta el ciclo del for
             ArrayList<Integer> Listxxx = aleatorio(cantidad, 0, 999); // crea Lista de los 3 numeros restantes de manera Aleaoria
 
-            while (contador < cantidad) {
+            while (contador <= cantidad) {
 
                 int numeroTelefonico = numBanco_8digitos + Listxxx.get(contador); // se crea el numero telefonico final
                 //suma del banco (5 inicial*1000 )+ 3 restantes

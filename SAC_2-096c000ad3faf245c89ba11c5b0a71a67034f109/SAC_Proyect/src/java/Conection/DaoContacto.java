@@ -181,15 +181,15 @@ public class DaoContacto {
          String sql = "select numero_Telefono,estado,banco,citaTelefonica from contacto where encuesta = ?";
        
          try (Connection conn =connect();
-                 Statement stmt = conn.createStatement();
-                 ResultSet rs = stmt.executeQuery(sql)){
+                 PreparedStatement pstmt = conn.prepareStatement(sql)){
+                pstmt.setString(1, encu);
+                ResultSet rs = pstmt.executeQuery();
              while(rs.next()){
              op.add(getContacto(rs));
              }
          } catch (SQLException ex) {
             Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
         }
-         
         return op;
      
     } 

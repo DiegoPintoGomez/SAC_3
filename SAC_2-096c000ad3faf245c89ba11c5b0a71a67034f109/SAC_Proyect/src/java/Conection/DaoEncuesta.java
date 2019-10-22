@@ -160,7 +160,7 @@ public class DaoEncuesta {
         List<Encuesta> op;
         op = new ArrayList<Encuesta>();
 
-        String sql = "Select nombreEncuesta "
+        String sql = "select nombreEncuesta, muestra "
                 + "from Encuesta " 
                 +"where nombreEncuesta like ?"
                 + " order by nombreEncuesta ASC";

@@ -15,7 +15,7 @@
     <!-- Start: Login Form Dark -->
      <div class="row">
                     <div class="col-md-12" id="CrearEncuesta">
-    <div class="login-dark">
+    <div class="login-dark style"">
         <form method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>

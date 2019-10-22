@@ -23,7 +23,8 @@
 
 
         <div class="  container-fluid">  
-               
+                   <form method="GET" action="eliEncuesPeril">
+
 
 
             <div class="container" id="ContanerTituloEncuesta">
@@ -32,7 +33,7 @@
             <div class="row space-rows" id="RowCards">
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
-                        <div class="card-header" id="Card" style=""><span class="space"><a href="#"></a></span>
+                        <div class="card-header" id="Card" style=""><span class="space"><a href=""></a></span>
                             <div class="cardheader-text">
                                 <h4 id="heading-card" >Muestra</h4>
                                 <p id="cardheader-subtext"></p>
@@ -115,12 +116,14 @@
                                      <%}%>
                                      
              
-                <button class="btn btn-primary" id="Button2"  type="button">Eliminar Encuesta</button>
-                </form
+                <button class="btn btn-primary" id="Button2"  type="submit">Eliminar Encuesta</button>
+              
                   
-            </div>
 
-        </div>
+                    </div>
+                   </form>
+       </div>
+
 
         <%@ include file="/presentation/Footer.jsp" %>
 

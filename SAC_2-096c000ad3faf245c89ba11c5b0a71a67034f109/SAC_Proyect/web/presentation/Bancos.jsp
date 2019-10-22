@@ -20,7 +20,7 @@
 
         
 
-        <div style=" " style="margin-top:10px">
+        <div style=" " style="margin-top:0px; overflow-y:  ">
          <form method="GET" action="buscaBancos">
 
           <h1 id="TituloEncuesta" style=" margin-top:0px">Banco:  <%= list.get(0).getNombreBanco() %> </h1>
@@ -70,8 +70,15 @@
                        
                     </tbody>
                 </table>
+                   
+                
                  
             </div>
+                                <div class="col text-center">
+           <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" type="submit" style="">Anterior</button>
+            <button  class="btn btn-light text-left" id="ButtonCrearEncuesta" type="submit" style="">Siguiente</button>
+
+                      </div> 
             </form>       
         </div>
 

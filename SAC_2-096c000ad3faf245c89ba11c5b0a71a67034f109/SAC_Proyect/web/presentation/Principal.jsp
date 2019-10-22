@@ -10,12 +10,13 @@
     </head>
 
     <body>
-       
+           <%@ include file="/presentation/Header.jsp" %>
+
       <body>
     <!-- Start: Login Form Dark -->
      <div class="row">
-                    <div class="col-md-12" id="CrearEncuesta">
-    <div class="login-dark    " style="">
+                    <div class="col-md-12" id="CrearEncuesta" >
+                    <div class="login-dark style" style="background-color: white" >
         
         <form method="post">
             <h2 class="sr-only" style=" " >Login Form</h2>
@@ -34,7 +35,7 @@
      
 
             
-
+<%@ include file="/presentation/Footer.jsp" %>
     </body>
 
 </html>

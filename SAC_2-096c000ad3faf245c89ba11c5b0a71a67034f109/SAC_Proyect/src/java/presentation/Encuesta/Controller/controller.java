@@ -19,6 +19,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,6 +28,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import sac.Logic.Bancos.Contacto;
 
 /**
  *
@@ -132,6 +134,8 @@ public class controller extends HttpServlet {
      protected void listadoEncuestas(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException, SQLException {
+         
+          
            request.setAttribute("listaEncuestas", Model.Model.instance().getAllEncuesta());
             request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
     }

@@ -1,5 +1,8 @@
 <footer>
-    <footer id="footerpad" style=" background-color:#404957">
+    <footer id="footerpad" style=" background-color:#404957; clear: both;
+   
+    height: 100px;
+    margin-top: -100px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-8 mx-auto">
@@ -12,7 +15,7 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
+ 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>

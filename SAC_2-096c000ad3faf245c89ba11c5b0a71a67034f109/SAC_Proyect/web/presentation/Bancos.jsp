@@ -18,17 +18,20 @@
  
         
         
-                    <div class="container container-fluid" id="containerCrearEncuesta" style="height: 300px ">
+                    <div class="container container-fluid" id="containerCrearEncuesta" style="height: 600px ">
                     <h1 id="TituloEncuesta"> Bancos de <%= encuesta.getNombreEncuesta() %></h1>
 
 
-        <table id="example" class="table table-striped table-bordered" style="width:100%">
-            
+        <table id="example" class="table table-bordered table-striped  " style="width:400; margin-top: 0px;  margin-left: 0px; margin-right: 0px;">
+           
         <thead>
             <tr>
                 <th>Banco Telefonico</th>
-                <th>Numero de Contacto</th>
-                <th>Intentos</th>
+                <th>Numero Contacto</th>
+                <th>Llamada 1</th>
+                <th>Llamada 2</th>
+                <th>Llamada 3</th>
+
                 <th>Estado de Llamada</th>
                 <th>Observaciones</th>
                 
@@ -39,7 +42,13 @@
             <tr>
                 <td><%= banco.getBase()%></td>
                 <td><%= banco.getNumero_Telefono() %></td>
-                <td>0</td>
+       
+                <td> Sin Realizar</td>
+                 <td>Sin Realizar </td>
+
+                 <td>Sin Realizar</td>
+
+    
                 <td><%= banco.getEstado() %></td>
                 <td> </td>
               
@@ -60,15 +69,19 @@
     </table>
 
                     </div>
+               
+                   <%@ include file="/presentation/Footer.jsp" %>
+               
     </body>
+    
 </html>
 
 <script>
 $(document).ready(function() {
     $('#example').DataTable({
         pageLength: 10,
-       pageLength: 20,
-         lengthMenu: [[10,50,100,-1],["10","50","100","Todos"]],
+      responsive: true,
+      lengthMenu: [[10,20,100,-1],["10","20","100","Todos"]],
         
         
     });

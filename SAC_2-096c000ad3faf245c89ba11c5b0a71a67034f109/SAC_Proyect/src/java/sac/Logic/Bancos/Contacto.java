@@ -42,7 +42,7 @@ public class Contacto {
 
     public Contacto(String numero_Telefono) {
         this.numero_Telefono = numero_Telefono;
-        this.estado= "";
+        this.estado= "Sin Realizar";
         this.citaTelefonica= new GregorianCalendar();
         this.citaTelefonica.set(0, 0, 0);
         

@@ -44,7 +44,8 @@
                 <td> </td>
               
             </tr>
-           
+                                      <%}%>
+
         </tbody>
         <tfoot>
             <tr>
@@ -57,7 +58,6 @@
             </tr>
         </tfoot>
     </table>
-                           <%}%>
 
                     </div>
     </body>

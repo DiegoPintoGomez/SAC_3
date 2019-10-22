@@ -116,7 +116,7 @@
                                      
              
                 <button class="btn btn-primary" id="Button2"  type="submit">Eliminar Encuesta</button>
-               <a class="dropdown-item" href="Banco" style="color:#ef384c" uk-scroll="offset:50">Ver Bancos</a></form>
+               <a class="dropdown-item" href="/presentation/Bancos.jsp" style="color:#ef384c" uk-scroll="offset:50">Ver Bancos</a></form>
 
               
                   

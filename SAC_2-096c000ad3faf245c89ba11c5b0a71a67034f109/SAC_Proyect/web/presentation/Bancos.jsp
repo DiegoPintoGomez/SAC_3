@@ -1,100 +1,75 @@
-<%@page import="java.util.Vector"%>
 <%@page import="sac.Logic.Bancos.Contacto"%>
-<%@page import="Conection.DaoBanco"%>
-<%@page import="java.util.List"%>
 <%@page import="sac.Logic.Bancos.Bancos_Telefonicos"%>
+<%@page import="java.util.List"%>
+<%@page import="Conection.DaoBanco"%>
+<%@page import="sac.Logic.Encuesta.Encuesta"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="utf-8" />
         <title></title>
             <%@include file="/presentation/Head.jsp"%>
+            <% Encuesta encuesta = (Encuesta) session.getAttribute("encuestaActual"); List<Bancos_Telefonicos> Bancos= DaoBanco.getAllBanco(encuesta.getNombreEncuesta()); %>  
+
 
     </head>
     <body>
-    <%@ include file="/presentation/Header.jsp" %>
+               <%@ include file="/presentation/Header.jsp" %>
+ 
         
-        <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
-             
-        <% Bancos_Telefonicos  Banco = (Bancos_Telefonicos) request.getAttribute("BancoActual");  %>      
-
         
+                    <div class="container container-fluid" id="containerCrearEncuesta" style="height: 300px ">
+                                        <h1 id="TituloEncuesta"> Bancos de <%= encuesta.getNombreEncuesta() %></h1>
 
-        <div style=" " style="margin-top:0px; overflow-y:  "  id="xx">
-         <form method="GET" action="buscaBancos">
 
-          <h1 id="TituloEncuesta" style=" margin-top:0px">Banco:  <%= Banco.getNombreBanco() %>  </h1>
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            
+        <thead>
+            <tr>
+                <th>Banco Telefonico</th>
+                <th>Contacto</th>
+                <th>Intentos</th>
+                <th>Estado de Llamada</th>
+                <th>Observaciones</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <%for(Bancos_Telefonicos banco: Bancos){ for(Contacto contacto: banco.getListaContacos()){ %>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+              
+            </tr>
+           <%}}%>
            
-            <div class="input-group mb-2" style="margin-right: 200px; margin-left: 200px">
-                <div>
-
-                <input type="text" size="40" name="buscador" maxhigth="3" id="" style="align-content: center; margin-left: 350px; margin-right: 50px; border-color:#ef384c"  placeholder="Nombre Encuesta">
-                <button type="submit" class="btn btn-default" id="ButtonCrearEncuesta"> Buscar</button>
-                </div>
-                
-               
-            </div>
-                
-            <div class="table-wrapper-scroll-y my-custom-scrollbar" style=" margin-top: 0px;  margin-left: 30px; margin-right: 30px; ">
-
-               
-                               
-
-                <table class="table table-bordered table-striped mb-0 " id="e" style=" ">
-                    <thead>
-                        <tr>
-                             <th scope="col">#</th>
-                            <th scope="col">Telefono Movil</th>
-                            <th scope="col">Intentos de Llamada</th>
-                            <th scope="col">Estado de Llamada</th>
-                            <th scope="col">Observaciones</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% int i = 0;%>
-
-                        <%   for(Contacto contacto: Banco.getListaContacos()){ %>
-                        <% i++;%>
-
-
-                        <tr>
-                            <td> <%= i%></td>
-                            <td> <%= contacto.getNumero_Telefono() %> </td>
-                            <td>0</td>
-                            <td><%= contacto.getEstado() %> </td>
-                             <td>0</td>
-
-                        </tr>
-                        <%}%>
-                       
-                    </tbody>
-                </table>
-                   
-                
-                 
-            </div>
-          <div class="col text-center">
-           <button  class="btn  text-left" id="ButtonCrearEncuesta" type="submit" ><a class="" href="AnteriorPagina" style="" uk-scroll="offset:50">Anterior</a></button>
-           <button  class="btn text-left" id="ButtonCrearEncuesta" type="submit" ><a class="" href="SiguientePagina" style="" uk-scroll="offset:50">Siguiente</a></button>
-
-
-                      </div> 
-            </form>       
-        </div>
-
-
-
-        <%@ include file="/presentation/Footer.jsp" %>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Usuario</th>
+                <th>Hora Inicio</th>
+                <th>Hora Inicio Pausa</th>
+                <th>Hora Fin Pausa</th>
+                <th>Hora Final</th>
+              
+            </tr>
+        </tfoot>
+    </table>
+                    </div>
     </body>
 </html>
 
 <script>
-    
-    
-    
-    
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        pageLength: 10,
+       pageLength: 20,
+         lengthMenu: [[10,50,100,-1],["10","50","100","Todos"]],
+        
+        
+    });
 } );
 </script>

@@ -24,7 +24,7 @@ import sac.Logic.Encuesta.Encuesta;
  *
  * @author Chris
  */
-@WebServlet(name = "controllerBanco", urlPatterns = {"/controllerBanco", "/Banco", "/SiguientePagina", "/AnteriorPagina"})
+@WebServlet(name = "controllerBanco", urlPatterns = {"/controllerBanco", "/Banco", "/SiguientePagina", "/Anterior"})
 public class controllerBanco extends HttpServlet {
 
     /**
@@ -44,20 +44,7 @@ public class controllerBanco extends HttpServlet {
              this.Bancos(request, response);
             
         }
-         
-          if (request.getServletPath().equals("/AnteriorPagina")) {
-            System.out.println("Llega al controller Encuesta");
-             this.Anterior(request, response);
-            
-        }
-           if (request.getServletPath().equals("/SiguientePagina")) {
-            System.out.println("Llega al controller Encuesta");
-             this.Siguiente(request, response);
-            
-        }
     }
-    
-    
     
          protected void Bancos(HttpServletRequest request,
             HttpServletResponse response)

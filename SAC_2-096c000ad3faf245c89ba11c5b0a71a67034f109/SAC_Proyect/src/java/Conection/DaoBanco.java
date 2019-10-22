@@ -84,16 +84,18 @@ public class DaoBanco {
         }
     }
       
-    public static Bancos_Telefonicos findByID(String id){
+    public static Bancos_Telefonicos findByID(String Nom,String Encu){
         //busca las operadoras por su id
         String SQL ="SELECT  base,encuesta,estado "
                 + "FROM banco "
-                + "WHERE base = ?";
+                + "WHERE base = ?"
+                + "and encuesta = ?";
                 
         try(Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(SQL)){
             
-            pstmt.setString(1,id);
+            pstmt.setString(1,Nom);
+            pstmt.setString(2, Encu);
             ResultSet rs = pstmt.executeQuery();
            if(rs.next()){
                return getBanco(rs);

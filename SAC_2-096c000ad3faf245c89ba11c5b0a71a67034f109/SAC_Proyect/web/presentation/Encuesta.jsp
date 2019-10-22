@@ -33,7 +33,7 @@
             <div class="row space-rows" id="RowCards">
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
-                        <div class="card-header" id="Card" style=""><span class="space"><a href=""></a></span>
+                        <div class="card-header" id="Card" style="background-color: #293352;"><span class="space"><a href=""></a></span>
                             <div class="cardheader-text">
                                 <h4 id="heading-card" >Muestra</h4>
                                 <p id="cardheader-subtext"></p>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="slide-right" data-aos-duration="950">
-                        <div class="card-header" id="Card"><span class="space"><a href="#"></a></span>
+                        <div class="card-header" id="Card" style="background-color: #293352;"><span class="space" ><a href="#"></a></span>
                             <div class="cardheader-text">
                                 <h4 id="heading-card">Total Bancos</h4>
                                 <p id="cardheader-subtext"></p>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="flip-up" data-aos-duration="950">
-                        <div class="card-header cards-header-hover"><span class="space"><a href="#"></a></span>
+                        <div class="card-header cards-header-hover" style="background-color: #293352;"><span class="space"><a href="#"></a></span>
                             <div class="cardheader-text">
                                 <h4 id="heading-card">Bancos Activos</h4>
                                 <p id="cardheader-subtext"></p>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
-                        <div class="card-header" id="Card"><span class="space"><a href="#"></a></span>
+                        <div class="card-header" id="Card" style="background-color: #293352;"><span class="space"><a href="#"></a></span>
                             <div class="cardheader-text">
                                 <h4 id="heading-card">Bancos Inactivos</h4>
                                 <p id="cardheader-subtext"></p>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
-                        <div class="card-header" id="Card"><span class="space"><a href="#"></a></span>
+                        <div class="card-header" id="Card" style="background-color: #293352;"><span class="space"><a href="#"></a></span>
                             <div class="cardheader-text">
                                 <h4 id="heading-card" style="font-size: 45px;">Turnos</h4>
                                 <p id="cardheader-subtext"></p>

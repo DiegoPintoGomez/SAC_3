@@ -81,6 +81,7 @@ public class DaoOperadora {
             op.setNombre(rs.getString("nombre"));
             op.setRangoMayor(rs.getString("rangoMayor"));
             op.setRangoMenor(rs.getString("rangoMenor"));
+            
             return op;
         }       catch(SQLException ex){
             return new Operadora();
@@ -184,7 +185,6 @@ public class DaoOperadora {
         }       
         return new Operadora();
     }
-    
     
     public static Boolean OperadoraExciste(String Nombre){
         Operadora ope= new Operadora();

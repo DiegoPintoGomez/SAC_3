@@ -24,6 +24,7 @@
 
 
         <div class="  container-fluid">  
+            <form method="GET" action="eliEncuesPeril" >
 
 
 
@@ -129,7 +130,7 @@
 
                     </div>
 
-                   
+            </form>       
        </div>
 
 

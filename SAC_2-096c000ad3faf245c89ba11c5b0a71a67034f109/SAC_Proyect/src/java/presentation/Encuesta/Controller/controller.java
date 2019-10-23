@@ -92,7 +92,7 @@ public class controller extends HttpServlet {
          
          if (request.getServletPath().equals("/eliEncuesPeril")) {
             System.out.println("Llega al controller  PerfilEncuesta");
-            this.PerfilEncuesta(request, response);
+            this.eliEncuesPeril(request, response);
 
         } 
           
@@ -107,7 +107,7 @@ public class controller extends HttpServlet {
             Encuesta encuesta= (Encuesta) request.getSession(true).getAttribute("encuestaActual");
  
             Model.Model.instance().deleteAllEncuesta(encuesta);
-            request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
+           this.listadoEncuestas(request, response);
     }
 
     

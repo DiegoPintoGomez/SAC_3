@@ -9,7 +9,7 @@
 <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean navbar-inverse navbar-fixed-top" id="" style="background-color: #ffffff; padding-right: auto;padding-left: auto; ">
     <div class="container">
         <div>
-            <a class="navbar-brand" style="" href="#"> 
+            <a class="navbar-brand" style="" href="/presentation/Principal.jsp"> 
                 <img id="LogoIdespo" src="/assets/img/logo.jpg" style="">
             </a>
             <button data-toggle="collapse"class="navbar-toggler" data-target="#navcol-1">

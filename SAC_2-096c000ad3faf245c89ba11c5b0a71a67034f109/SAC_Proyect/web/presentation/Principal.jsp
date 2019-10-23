@@ -8,7 +8,6 @@
         <title>Crear Encuesta</title>
         <%@include file="/presentation/Head.jsp"%>
     </head>
-
     <body>
         
         <%@include file="/presentation/Header.jsp"%>
@@ -16,7 +15,7 @@
             <div class="col-md-12" id="CrearEncuesta">
                 <div class="login-dark" >
                     <form method="post" >
-                        <h2 class="sr-only" style=" " >Login Form</h2>
+                        <h2 class="sr-only" style=" " >Login   Form</h2>
                         <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
                         <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
                         <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>

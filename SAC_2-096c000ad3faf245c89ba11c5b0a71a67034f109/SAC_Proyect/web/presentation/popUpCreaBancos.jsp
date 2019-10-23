@@ -53,6 +53,7 @@
             </div>
             <div class="modal-footer">
                 <form action="creaBancos" method="post">
+                    <button type="button" class="btn btn-light text-left" href="/presentation/Operadoras.jsp"  style="border-color: #ef384c" >Ajustes de Operadoras</button>
                     <button class="btn btn-light text-left" onclick="return carga();" style="border-color: #ef384c" type="submit">Generar Bancos</button>
                     <button type="button" class="btn btn-secondary" style="border-color: #ef384c" data-dismiss="modal">Close</button>
                     <div class="spinner-grow text-danger" id="cargando" style="visibility: hidden" role="status">

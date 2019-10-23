@@ -21,10 +21,10 @@
                 <li class="nav-item" role="presentation">
                     <div class="dropdown" style="margin-right:15px">
                         <button class="btn btn-secondary dropdown-toggle" style="background-color: #ef384c;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Navegacion
+                            Navegacion 
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                           <a class="dropdown-item" href="inicio" style="color:#ef384c" uk-scroll="offset:50">Encuestas</a> <!-- R1 -->
+                           <a class="dropdown-item" href="inicio" style="color:#ef384c" uk-scroll="offset:50">Encuestas</a>
                            <a class="dropdown-item" href="/presentation/BarraLateral.jsp" style="color:#ef384c" uk-scroll="offset:50">Barra Lateral</a></form>
                            <a class="dropdown-item" href="/presentation/Operadoras.jsp" style="color:#ef384c" uk-scroll="offset:50">Operadoras Telefonicas</a></form>
                            <a class="dropdown-item" href="/presentation/Bancos.jsp" style="color:#ef384c" uk-scroll="offset:50">Bancos</a></form>
@@ -35,6 +35,7 @@
                     </div>
                     
                 </li>
+                
                 
                  <li class="nav-item" role="presentation">
                     <div class="dropdown">

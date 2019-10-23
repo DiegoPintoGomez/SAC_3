@@ -17,8 +17,7 @@
 
 
         <div>
-
-            <div class="container container-fluid" id="containerCrearEncuesta">
+            <div class="container container-fluid" id="containerCrearEncuesta" style="height: available; position: relative; margin-top: 0px;  margin-left: auto; margin-right: auto; margin-bottom: 100px; ">
 <!-- Editable table -->
 <div class="card">
   <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>

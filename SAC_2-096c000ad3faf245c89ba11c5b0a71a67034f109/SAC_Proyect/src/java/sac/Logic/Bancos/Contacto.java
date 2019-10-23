@@ -46,6 +46,8 @@ public class Contacto {
         this.citaTelefonica= new GregorianCalendar();
         this.citaTelefonica.set(0, 0, 0);
         
+        
+        
         int base=0;
     }
 

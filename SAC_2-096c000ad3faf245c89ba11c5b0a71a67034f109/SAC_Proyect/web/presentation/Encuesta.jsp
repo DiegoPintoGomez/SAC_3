@@ -33,7 +33,7 @@
             <div class="row space-rows" id="RowCards">
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
-                        <div class="card-header" id="Card" style="background-color: #293352;"><span class="space"><a href=""></a></span>
+                        <div class="card-header" id="Card" style="background-color: #293352;" ><span class="space"> <a href="/presentation/Bancos.jsp"> jejej</a></span>
                             <div class="cardheader-text">
                                 <h4 id="heading-card" >Muestra</h4>
                                 <p id="cardheader-subtext"></p>
@@ -47,15 +47,18 @@
                 </div>
                 <div class="col" id="columna">
                     <div class="card cards-shadown cards-hover" data-aos="slide-right" data-aos-duration="950">
-                        <div class="card-header" id="Card" style="background-color: #293352;"><span class="space" ><a href="#"></a></span>
+                        <div class="card-header" id="Card" style="background-color: #293352;">
                             <div class="cardheader-text">
+
                                 <h4 id="heading-card">Total Bancos</h4>
                                 <p id="cardheader-subtext"></p>
                             </div>
                         </div>
+
                         <div class="card-body">
                             <p class="card-text sub-text-color"><%=encuesta.getListaBancosTelefonicos().size()%></p>
-                            <p class="card-text cardbody-sub-text" id="totalBancos"></p>
+                          
+                           <p class="card-text cardbody-sub-text" id="totalBancos"> </p>
                         </div>
                     </div>
                 </div>
@@ -117,7 +120,7 @@
                                      
              
                 <button class="btn btn-primary" id="Button2"  type="submit">Eliminar Encuesta</button>
-                 <button class="btn btn-primary" id="Button2"  type="submit"><a  href="/presentation/Bancos.jsp" style="" uk-scroll="offset:50">Ver Bancos</a></form></button>
+                 <button class="btn btn-primary" id="Button2"  type="submit"><a  href="/presentation/Bancos.jsp" style="" >Ver Bancos</a></form></button>
               
 
               

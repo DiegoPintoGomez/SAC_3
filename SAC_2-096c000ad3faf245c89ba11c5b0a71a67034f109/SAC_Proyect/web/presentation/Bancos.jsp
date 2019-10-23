@@ -43,9 +43,8 @@
                 <td><%= contacto.getBase()%></td>
                 <td><%= contacto.getNumero_Telefono() %></td>
                 
-                 <td> Sin Realizar</td>
-                 <td>Sin Realizar </td>
-
+                 <td>Sin Realizar</td>
+                 <td>Sin Realizar</td>
                  <td>Sin Realizar</td>
 
     

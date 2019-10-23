@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean navbar-inverse navbar-fixed-top" id="" style="background-color: #ffffff; padding-right: auto;padding-left: auto; ">
     <div class="container">
         <div>

@@ -38,19 +38,19 @@
             </tr>
         </thead>
         <tbody>
-            <%for(Contacto banco: Bancos){  %>
+            <%for(Contacto contacto: Bancos){  %>
             <tr>
-                <td><%= banco.getBase()%></td>
-                <td><%= banco.getNumero_Telefono() %></td>
-       
-                <td> Sin Realizar</td>
+                <td><%= contacto.getBase()%></td>
+                <td><%= contacto.getNumero_Telefono() %></td>
+                
+                 <td> Sin Realizar</td>
                  <td>Sin Realizar </td>
 
                  <td>Sin Realizar</td>
 
     
-                <td><%= banco.getEstado() %></td>
-                <td> </td>
+                <td><%= contacto.getEstado() %></td>
+                <td><%= contacto.getBase()%> </td>
               
             </tr>
                                       <%}%>
@@ -60,10 +60,11 @@
             <tr>
                 <th>Banco Telefonico</th>
                 <th>Numero de Contacto</th>
-                <th>Hora Inicio Pausa</th>
-                <th>Hora Fin Pausa</th>
-                <th>Hora Final</th>
-              
+                 <th>Llamada 1</th>
+                <th>Llamada 2</th>
+                <th>Llamada 3</th>
+                <th>Estado de Llamada</th>
+                <th>Observaciones</t
             </tr>
         </tfoot>
     </table>

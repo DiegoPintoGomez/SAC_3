@@ -15,7 +15,7 @@ import java.util.List;
  * @author Chris
  */
 public class Contacto {
-    private List<Date> date;
+    private List<Calendar> date;
     private String Nota;
     private String numero_Telefono;
     private String estado;
@@ -43,7 +43,7 @@ public class Contacto {
         this.ListaGris = ListaGris;
     }
 
-    public void setDate(List<Date> date) {
+    public void setDate(List<Calendar> date) {
         this.date = date;
     }
 
@@ -51,7 +51,7 @@ public class Contacto {
         this.Nota = Nota;
     }
 
-    public List<Date> getDate() {
+    public List<Calendar> getDate() {
         return date;
     }
 

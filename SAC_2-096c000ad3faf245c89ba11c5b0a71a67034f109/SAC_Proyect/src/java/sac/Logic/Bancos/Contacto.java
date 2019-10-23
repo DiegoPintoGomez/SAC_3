@@ -25,6 +25,20 @@ public class Contacto {
     private Calendar citaTelefonica;
     private boolean ListaGris;
     //estos son para la base de datos
+
+    public Contacto() {
+        this.date = new ArrayList<Calendar>();
+        this.Nota = " ";
+        this.numero_Telefono ="";
+        this.estado = "Sin Realizar";
+        this.encuesta = 0;
+        this.base = 0;
+        this.citaTelefonica = new GregorianCalendar();
+        this.ListaGris = false;
+    }
+    
+    
+    
     
     
     public int getEncuesta() {    
@@ -66,8 +80,6 @@ public class Contacto {
         this.citaTelefonica= new GregorianCalendar();
         this.citaTelefonica.set(0, 0, 0);
         this.date = new ArrayList<Calendar>();
-        
-        
         int base=0;
     }
 
@@ -87,9 +99,7 @@ public class Contacto {
         this.citaTelefonica = citaTelefonica;
     }
     
-    public Contacto() {
-        this.numero_Telefono = "";
-    }
+   
    
     public String getNumero_Telefono() {
         return numero_Telefono;

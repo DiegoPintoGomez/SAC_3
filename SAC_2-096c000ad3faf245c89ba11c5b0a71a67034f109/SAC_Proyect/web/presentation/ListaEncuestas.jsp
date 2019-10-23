@@ -22,11 +22,11 @@
        <%List<Encuesta> list = (List<Encuesta>) request.getAttribute("listaEncuestas");%>      
 
         <div style=" " style="margin-top:10px">
-         <form method="GET" action="buscaBancos">
+            <form method="GET" action="buscaBancos" >
 
           <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
            
-            <div class="input-group mb-2" style="margin-right: 200px; margin-left: 200px">
+            <div class="input-group mb-2" style=" margin-right: 200px; margin-left: 200px">
                 
                    <div>
                    
@@ -36,9 +36,9 @@
                
             </div>
                 
-            <div class="" style=" margin-top: 0px;  margin-left: 30px; margin-right: 30px; ">      
+            <div class="" style="height: available; position: relative; margin-top: 0px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; ">      
 
-                <table class="table table-bordered table-striped mb-0 " id="example"style=" ">
+                <table class="table table-bordered table-striped mb-0 " id="example"style="">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

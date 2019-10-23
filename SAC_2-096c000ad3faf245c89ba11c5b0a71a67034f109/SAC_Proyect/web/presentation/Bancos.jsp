@@ -51,7 +51,7 @@
 
 
                             <td><%= contacto.getEstado()%></td>
-                            <td><%= contacto.getBase()%> </td>
+                            <td><%= contacto.getNota() %> </td>
 
                         </tr>
                         <%}%>

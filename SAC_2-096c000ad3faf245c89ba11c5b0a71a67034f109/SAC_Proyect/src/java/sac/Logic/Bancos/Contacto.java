@@ -6,14 +6,17 @@
 package sac.Logic.Bancos;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 /**
  *
  * @author Chris
  */
 public class Contacto {
-    
+    private List<Date> date;
+    private String Nota;
     private String numero_Telefono;
     private String estado;
     private int encuesta;
@@ -38,6 +41,22 @@ public class Contacto {
 
     public void setListaGris(boolean ListaGris) {
         this.ListaGris = ListaGris;
+    }
+
+    public void setDate(List<Date> date) {
+        this.date = date;
+    }
+
+    public void setNota(String Nota) {
+        this.Nota = Nota;
+    }
+
+    public List<Date> getDate() {
+        return date;
+    }
+
+    public String getNota() {
+        return Nota;
     }
 
     public Contacto(String numero_Telefono) {

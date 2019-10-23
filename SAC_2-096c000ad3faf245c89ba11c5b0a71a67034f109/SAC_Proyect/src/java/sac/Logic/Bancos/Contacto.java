@@ -5,6 +5,7 @@
  */
 package sac.Logic.Bancos;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -64,7 +65,7 @@ public class Contacto {
         this.estado= "Sin Realizar";
         this.citaTelefonica= new GregorianCalendar();
         this.citaTelefonica.set(0, 0, 0);
-        
+        this.date = new ArrayList<Calendar>();
         
         
         int base=0;

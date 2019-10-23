@@ -121,7 +121,7 @@
                                      
              
                 <button class="btn btn-primary" id="Button2"  type="submit">Eliminar Encuesta</button>
-                   <a title="Los Tejos" href="/presentation/Bancos.jsp" style="margin-left: 10px;"   ><img src="/assets/img/icon.png"  style="height: 50px; width: 50px"  alt="Los Tejos" /></a>
+                   <a title="Ver Bancos Telefonicos" href="/presentation/Bancos.jsp" style="margin-left: 10px;"   ><img src="/assets/img/icon.png"  style="height: 50px; width: 50px"  alt="Los Tejos" /></a>
 
 
               

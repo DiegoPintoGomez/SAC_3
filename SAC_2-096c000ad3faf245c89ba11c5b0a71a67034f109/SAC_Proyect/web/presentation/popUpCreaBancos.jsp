@@ -45,7 +45,11 @@
                 </div>
             </div>
             <div>
-                <div class="alert alert-info" style="margin-left: 10px; margin-right: 10px" role="alert">
+                
+                <div class="alert alert-info " style="margin-left: 10px; margin-right: 10px" role="alert">
+                    Para agregar, editar o eliminar Operadoras Telefonicas ingrese<a title="Los Tejos" href="/presentation/Operadoras.jsp" style="margin-left: 10px;"   > aqui</a>
+                </div>
+                <div class="alert  alert-danger" style="margin-left: 10px; margin-right: 10px" role="alert">
                     El tamano predeterminado del Banco telefonico es de 10 numeros, solamente si desea cambiarlo ingrese un numero.
                 </div>
 
@@ -53,7 +57,7 @@
             </div>
             <div class="modal-footer">
                 <form action="creaBancos" method="post">
-                    <button type="button" class="btn btn-light text-left" href="/presentation/Operadoras.jsp"  style="border-color: #ef384c" >Ajustes de Operadoras</button>
+        
                     <button class="btn btn-light text-left" onclick="return carga();" style="border-color: #ef384c" type="submit">Generar Bancos</button>
                     <button type="button" class="btn btn-secondary" style="border-color: #ef384c" data-dismiss="modal">Close</button>
                     <div class="spinner-grow text-danger" id="cargando" style="visibility: hidden" role="status">

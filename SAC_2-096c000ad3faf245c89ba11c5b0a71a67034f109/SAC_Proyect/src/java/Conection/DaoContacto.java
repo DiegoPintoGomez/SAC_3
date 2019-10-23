@@ -81,6 +81,7 @@ public class DaoContacto {
             con.setNumero_Telefono(rs.getString("numero_Telefono"));
             con.setBase(Integer.valueOf( rs.getString("banco")));
             con.setEstado(rs.getString("estado"));
+            con.setDate(DaoFecha.getAllFecha_Contacto(con.getNumero_Telefono()));
             con.setCitaTelefonica(null);
             return con;
      

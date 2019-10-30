@@ -28,14 +28,13 @@ public class DaoContacto {
         return DBConection.mariaDBconn();
     }
     
-    public static long  insertaContacto(Contacto conta,Bancos_Telefonicos bt,Encuesta encu) throws SQLException{
+    public static long  insertaContacto(Contacto conta,Bancos_Telefonicos bt,Encuesta encu, Connection conn) throws SQLException{
         //por el momento estoy dejando que la base se encargue del id
         //luego lo podemos ver estoy en la playa
         String SQL ="INSERT INTO contacto (numero_Telefono, estado, encuesta,banco,citaTelefonica) "
                 + "VALUES(?,?,?,?,?)";
          long id = 0;
-        try(Connection conn = connect();
-               PreparedStatement pstmt = conn.prepareStatement(SQL,
+        try(PreparedStatement pstmt = conn.prepareStatement(SQL,
                 Statement.RETURN_GENERATED_KEYS)){
                 pstmt.setString(1, conta.getNumero_Telefono());
                 pstmt.setString(2, conta.getEstado());
@@ -144,25 +143,25 @@ public class DaoContacto {
     return rows;
     }
     
-    public static void insertaListaContactos(Bancos_Telefonicos BT,Encuesta encu) throws SQLException{
+    public static void insertaListaContactos(Bancos_Telefonicos BT,Encuesta encu,Connection conn) throws SQLException{
     
          for(Contacto con: BT.getListaContacos() ){
         
-            insertaContacto(con,BT,encu);
+            insertaContacto(con,BT,encu,conn);
         } 
         
     }
     
     public static void insertarContactosBancos(Encuesta encu ) throws SQLException{
         ArrayList<Bancos_Telefonicos> Bancos = encu.getListaBancosTelefonicos();
-        
+        Connection conn = connect();
+               
         for(Bancos_Telefonicos BT: Bancos){
-            DaoContacto.insertaListaContactos(BT,encu);
+            DaoContacto.insertaListaContactos(BT,encu,conn);
             
         }
+        }
         
-    }
-     
     public static void deletenumero_emcuesta(Encuesta encu){
         String SQL = "Delete from Contacto where encuesta = ?";
         

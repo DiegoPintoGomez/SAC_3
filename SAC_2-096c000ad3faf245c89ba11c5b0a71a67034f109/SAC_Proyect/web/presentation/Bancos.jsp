@@ -7,7 +7,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <title></title>
+        <title>Bancos Telefonicos</title>
         <%@include file="/presentation/Head.jsp"%>
         <% Encuesta encuesta = (Encuesta) session.getAttribute("encuestaActual");
             List<Contacto> Bancos = Model.Model.instance().getContacto_Encuesta(encuesta.getNombreEncuesta());%>  

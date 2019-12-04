@@ -132,9 +132,9 @@
                                 Desea eliminar la encuesta?
                             </div>
                             <div class="modal-footer">
-                                <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">rechazar</button>
-                                <form method="GET" action="eliEncuesPeril">
-                                    <button type="submit" id="Button2" class="btn btn-primary">aceptar</button>
+                                <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                                <form method="GET" action="eliEncuesPerfil">
+                                    <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
                                 </form>
                             </div>
                         </div>

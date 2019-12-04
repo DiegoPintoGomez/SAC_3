@@ -25,10 +25,10 @@
             <form method="GET" action="buscaBancos" >
 
           <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
-          <div style="text-align: left; margin-left: 110px;  margin-top: 20px" >
-                                  <button type="button" class="btn btn-secondary" style="border-color: #ef384c" data-dismiss="modal">Close</button>
+          <div style="text-align: left; margin-left: 125px;  margin-top: 20px" >
+                                  
 
-                             <button  title="Agregar Encuesta" data-toggle="modal"  type="button" data-target="#Modall" class="btn btn-default" id="ButtonCrearEncuesta "><img  src="/assets/img/addd.png" style=" width: 40px; height: 40px"></button>
+           <button  title="Agregar Encuesta" data-toggle="modal"  class="btn btn-light text-left" type="button" style=" background: #5fbaa7" data-target="#Modall" class="btn btn-default" id="ButtonCrearEncuesta ">Crear Nueva Encuesta</button>
 
           </div>
             <div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; ">      

@@ -33,15 +33,15 @@
           </div>
             <div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; ">      
 
-                <table class="table table-bordered table-striped mb-0 " id="example"style="">
+                <table class="table table-bordered table-striped mb-0 " id="example"style="  text-align: center;">
                     <thead>
-                        <tr>
+                        <tr  style="font-size: 20px">
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Muestra</th>
                             <th scope="col">Bancos</th>
                             <th scope="col">Eliminar</th>
-                            <th scope="col">Crear Bancos</th>
+                            <th w scope="col">Crear Bancos</th>
 
                         </tr>
                     </thead>
@@ -52,19 +52,19 @@
                         <% i++;%>
 
 
-                        <tr style="height: 10px">
-                            <td> <%= i%>   </td>
-                            <td> <%= e.getNombreEncuesta()%> </td>
-                            <td><%= e.getMuestra()%> </td>
-                            <td  style=""><%= e.getListaBancosTelefonicos().size()%> </td>
-                            <td>
+                        <tr style="height: 10px; font-size: 20px  ">
+                            <td width="10%"  ><b><%= i%> </b>  </td>
+                            <td width="15%"   > <%= e.getNombreEncuesta()%> </td>
+                            <td width="15%"><%= e.getMuestra()%> </td>
+                            <td  width="15%"><%= e.getListaBancosTelefonicos().size()%> </td>
+                            <td width="15%">
                                 <form method="GET" action="EliminaBancos">
                                      <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta() %>">
 
                                     <button type="submit" class="btn btn-default"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
                                 </form>
                             </td>
-                             <td>
+                             <td width="15%">
                                 <form method="GET" action="perfilEncuesta">
                                      <input type="text" name="nomEncu"style=" display:none;" value="<%= e.getNombreEncuesta() %>">
 

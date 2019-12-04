@@ -25,7 +25,7 @@
 
         <div class="  container-fluid">  
             
-            <form method="GET" action="eliEncuesPeril" >
+            <form method="GET" action="eliEncuesPerfil" >
 
 
 

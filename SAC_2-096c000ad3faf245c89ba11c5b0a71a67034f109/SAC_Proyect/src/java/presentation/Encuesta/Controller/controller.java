@@ -34,7 +34,7 @@ import sac.Logic.Bancos.Contacto;
  *
  * @author Chris
  */
-@WebServlet(name = "controller", urlPatterns = {"/controller", "/inicio", "/encuesta", "/creaBancos", "/EliminaBancos", "/perfilEncuesta","/eliEncuesPeril" , "/buscaBancos"})
+@WebServlet(name = "controller", urlPatterns = {"/controller", "/inicio", "/encuesta", "/creaBancos", "/EliminaBancos", "/perfilEncuesta","/eliEncuesPerfil" , "/buscaBancos"})
 public class controller extends HttpServlet {
 
     /**
@@ -90,7 +90,7 @@ public class controller extends HttpServlet {
         }
           
          
-         if (request.getServletPath().equals("/eliEncuesPeril")) {
+         if (request.getServletPath().equals("/eliEncuesPerfil")) {
             System.out.println("Llega al controller  PerfilEncuesta");
             this.eliEncuesPeril(request, response);
 

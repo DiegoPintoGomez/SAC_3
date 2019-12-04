@@ -25,11 +25,13 @@
             <form method="GET" action="buscaBancos" >
 
           <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
-          <div style="text-align: right; margin-right: 300px">
-                             <button  title="Agregar Encuesta" data-toggle="modal"  type="button" data-target="#Modall" class="btn btn-default" id="ButtonCrearEncuesta "><img  src="/assets/img/addd.png" style="  margin-left: 120px; width: 40px; height: 40px"></button>
+          <div style="text-align: left; margin-left: 110px;  margin-top: 20px" >
+                                  <button type="button" class="btn btn-secondary" style="border-color: #ef384c" data-dismiss="modal">Close</button>
+
+                             <button  title="Agregar Encuesta" data-toggle="modal"  type="button" data-target="#Modall" class="btn btn-default" id="ButtonCrearEncuesta "><img  src="/assets/img/addd.png" style=" width: 40px; height: 40px"></button>
 
           </div>
-            <div class="" style="height: available; position: relative; margin-top: 0px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; ">      
+            <div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; ">      
 
                 <table class="table table-bordered table-striped mb-0 " id="example"style="">
                     <thead>
@@ -54,7 +56,7 @@
                             <td> <%= i%>   </td>
                             <td> <%= e.getNombreEncuesta()%> </td>
                             <td><%= e.getMuestra()%> </td>
-                            <td><%= e.getListaBancosTelefonicos().size()%> </td>
+                            <td  style=""><%= e.getListaBancosTelefonicos().size()%> </td>
                             <td>
                                 <form method="GET" action="EliminaBancos">
                                      <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta() %>">
@@ -93,8 +95,24 @@ $(document).ready(function() {
         pageLength: 10,
       responsive: true,
       lengthMenu: [[10,20,100,-1],["10","20","100","Todos"]],
-     
+    language: {
 
+        search:         "Buscar: ",
+        lengthMenu:    "Elementos _MENU_  por pagina",
+
+        info:           "Mostrando  _START_  a _END_ de _TOTAL_ elementos",
+  
+        loadingRecords: "Cargando Elementos...",
+        zeroRecords:    "No se encontraron elementos que coincidan con los parametros de busqueda",
+        emptyTable:     "No hay elementos disponibles",
+        paginate: {
+            first:      "Primer",
+            previous:   "Anterior",
+            next:       "Siguiente",
+            last:       "Ultimo"
+        },
+        
+    }
 
     
         

@@ -18,14 +18,13 @@
     </head>
 
     <body>
-       
+
         <%@ include file="/presentation/Header.jsp" %>
-                <%@include file="/presentation/popUpCreaBancos.jsp" %>
+        <%@include file="/presentation/popUpCreaBancos.jsp" %>
 
 
         <div class="  container-fluid">  
-            
-            <form method="GET" action="eliEncuesPerfil" >
+
 
 
 
@@ -59,9 +58,9 @@
 
                         <div class="card-body">
                             <p class="card-text sub-text-color"><%=encuesta.getListaBancosTelefonicos().size()%></p>
-                      
 
-                           
+
+
                         </div>
                     </div>
                 </div>
@@ -99,7 +98,7 @@
                             <div class="cardheader-text">
                                 <h4 id="heading-card" style="font-size: 45px;">Turnos</h4>
                                 <p id="cardheader-subtext"></p>
-                                
+
                             </div>
                         </div>
                         <div class="card-body">
@@ -115,24 +114,39 @@
 
             <div class="container " id="ContanerButtonsEncuesta">
 
-                <% if(encuesta.getListaBancosTelefonicos().isEmpty()){ %>
+                <% if (encuesta.getListaBancosTelefonicos().isEmpty()) { %>
                 <button class="btn btn-primary" data-toggle="modal" id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
-                                     <%} else{ %>
-                       <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
-                                     <%}%>
-                                     
-             
-                <button class="btn btn-primary" id="Button2"  type="submit">Eliminar Encuesta</button>
-                   <a title="Ver Bancos Telefonicos" href="/presentation/Bancos.jsp" style="margin-left: 10px;"   ><img src="/assets/img/icon.png"  style="height: 50px; width: 50px"  alt="Los Tejos" /></a>
-
-
-              
-                  
-
+                <%} else { %>
+                <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
+                <%}%>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Desea eliminar la encuesta?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">rechazar</button>
+                                <form method="GET" action="eliEncuesPeril">
+                                    <button type="submit" id="Button2" class="btn btn-primary">aceptar</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Eliminar Encuesta
+                </button>
+                <a title="Ver Bancos Telefonicos" href="/presentation/Bancos.jsp" style="margin-left: 10px;"   ><img src="/assets/img/icon.png"  style="height: 50px; width: 50px"  alt="Los Tejos" /></a>
 
-            </form>       
-       </div>
+            </div>
+        </div>
 
 
         <%@ include file="/presentation/Footer.jsp" %>

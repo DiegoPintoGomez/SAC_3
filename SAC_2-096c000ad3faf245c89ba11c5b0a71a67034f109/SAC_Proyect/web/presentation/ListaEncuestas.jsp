@@ -59,14 +59,14 @@
                                 <form method="GET" action="EliminaBancos">
                                      <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta() %>">
 
-                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/delete.png" style=" width: 45px; height: 45px"></button>
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
                                 </form>
                             </td>
                              <td>
                                 <form method="GET" action="perfilEncuesta">
                                      <input type="text" name="nomEncu"style=" display:none;" value="<%= e.getNombreEncuesta() %>">
 
-                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/ajuste.png" style=" width: 45px; height: 45px"></button>
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/pencil7.png" style=" width: 50px; height: 50px;"></button>
                                 </form>
                             </td>
                         </tr>
@@ -93,7 +93,10 @@ $(document).ready(function() {
         pageLength: 10,
       responsive: true,
       lengthMenu: [[10,20,100,-1],["10","20","100","Todos"]],
-        
+     
+
+
+    
         
     });
 } );

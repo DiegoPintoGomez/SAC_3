@@ -32,7 +32,7 @@
 
                 <%List<Operadora> list = (List<Operadora>) Model.Model.instance().getAllOperadora();%>
 
-                <table class="table" id="example" style="  ">
+                          <table class="table table-bordered table-striped mb-0 " id="example"style="">
                     <thead>
                         <tr style="">
                             <th scope="col">#</th>
@@ -61,7 +61,7 @@
                                 <form method="GET" action="elimnaOperadora">
                                     <input type="text" name="DeleteOperadora"style=" display:none;" value="<%= e.getNombre()%>">
 
-                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/delete.png" style=" width: 45px; height: 45px"></button>
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
                                 </form>
                             </td>
 
@@ -88,7 +88,7 @@
             pageLength: 10,
             responsive: true,
             lengthMenu: [[10, 20, 100, -1], ["10", "20", "100", "Todos"]],
-            fixedColumns: true
+           
 
 
         });

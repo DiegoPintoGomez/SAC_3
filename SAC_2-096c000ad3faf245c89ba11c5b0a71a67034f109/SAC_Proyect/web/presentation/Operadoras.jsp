@@ -21,18 +21,22 @@
         <div style=" ">
 
             <h1 id="TituloEncuesta" style=" margin-top:10px">Operadoras</h1> 
-             <div style="text-align: right; margin-right: 280px">
-            <button  data-toggle="modal"  type="button" data-target="#ModalOperadora" class="btn btn-default" id="ButtonCrearOperadora"><img  src="/assets/img/addd.png" style="  margin-left: 120px; width: 40px; height: 40px"></button>
-             </div>
 
-            <div class="" style="height: available; position: relative; margin-top: 0px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; "> 
+
+
+
+            <div style="text-align: left; margin-left: 125px;  margin-top: 20px" >
+                <button title="Agregar Encuesta" data-toggle="modal"  class="btn btn-light text-left" type="button" style=" background: #5fbaa7" data-target="#ModalOperadora" class="btn btn-default" id="ButtonCrearEncuesta ">Crear Nueva Operadora</button>
+            </div>
+
+<div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; ">      
 
 
 
 
                 <%List<Operadora> list = (List<Operadora>) Model.Model.instance().getAllOperadora();%>
-
-                          <table class="table table-bordered table-striped mb-0 " id="example"style="">
+                  
+                <table class="table table-bordered table-striped mb-0 " id="example"style="">
                     <thead>
                         <tr style="">
                             <th scope="col">#</th>
@@ -88,9 +92,24 @@
             pageLength: 10,
             responsive: true,
             lengthMenu: [[10, 20, 100, -1], ["10", "20", "100", "Todos"]],
-           
+  language: {
 
+        search:         "Buscar: ",
+        lengthMenu:    "Elementos _MENU_  por pagina",
 
+        info:           "Mostrando  _START_  a _END_ de _TOTAL_ elementos",
+  
+        loadingRecords: "Cargando Elementos...",
+        zeroRecords:    "No se encontraron elementos que coincidan con los parametros de busqueda",
+        emptyTable:     "No hay elementos disponibles",
+        paginate: {
+            first:      "Primer",
+            previous:   "Anterior",
+            next:       "Siguiente",
+            last:       "Ultimo"
+        },
+        
+    }
         });
     });
 

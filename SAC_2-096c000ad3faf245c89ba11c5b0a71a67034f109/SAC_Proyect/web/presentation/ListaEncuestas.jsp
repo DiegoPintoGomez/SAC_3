@@ -20,7 +20,7 @@
         
         <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
        <%List<Encuesta> list = (List<Encuesta>) request.getAttribute("listaEncuestas");%>      
-
+          
         <div style=" " style="margin-top:10px">
             <form method="GET" action="buscaBancos" >
 

@@ -58,7 +58,11 @@
                                 <td><%= e.getMuestra()%> </td>
                                 <td  style=""><%= e.getListaBancosTelefonicos().size()%> </td>
                                 <td>
+                                    <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
+
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -74,15 +78,14 @@
                                                     <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
                                                     <form method="GET" action="EliminaBancos">
                                                         <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
-                                                        
+
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta()%>">
 
-                                    <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
+
                                 </td>
                                 <td>
 

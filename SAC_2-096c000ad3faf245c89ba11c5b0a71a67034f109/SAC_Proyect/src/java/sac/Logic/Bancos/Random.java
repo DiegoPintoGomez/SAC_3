@@ -102,28 +102,31 @@ public class Random {
     // min: Rango minimo del numero Aleatorio
     // max: Rango maximo del numero Aleatorio
     public ArrayList aleatorio(int cantidad, int min, int max) {
-        System.out.println("generando rango aleatorio");
+ 
 
         int numeroAleatorio;// numero Aleatorio que se va a crear
         ArrayList<Integer> ListaNumerosAleatorios = new ArrayList<>(); // Lista en donde se guardan los numeros Aleatorios
-        int contador = 0;                                                             // Se retorna al final
+//        int contador = 0;                                                             // Se retorna al final
         int range = max - min + 1;
-        while (contador < cantidad) {      // se detiene cuando se crean la cantidad de numeros indicados por el usuario
+        for (int contador = 0; contador < cantidad; contador++) {
+            
+        
+     // se detiene cuando se crean la cantidad de numeros indicados por el usuario
 
             numeroAleatorio = (int) (Math.random() * range) + min; // Formula que genera un numero Aleatorio en un rango especifico
-
+           
             if (ListaNumerosAleatorios.contains(numeroAleatorio)) { // Si el numero exite en la lista (numero repetido)
                 //no deja avanzar al contador, para que genere un nuevo numero, no repetido
                 contador--;
 
-            } else {
+            } if( !ListaNumerosAleatorios.contains(numeroAleatorio)) {
                 ListaNumerosAleatorios.add(numeroAleatorio);// SI no esta repetido, lo agrega a la lista
-                contador++;
+             
             }
 
         }
 
-        System.out.println(ListaNumerosAleatorios.toString()); // ToString para Pruebas
+//        System.out.println(ListaNumerosAleatorios.toString()); // ToString para Pruebas
         return ListaNumerosAleatorios; // Retorna la Lista
     }
 
@@ -179,7 +182,7 @@ public class Random {
             //La funcion de Lista de la Encuesta.
         } //Termina el ciclo
 
-        Collections.shuffle(ListaBancos); //Shuffle para desordenar La lista de Bancos Finalmente
+//        Collections.shuffle(ListaBancos); //Shuffle para desordenar La lista de Bancos Finalmente
         //Evita que el orden de las operaddoras esten aleatorias.
 
         return ListaBancos;

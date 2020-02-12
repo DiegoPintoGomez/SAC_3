@@ -208,7 +208,7 @@ protected void eliminaEncuesta(HttpServletRequest request,
         r.setListaOperadoras((ArrayList<Operadora>) DaoOperadora.getAlloperadora());
         r.GeneraListaBancos(encuesta, numeroBancos);
         System.out.print("se crean los bancos");
-
+        
        request.getSession(true).setAttribute("encuestaActual", encuesta);// seteaa encuesta en sesion
       
         Model.Model.instance().insertarMuestra(encuesta);

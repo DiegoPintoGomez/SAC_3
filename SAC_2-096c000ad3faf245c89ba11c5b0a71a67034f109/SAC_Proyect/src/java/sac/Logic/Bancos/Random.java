@@ -102,7 +102,7 @@ public class Random {
     // min: Rango minimo del numero Aleatorio
     // max: Rango maximo del numero Aleatorio
     public ArrayList aleatorio(int cantidad, int min, int max) {
-        System.out.println("genernado rango aleatorio");
+        System.out.println("generando rango aleatorio");
 
         int numeroAleatorio;// numero Aleatorio que se va a crear
         ArrayList<Integer> ListaNumerosAleatorios = new ArrayList<>(); // Lista en donde se guardan los numeros Aleatorios
@@ -174,7 +174,7 @@ public class Random {
 //            System.out.print("Lista FInal de Banco-->");// SOlo pruebas
 
             ListaBancos.add(newBanco);// Guarda los Bancos, con sus respectivos 10 Contactos (Se guradan en un vector)
-            // En este momento es cuando se deberian agregar los bancos en la encuesta.
+            // En este momento es cuando se  agregan los bancos en la encuesta.
             // Encuesta tiene de ListaBancos, la variable   ArrayList<Bancos_Telefonicos> ListaBancos esta cumpliendo
             //La funcion de Lista de la Encuesta.
         } //Termina el ciclo
@@ -192,7 +192,7 @@ public class Random {
 
 // Este metodo Crea la Lista de Bancos, recibde la cantidad de bancos a generar
     // Toma la lista de operadoras, calcula la cantidad de bancos por operadora gracias al metodo calculaBancosPorOperadora()
-    // Agregra los bancos a la Enceuesta, aqui se generaria la lista de Bancos Telefonicos completa  de la Encuesta.
+    // Agrega los bancos a la Encuesta, aqui se generaria la lista de Bancos Telefonicos completa  de la Encuesta.
     public void GeneraListaBancos(Encuesta encuesta, int telefonosPorBanco) {
 
         int cantidadBancosTotales = encuesta.getMuestra() / telefonosPorBanco;  // Muestra / telefonosporBanco= Cantidad de Banos totales a generar

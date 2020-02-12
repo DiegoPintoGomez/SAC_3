@@ -31,7 +31,7 @@
                     <button  title="Agregar Encuesta" data-toggle="modal"  class="btn btn-light text-left" type="button" style=" background: #5fbaa7" data-target="#Modall" class="btn btn-default" id="ButtonCrearEncuesta ">Crear Nueva Encuesta</button>
 
                 </div>
-                <div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; ">      
+                <div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 40px; margin-right: 40px; margin-bottom: 100px; ">      
 
                     <table class="table table-bordered table-striped mb-0 " id="example"style="">
                         <thead>
@@ -54,11 +54,11 @@
 
                             <tr style="height: 10px">
                                 <td> <%= i%>   </td>
-                                <td> <%= e.getNombreEncuesta()%> </td>
+                                <td width="200"> <%= e.getNombreEncuesta()%> </td>
                                 <td><%= e.getMuestra()%> </td>
                                 <td  style=""><%= e.getListaBancosTelefonicos().size()%> </td>
                                 <td>
-                                    <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
+                                    <button type="button"  class="btn btn-default" data-toggle="modal" data-target="#exampleModal"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
 
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta()%>">
@@ -87,7 +87,7 @@
 
 
                                 </td>
-                                <td>
+                                <td width="200">
 
                                     <form method="GET" action="perfilEncuesta">
                                         <input type="text" name="nomEncu"style=" display:none;" value="<%= e.getNombreEncuesta()%>">

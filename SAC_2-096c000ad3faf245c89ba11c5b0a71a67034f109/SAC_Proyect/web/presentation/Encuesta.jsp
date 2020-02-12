@@ -143,7 +143,9 @@
                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Eliminar Encuesta
                 </button>
-                <a title="Ver Bancos Telefonicos" href="/presentation/Bancos.jsp" style="margin-left: 10px;"   ><img src="/assets/img/icon.png"  style="height: 50px; width: 50px"  alt="Los Tejos" /></a>
+                <form method="GET" action="/presentation/Bancos.jsp">
+                                    <button type="submit" id="Button2" class="btn btn-primary">Ver Bancos Telefonicos</button>
+                                </form>
 
             </div>
         </div>

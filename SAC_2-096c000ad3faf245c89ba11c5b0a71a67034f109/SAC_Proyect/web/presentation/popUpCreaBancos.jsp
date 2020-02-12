@@ -46,9 +46,7 @@
             </div>
             <div>
                 
-                <div class="alert alert-info " style="margin-left: 10px; margin-right: 10px" role="alert">
-                    Para agregar, editar o eliminar Operadoras Telefonicas ingrese<a title="Los Tejos" href="/presentation/Operadoras.jsp" style="margin-left: 10px;"   > aqui</a>
-                </div>
+          
                 <div class="alert  alert-danger" style="margin-left: 10px; margin-right: 10px" role="alert">
                     El tamano predeterminado del Banco telefonico es de 10 numeros, solamente si desea cambiarlo ingrese un numero.
                 </div>

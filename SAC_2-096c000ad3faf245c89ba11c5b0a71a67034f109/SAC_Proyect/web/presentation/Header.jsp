@@ -29,7 +29,7 @@
                            <a class="dropdown-item" href="/presentation/BarraLateral.jsp" style="color:#ef384c" uk-scroll="offset:50">Barra Lateral</a></form>
                            <a class="dropdown-item" href="/presentation/Operadoras.jsp" style="color:#ef384c" uk-scroll="offset:50">Operadoras Telefonicas</a></form>
                            <a class="dropdown-item" href="/presentation/Bancos.jsp" style="color:#ef384c" uk-scroll="offset:50">Bancos</a></form>
-                           <a class="dropdown-item" href="/presentation/Encuestador.jsp" style="color:#ef384c" uk-scroll="offset:50">Encuestador</a></form>
+                           <a class="dropdown-item" href="/presentation/Encuestador.jsp" style="color:#ef384c" uk-scroll="offset:50">Encuestador  </a></form>
 
 
                         </div>

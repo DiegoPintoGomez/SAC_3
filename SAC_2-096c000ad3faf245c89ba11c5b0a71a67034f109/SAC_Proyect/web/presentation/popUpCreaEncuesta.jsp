@@ -10,7 +10,12 @@
                         </button>
                     </div>
                     <div class="modal-body" id="modBody">
-                        <div class="form-group"><label>Nombre Encuesta</label><input class="form-control" onkeypress="return validar(event, this);" name="NombreEncuesta" type="text" style="border-color: #ef384c" id="PlaceNameEncuesta" placeholder="Ejemplo: Idespo"></div>
+                        <div class="form-group"><label>Nombre Encuesta</label>
+                            <div class="input-group">
+                                <textarea class="form-control" aria-label="With textarea" onkeypress="return validar(event, this);" name="NombreEncuesta" type="text" style="border-color: #ef384c" id="PlaceNameEncuesta" placeholder="Ejemplo: Idespo">
+                                </textarea>
+                            </div>
+                        </div>
                         <div class="form-group"><label>Tamaño Muestra de Encuesta</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra"style="border-color: #ef384c" id="PlaceMuestra" placeholder="Ejemplo: 2000"></div>
 
                     </div>
@@ -58,7 +63,7 @@
         //      Control.value = "";
         //  }
     }
-    function carga(){
+    function carga() {
         control = document.getElementById("cargando");
         control.style = "visibility: visible";
     }

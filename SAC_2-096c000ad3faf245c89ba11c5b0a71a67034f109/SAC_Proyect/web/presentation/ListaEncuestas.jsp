@@ -1,3 +1,4 @@
+<%@page import="sac.Logic.Bancos.Bancos_Telefonicos"%>
 <%@page import="sac.Logic.Bancos.Operadora"%>
 <%@page import="Conection.DaoOperadora"%>
 <%@page import="java.util.List"%>
@@ -40,6 +41,7 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Muestra</th>
                                 <th scope="col">Bancos</th>
+                                <th scope="col">Bancos Activos</th>
                                 <th scope="col">Eliminar</th>
                                 <th scope="col">Crear Bancos</th>
 
@@ -55,8 +57,9 @@
                             <tr style="height: 10px">
                                 <td> <%= i%>   </td>
                                 <td width="200"> <%= e.getNombreEncuesta()%> </td>
-                                <td><%= e.getMuestra()%> </td>
-                                <td  style=""><%= e.getListaBancosTelefonicos().size()%> </td>
+                                <td width="300"><%= e.getMuestra()%> </td>
+                                <td width="300"><%= e.getListaBancosTelefonicos().size()%> </td>
+                                <td width="300"><%= BancosActivos(e)%> </td>
                                 <td>
                                     <button type="button"  class="btn btn-default" data-toggle="modal" data-target="#exampleModal"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
 
@@ -111,6 +114,19 @@
     </body>
 
 </html>
+<%!
+    private int BancosActivos(Encuesta encuesta) {
+        int cantidad = 0;
+        for (Bancos_Telefonicos e : encuesta.getListaBancosTelefonicos()) {
+            if (e.isEstado() == true) {
+                cantidad++;
+            }
+        }
+
+        return cantidad;
+
+    }
+%>
 
 <script>
     $(document).ready(function () {
@@ -141,4 +157,6 @@
 
         });
     });
+    
+    
 </script>

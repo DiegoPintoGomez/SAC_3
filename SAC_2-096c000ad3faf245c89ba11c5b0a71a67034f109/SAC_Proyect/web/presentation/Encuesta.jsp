@@ -119,7 +119,7 @@
                 <%} else { %>
                 <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
                 <%}%>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal"   tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">

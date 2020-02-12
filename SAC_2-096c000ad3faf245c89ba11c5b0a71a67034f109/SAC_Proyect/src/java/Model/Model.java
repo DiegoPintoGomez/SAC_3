@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Model;
-
+//quiero ver si sirve
 import Conection.DaoBanco;
 import Conection.DaoContacto;
 import Conection.DaoEncuesta;

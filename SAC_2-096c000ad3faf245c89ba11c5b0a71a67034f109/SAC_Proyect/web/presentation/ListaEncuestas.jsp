@@ -57,9 +57,9 @@
                             <tr style="height: 10px">
                                 <td> <%= i%>   </td>
                                 <td width="200"> <%= e.getNombreEncuesta()%> </td>
-                                <td width="300"><%= e.getMuestra()%> </td>
-                                <td width="300"><%= e.getListaBancosTelefonicos().size()%> </td>
-                                <td width="300"><%= BancosActivos(e)%> </td>
+                                <td style=" "><%= e.getMuestra()%> </td>
+                                <td style=" "><%= e.getListaBancosTelefonicos().size()%> </td>
+                                <td style=" "><%= BancosActivos(e)%> </td>
                                 <td>
                                     <div>
                                  

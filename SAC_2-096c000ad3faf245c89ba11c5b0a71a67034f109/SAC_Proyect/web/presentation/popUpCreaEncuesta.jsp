@@ -15,7 +15,7 @@
                                 <textarea class="form-control" aria-label="With textarea" onkeypress="return validar(event, this);" name="NombreEncuesta" type="text" style="border-color: #ef384c" id="PlaceNameEncuesta" placeholder="Ejemplo: Idespo"></textarea>
                             </div>
                         </div>
-                        <div class="form-group"><label>Tamaño Muestra de Encuesta</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra"style="border-color: #ef384c" id="PlaceMuestra" placeholder="Ejemplo: 2000"></div>
+                        <div class="form-group"><label>Tamaño Muestra de Encuesta</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra"style="border-color: #ef384c" id="PlaceMuestra" ></div>
 
                     </div>
                     <div class="modal-footer">

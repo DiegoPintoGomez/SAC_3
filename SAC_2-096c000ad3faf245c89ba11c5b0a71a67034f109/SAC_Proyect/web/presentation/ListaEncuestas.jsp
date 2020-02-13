@@ -61,10 +61,12 @@
                                 <td width="300"><%= e.getListaBancosTelefonicos().size()%> </td>
                                 <td width="300"><%= BancosActivos(e)%> </td>
                                 <td>
+                                    <div>
+                                 
+
                                     <button type="button"  class="btn btn-default" data-toggle="modal" data-target="#exampleModal"><img  src="/assets/img/trash3.png" style=" width: 53px; height: 53px"></button>
 
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta()%>">
 
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -78,17 +80,20 @@
                                                     Desea eliminar la  encuesta?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
-                                                    <form method="GET" action="EliminaBancos">
-                                                        <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
 
-                                                    </form>
+                                                    <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                                                     <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+
+                                                        <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
+                                                    
+                                                   
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-
+                                   
+                                    </div>
                                 </td>
                                 <td width="200">
 

@@ -117,7 +117,7 @@ public class controller extends HttpServlet {
             throws ServletException, IOException, SQLException {
      
         String s=request.getParameter("buscador");
-          if(request.getParameter("buscador")==""){
+          if("".equals(request.getParameter("buscador"))){
           this.listadoEncuestas(request, response);
           }
           else{
@@ -196,6 +196,7 @@ protected void eliminaEncuesta(HttpServletRequest request,
             throws ServletException, IOException, SQLException {
 
 
+      
         Random r = new Random();
         Encuesta encuesta= (Encuesta)request.getSession(true).getAttribute("encuestaActual");// seteaa encuesta en sesion
          int numeroBancos=0;

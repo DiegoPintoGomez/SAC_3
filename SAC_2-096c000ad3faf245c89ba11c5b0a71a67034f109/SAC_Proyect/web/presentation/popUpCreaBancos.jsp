@@ -29,7 +29,7 @@
                             <%if (lista != null) {%>
                             <%for (Operadora s : lista) {%>
 
-                            <tr>
+                            <tr >
                                 <td>  <%= s.getNombre()%>  </td>
                                 <td> <%= s.getRangoMenor()%>  </td>
                                 <td> <%= s.getRangoMayor()%>  </td>
@@ -48,7 +48,12 @@
                 
           
                 <div class="alert  alert-danger" style="margin-left: 10px; margin-right: 10px" role="alert">
-                    El tamano predeterminado del Banco telefonico es de 10 numeros, solamente si desea cambiarlo ingrese un numero.
+                    *El tamano predeterminado y minimo del Banco telefonico es de 10 numeros.
+                    
+                </div>
+                 <div class="alert  alert-danger" style="margin-left: 10px; margin-right: 10px" role="alert">
+                    *Solamente si desea cambiar el tamano prederminado por uno mayor y diferente de 10, ingrese un valor. .
+                    
                 </div>
 
                 <div class="form-group"><label>Numeros por banco</label><input class="form-control" onkeyUp="return ValNumero(this);" style="border-color: #ef384c"  size="4"name="NumerosPorBanco" type="text" id="NumerosPorBanco" placeholder="Actualmente 10"></div>

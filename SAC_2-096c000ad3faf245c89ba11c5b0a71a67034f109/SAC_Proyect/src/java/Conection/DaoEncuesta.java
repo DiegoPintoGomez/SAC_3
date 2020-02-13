@@ -28,8 +28,7 @@ public class DaoEncuesta {
     }
 
     public static long insertEncuesta(Encuesta ENCU) throws SQLException {
-        String SQL = "INSERT INTO ENCUESTA (NOMBREENCUESTA, MUESTRA) "
-                + "VALUES(?,?)";
+        String SQL = "CALL insertar_encuesta(?,?)";
         long id = 0;
         try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(SQL,

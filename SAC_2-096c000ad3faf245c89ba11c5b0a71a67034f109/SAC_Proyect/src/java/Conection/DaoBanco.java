@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -31,8 +31,7 @@ public class DaoBanco {
      
     public static long  insertBanco(Bancos_Telefonicos BAC,Encuesta encu) throws SQLException{
         //este inserta el operador ya creado 
-        String SQL ="INSERT INTO banco (base,encuesta,estado) "
-                + "VALUES(?,?,?)";
+        String SQL ="call insertar_bancos(?,?,?)";
          long id = 0;
         try(Connection conn = connect();
                PreparedStatement pstmt = conn.prepareStatement(SQL,

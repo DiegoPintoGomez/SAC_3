@@ -31,8 +31,7 @@ public class DaoContacto {
     public static long  insertaContacto(Contacto conta,Bancos_Telefonicos bt,Encuesta encu, Connection conn) throws SQLException{
         //por el momento estoy dejando que la base se encargue del id
         //luego lo podemos ver estoy en la playa
-        String SQL ="INSERT INTO contacto (numero_Telefono, estado, encuesta,banco,citaTelefonica) "
-                + "VALUES(?,?,?,?,?)";
+        String SQL ="CALL insertar_contacto (?,?,?,?,?)";
          long id = 0;
         try(PreparedStatement pstmt = conn.prepareStatement(SQL,
                 Statement.RETURN_GENERATED_KEYS)){

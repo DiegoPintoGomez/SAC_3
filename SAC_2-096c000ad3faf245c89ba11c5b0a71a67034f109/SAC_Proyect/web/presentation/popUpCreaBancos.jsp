@@ -5,7 +5,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="ModalLabel">Operadoras Actuales</h5>
+                <!--h5 class="modal-title" id="ModalLabel">Operadoras Actuales</h5-->
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -13,7 +13,7 @@
             <div class="modal-body" id="modBody">
 
                 <div class="table-responsive" style=" overflow: auto">
-                    <%List<Operadora> lista = (List<Operadora>) DaoOperadora.getAlloperadora();%>
+                  <!--  <%List<Operadora> lista = (List<Operadora>) DaoOperadora.getAlloperadora();%>
                     <table class="table table-striped table-bordered table-hover" style="border-color: #ef384c">
                         <thead>
                             <tr>
@@ -38,7 +38,7 @@
                             </tr>
                             <% }
                                 }%>
-                    </table>
+                    </table>-->
 
 
 
@@ -56,7 +56,8 @@
                     
                 </div>
 
-                <div class="form-group"><label>Numeros por banco</label><input class="form-control" onkeyUp="return ValNumero(this);" style="border-color: #ef384c"  size="4"name="NumerosPorBanco" type="text" id="NumerosPorBanco" placeholder="Actualmente 10"></div>
+                <div style="margin-left: 10px; margin-right: 10px" class="form-group"><label>Numeros por banco</label>
+                    <input class="form-control" onkeyUp="return ValNumero(this);" style="border-color: #ef384c; width: 50%"  size="4"name="NumerosPorBanco" type="text" id="NumerosPorBanco" placeholder="Actualmente 10"></div>
             </div>
             <div class="modal-footer">
                 <form action="creaBancos" method="post">

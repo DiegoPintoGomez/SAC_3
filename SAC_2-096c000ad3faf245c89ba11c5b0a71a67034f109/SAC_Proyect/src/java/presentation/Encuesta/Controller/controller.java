@@ -200,9 +200,11 @@ protected void eliminaEncuesta(HttpServletRequest request,
         Random r = new Random();
         Encuesta encuesta= (Encuesta)request.getSession(true).getAttribute("encuestaActual");// seteaa encuesta en sesion
          int numeroBancos=0;
+         int aux = 10;
          String n=request.getParameter("NumerosPorBanco");
          if(n!=null){
          numeroBancos= Integer.parseInt(request.getParameter("NumerosPorBanco"));
+         if(numeroBancos < aux)numeroBancos = aux;
          }
          else numeroBancos=10;
 

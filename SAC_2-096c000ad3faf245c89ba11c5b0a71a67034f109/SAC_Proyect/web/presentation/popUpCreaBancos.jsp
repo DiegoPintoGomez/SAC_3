@@ -46,13 +46,17 @@
             </div>
             <div>
                 
-          
-                <div class="alert  alert-danger" style="margin-left: 10px; margin-right: 10px" role="alert">
-                    *El tamano predeterminado y minimo del Banco telefonico es de 10 numeros.
+                 <div class="alert alert-info" style="margin-left: 10px; margin-right: 10px" role="alert">
+                    Para revisar o editar Operadoras Ingrese  <a href="/presentation/Operadoras.jsp">aqui.</a>
+
                     
                 </div>
-                 <div class="alert  alert-danger" style="margin-left: 10px; margin-right: 10px" role="alert">
-                    *Solamente si desea cambiar el tamano prederminado por uno mayor y diferente de 10, ingrese un valor. .
+                <div class="alert  alert-danger" style="margin-left: 10px; margin-right: 10px" role="alert">
+                    El tamano predeterminado y minimo del Banco telefonico es de 10 numeros.
+                    
+                </div>
+                 <div class="alert  alert-warning" style="margin-left: 10px; margin-right: 10px" role="alert">
+                    Solamente si desea cambiar el tamano prederminado por uno mayor y diferente de 10, ingrese un valor. .
                     
                 </div>
 

@@ -121,6 +121,7 @@ public class controller extends HttpServlet {
           this.listadoEncuestas(request, response);
           }
           else{
+              //aqui hay que cambiarlo haora se busca por Id q es un numero no por el nombre
            request.setAttribute("listaEncuestas", Model.Model.instance().FiltroBusquedaEncuesta(request.getParameter("buscador")));
            request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
 

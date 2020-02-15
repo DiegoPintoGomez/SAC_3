@@ -83,8 +83,8 @@ public class Model {
     return DaoOperadora.OperadoraExciste(nom);
     }
     
-    public List<Encuesta> FiltroBusquedaEncuesta(String nom){
-        return DaoEncuesta.getListEncuesta(nom);
+    public List<Encuesta> FiltroBusquedaEncuesta(int id){
+        return DaoEncuesta.getListEncuesta(id);
     }
     
     public Bancos_Telefonicos getBanco(String nom, String Encuesta){

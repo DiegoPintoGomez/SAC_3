@@ -133,7 +133,7 @@ public class DaoEncuesta {
 
         String sql = "select nombreEncuesta, muestra "
                 + "from Encuesta "
-                + "ORDER BY nombreEncuesta ASC";
+                + "ORDER BY IdEncuesta";
 
         try (Connection conn = connect();
                 Statement stmt = conn.createStatement();
@@ -155,18 +155,18 @@ public class DaoEncuesta {
         return true;
     }
     
-     public static List<Encuesta> getListEncuesta(String nom) {
+     public static List<Encuesta> getListEncuesta(int id) {
         List<Encuesta> op;
         op = new ArrayList<Encuesta>();
 
         String sql = "select nombreEncuesta, muestra "
                 + "from Encuesta " 
-                +"where nombreEncuesta like ?"
-                + " order by nombreEncuesta ASC";
+                +"where IdEncuesta like ?"
+                + " order by IdEncuesta ASC";
                 
         try (Connection conn = connect();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
-            pstmt.setString(1,"%"+nom+"%");
+            pstmt.setInt(1,id);
             
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {

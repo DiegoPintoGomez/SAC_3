@@ -36,10 +36,9 @@ public class DaoContacto {
         try(PreparedStatement pstmt = conn.prepareStatement(SQL,
                 Statement.RETURN_GENERATED_KEYS)){
                 pstmt.setString(1, conta.getNumero_Telefono());
-                pstmt.setString(2, conta.getEstado());
-                pstmt.setString(3, encu.getNombreEncuesta());
-                pstmt.setString(4, bt.getBase());
-                pstmt.setString(5, "null");
+                pstmt.setString(2, encu.getNombreEncuesta());
+                pstmt.setInt(3, Integer.parseInt(bt.getBase()));
+                
               int affectedRows = pstmt.executeUpdate();
               
              if (affectedRows > 0) {

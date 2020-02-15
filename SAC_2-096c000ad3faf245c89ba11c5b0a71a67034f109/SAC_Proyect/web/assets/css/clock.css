@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/02/2020, 02:56:17 PM
+    Author     : Chris
+*/
+
+
+.contenedor {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  max-width: 1000px;
+ 
+ background-color: #red;
+margin-left: 0px;
+;
+
+}
+.widget {
+  width: 40%;
+  height: 40%;
+ margin-left:500px;
+}
+.widget p {
+  display: inline-block;
+  line-height: 1em;
+}
+.fecha {
+  font-family: arial;
+  text-align: right;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+ background-color:#red;
+
+  padding: 20px;
+  width: 100%;
+}
+.reloj {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #red;
+
+}
+
+

@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/02/2020, 02:05:08 PM
+    Author     : Chris
+*/
+
+
+
+.NavsEncabezado {
+  background-color: #fafafa;
+  margin: 8rem;
+  padding: 1rem;
+  
+  border:  #ccc;
+  /* IMPORTANTE */
+  text-align: center;
+}
+.NavsCuerpo {
+  background-color: #fafafa;
+  margin-left: 8rem;
+margin-right: 8rem;
+
+  padding: 1rem;
+  border: 2px  ;
+  /* IMPORTANTE */
+  text-align: center;
+}

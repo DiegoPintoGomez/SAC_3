@@ -38,17 +38,25 @@
       <table class="table    " id=""style="">
           <tr>
               <td>
-                  <div class="form-group" style="margin-left: 0"><label class="">Telefono Actual: 
-                                <span class="label info ">88 55 33 22</span>
-                           </label>
-                            
-                        </div>
+                  <div class="form-group" style="text-align: center;"><label class="reloj">Telefono Actual: <label>
+                      <span class="label info "  style="margin-top: 10px" >88 55 33 22</span>      
+                  </div>
+                 
+                  
+
               </td> 
+               <td>  
+                    <div class="form-group" style="text-align: center; margin-left: ">
+                   <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Registrar Llamada</button>
+
+                  </div>
+</td>
               <td>
                  <%@include file="/presentation/Clock.jsp" %>
 
               </td>
           </tr>
+         
           
       </table>
         <table class="table table-bordered table-striped mb-0  stripe hover" id="ContacosdeBancos"style="">
@@ -59,6 +67,8 @@
                             <th scope="col">Intento</th>
                             <th scope="col">Estado</th>
                             <th scope="col">Observacion</th>
+                            <th scope="col">Guardar</th>
+
                             
 
                         </tr>
@@ -76,7 +86,8 @@
                             <td style=" ">2</td>
                             <td style=" ">OCUPADO</td>
                             <td style=" ">No contesta </td>
-                           
+                            <td style=" ">Aqui va botton </td>
+
                         </tr>
                         <%}%>
 

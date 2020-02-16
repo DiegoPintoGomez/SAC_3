@@ -61,4 +61,4 @@
         control = document.getElementById("cargando");
         control.style = "visibility: visible";
     }
-    </script
+    </script>

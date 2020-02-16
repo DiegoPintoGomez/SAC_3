@@ -18,7 +18,7 @@
 
     <body>
         <%@ include file="/presentation/Header.jsp" %>
-        <%@include file="/presentation/popUpCreaOperadoras.jsp" %>
+        <%@include file="/presentation/PopUpRegistraLlamada.jsp" %>
 
 
 
@@ -35,7 +35,7 @@
 <div class="tab-content NavsCuerpo " id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <h2> Nombre Encuesta</h2>
-      <table class="table    " id=""style="">
+      <table class="table table-bordered   " id=""style=" border: red">
           <tr>
               <td>
                   <div class="form-group" style="text-align: center;"><label class="reloj">Telefono Actual: <label>
@@ -45,9 +45,11 @@
                   
 
               </td> 
-               <td>  
+               <td style="height: 30px" >  
                     <div class="form-group" style="text-align: center; margin-left: ">
-                   <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Registrar Llamada</button>
+                  <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Registrar Llamada
+                </button>
 
                   </div>
 </td>

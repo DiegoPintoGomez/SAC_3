@@ -155,18 +155,18 @@ public class DaoEncuesta {
         return true;
     }
     
-     public static List<Encuesta> getListEncuesta(int id) {
+     public static List<Encuesta> getListEncuesta(String nom) {
         List<Encuesta> op;
         op = new ArrayList<Encuesta>();
 
         String sql = "select nombreEncuesta, muestra "
                 + "from Encuesta " 
-                +"where IdEncuesta like ?"
+                +"where Nombre like ?"
                 + " order by IdEncuesta ASC";
                 
         try (Connection conn = connect();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
-            pstmt.setInt(1,id);
+            pstmt.setString(1,'%'+nom+'%');
             
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {

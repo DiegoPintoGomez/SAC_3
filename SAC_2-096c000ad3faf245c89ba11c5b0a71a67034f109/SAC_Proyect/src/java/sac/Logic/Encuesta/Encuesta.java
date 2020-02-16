@@ -17,6 +17,7 @@ public class Encuesta {
     private String nombreEncuesta;
     private  ArrayList<Bancos_Telefonicos> ListaBancosTelefonicos= new ArrayList<>();
     private int muestra;
+    private int id;
 
     public Encuesta(String nombreEncuesta, int muestra) {
         this.nombreEncuesta = nombreEncuesta;
@@ -24,10 +25,21 @@ public class Encuesta {
         
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
+    
     public Encuesta() {
       ListaBancosTelefonicos= new ArrayList<>();
         this.muestra =0;
       this.nombreEncuesta = "";
+      this.id=0;
    
 
     }

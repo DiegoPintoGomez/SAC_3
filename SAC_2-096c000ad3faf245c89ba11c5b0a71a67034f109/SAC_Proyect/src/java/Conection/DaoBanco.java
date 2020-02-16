@@ -36,8 +36,8 @@ public class DaoBanco {
         try(Connection conn = connect();
                PreparedStatement pstmt = conn.prepareStatement(SQL,
                 Statement.RETURN_GENERATED_KEYS)){
-                pstmt.setString(1, BAC.getBase());
-                pstmt.setString(2, encu.getNombreEncuesta());
+                pstmt.setInt(1, Integer.valueOf( BAC.getBase()));
+                pstmt.setInt(2, encu.getId());
                 pstmt.setString(3,String.valueOf( BAC.isEstado()));
                 
               int affectedRows = pstmt.executeUpdate();
@@ -169,7 +169,7 @@ public class DaoBanco {
     }   
     
     
-       public static List<Bancos_Telefonicos> getAllBanco(String Encuesta){
+       public static List<Bancos_Telefonicos> getAllBanco(int Encuesta){
         List<Bancos_Telefonicos> op = new ArrayList<Bancos_Telefonicos>();
         
          String sql = "select base, encuesta, estado from banco where encuesta = ?";
@@ -177,7 +177,7 @@ public class DaoBanco {
          try (Connection conn =connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)){
               
-                pstmt.setString(1, Encuesta);
+                pstmt.setInt(1, Encuesta);
                 ResultSet rs = pstmt.executeQuery();
              while(rs.next()){
              op.add(getBanco(rs));

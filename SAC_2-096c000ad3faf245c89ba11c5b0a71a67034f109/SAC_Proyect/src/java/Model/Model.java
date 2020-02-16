@@ -91,7 +91,7 @@ public class Model {
     return DaoBanco.findByID(nom,Encuesta);
     }
     
-    public ArrayList<Contacto> getContacto_Encuesta(String encu){
+    public ArrayList<Contacto> getContacto_Encuesta(int encu){
     return DaoContacto.getAllContacto_Encuesta(encu);
     }
 }

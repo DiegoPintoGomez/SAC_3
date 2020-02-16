@@ -115,11 +115,11 @@ public class DaoEncuesta {
     }
 
     public static void delete_encuesta(Encuesta encu) {
-        String SQL = "Delete from encuesta where nombreEncuesta = ?";
+        String SQL = "Delete from encuesta where IdEncuesta = ?";
 
         try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-            pstmt.setString(1, encu.getNombreEncuesta());
+            pstmt.setInt(1, encu.getId());
             pstmt.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(DaoContacto.class.getName()).log(Level.SEVERE, null, ex);

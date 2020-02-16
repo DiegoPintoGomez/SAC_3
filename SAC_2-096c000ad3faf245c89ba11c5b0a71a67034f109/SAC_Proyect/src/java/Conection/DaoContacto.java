@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Conection;
+import java.sql.CallableStatement;
 import sac.Logic.Bancos.Contacto;
 import sac.Logic.Encuesta.Encuesta;
 import java.sql.Connection;
@@ -31,13 +32,13 @@ public class DaoContacto {
     public static long  insertaContacto(Contacto conta,Bancos_Telefonicos bt,Encuesta encu, Connection conn) throws SQLException{
         //por el momento estoy dejando que la base se encargue del id
         //luego lo podemos ver estoy en la playa
-        String SQL ="CALL insertar_contacto (?,?,?,?,?)";
+        String SQL ="CALL insertar_contacto (?,?,?)";
          long id = 0;
         try(PreparedStatement pstmt = conn.prepareStatement(SQL,
                 Statement.RETURN_GENERATED_KEYS)){
                 pstmt.setString(1, conta.getNumero_Telefono());
-                pstmt.setString(2, encu.getNombreEncuesta());
-                pstmt.setInt(3, Integer.parseInt(bt.getBase()));
+                pstmt.setInt(2, encu.getId());
+                pstmt.setInt(3, Integer.parseInt(bt.getNombreBanco()));
                 
               int affectedRows = pstmt.executeUpdate();
               
@@ -165,7 +166,7 @@ public class DaoContacto {
         
         try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-                pstmt.setString(1, encu.getNombreEncuesta());
+                pstmt.setInt(1, encu.getId());
                 pstmt.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(DaoContacto.class.getName()).log(Level.SEVERE, null, ex);
@@ -173,25 +174,28 @@ public class DaoContacto {
         
     }
     
-    public static ArrayList<Contacto> getAllContacto_Encuesta(String encu){
-        ArrayList<Contacto> op = new ArrayList<Contacto>();
+    public static ArrayList<Contacto> getAllContacto_Encuesta(int encu){
+        ArrayList<Contacto> contact = new ArrayList<Contacto>();
         
-         String sql = "select numero_Telefono,estado,banco,citaTelefonica from contacto where encuesta = ?";
-       
          try (Connection conn =connect();
-                 PreparedStatement pstmt = conn.prepareStatement(sql)){
-                pstmt.setString(1, encu);
-                ResultSet rs = pstmt.executeQuery();
+                 CallableStatement pstmt = conn.prepareCall("{selectallcontactos ( ? )}");
+                 ){
+                pstmt.setInt(1, encu);
+                
+            boolean hadResults = pstmt.execute();
+            
+            while(hadResults){                
+                ResultSet rs = pstmt.getResultSet();
              while(rs.next()){
-             op.add(getContacto(rs));
+                 
              }
-         } catch (SQLException ex) {
-            Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return op;
+         } 
+        return contact;
      
-    } 
-  
+    }   catch (SQLException ex) { 
+            Logger.getLogger(DaoContacto.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
     public static List<Contacto> getAllContacto_Base(String banco){
         List<Contacto> op = new Vector<Contacto>();
          

@@ -38,7 +38,11 @@
       <table class="table    " id=""style="">
           <tr>
               <td>
-                  <h3>TELEFONO  ACTUAL: 89898988</h2>
+                  <div class="form-group" style="margin-left: 0"><label class="">Telefono Actual: 
+                                <span class="label info ">88 55 33 22</span>
+                           </label>
+                            
+                        </div>
               </td> 
               <td>
                  <%@include file="/presentation/Clock.jsp" %>

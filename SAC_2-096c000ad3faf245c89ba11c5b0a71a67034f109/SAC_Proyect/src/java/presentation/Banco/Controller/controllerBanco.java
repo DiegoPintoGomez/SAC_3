@@ -56,7 +56,7 @@ public class controllerBanco extends HttpServlet {
 
            
             
-            List<Bancos_Telefonicos> lista= DaoBanco.getAllBanco(encuesta.getNombreEncuesta());
+            List<Bancos_Telefonicos> lista= DaoBanco.getAllBanco(encuesta.getId());
           request.setAttribute("listaBancos", lista);
 
             request.setAttribute("BancoActual", lista.get(0));

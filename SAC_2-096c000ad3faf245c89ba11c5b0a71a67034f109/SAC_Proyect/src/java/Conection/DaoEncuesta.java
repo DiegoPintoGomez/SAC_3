@@ -74,8 +74,8 @@ public class DaoEncuesta {
 
             op.setMuestra(Integer.valueOf(rs.getString("muestra")));
             op.setNombreEncuesta(rs.getString("nombreEncuesta"));
-            op.setListaBancosTelefonicos((ArrayList<Bancos_Telefonicos>) DaoBanco.getAllBanco(op.getNombreEncuesta()));
-
+            op.setListaBancosTelefonicos((ArrayList<Bancos_Telefonicos>) DaoBanco.getAllBanco(Integer.valueOf(rs.getString("IdEncuesta"))));
+            op.setId(Integer.valueOf(rs.getString("IdEncuesta")));
             return op;
         } catch (SQLException ex) {
             return new Encuesta();
@@ -94,7 +94,7 @@ public class DaoEncuesta {
 
     public static Encuesta findByName(String id) {
         //busca las operadoras por su id
-        String SQL = "SELECT nombreEncuesta,muestra "
+        String SQL = "SELECT nombreEncuesta, muestra, IdEncuesta "
                 + "FROM encuesta "
                 + "WHERE nombreEncuesta = ?";
 
@@ -131,7 +131,7 @@ public class DaoEncuesta {
         List<Encuesta> op;
         op = new ArrayList<Encuesta>();
 
-        String sql = "select nombreEncuesta, muestra "
+        String sql = "select nombreEncuesta, muestra,IdEncuesta "
                 + "from Encuesta "
                 + "ORDER BY IdEncuesta";
 
@@ -159,7 +159,7 @@ public class DaoEncuesta {
         List<Encuesta> op;
         op = new ArrayList<Encuesta>();
 
-        String sql = "select nombreEncuesta, muestra "
+        String sql = "select nombreEncuesta, muestra ,IdEncuesta "
                 + "from Encuesta " 
                 +"where Nombre like ?"
                 + " order by IdEncuesta ASC";

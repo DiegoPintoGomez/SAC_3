@@ -53,7 +53,7 @@ public class Model {
     public Encuesta getEncuesta(String Nom) {
         Encuesta encu = null;
         encu = DaoEncuesta.findByName(Nom);
-        encu.setListaBancosTelefonicos((ArrayList<Bancos_Telefonicos>) DaoBanco.getAllBanco(Nom));
+        encu.setListaBancosTelefonicos((ArrayList<Bancos_Telefonicos>) DaoBanco.getAllBanco(encu.getId()));
         return encu;
     }
 

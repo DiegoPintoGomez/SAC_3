@@ -35,11 +35,7 @@ public class Contacto {
         this.base = 0;
         this.citaTelefonica = new GregorianCalendar();
         this.ListaGris = false;
-    }
-    
-    
-    
-    
+    }    
     
     public int getEncuesta() {    
         return encuesta;

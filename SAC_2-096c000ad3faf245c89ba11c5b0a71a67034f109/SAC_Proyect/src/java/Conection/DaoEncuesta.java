@@ -131,7 +131,7 @@ public class DaoEncuesta {
         List<Encuesta> op;
         op = new ArrayList<Encuesta>();
 
-        String sql = "select nombreEncuesta, muestra,IdEncuesta "
+        String sql = "select nombreEncuesta, muestra, IdEncuesta "
                 + "from Encuesta "
                 + "ORDER BY IdEncuesta";
 

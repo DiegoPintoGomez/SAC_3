@@ -75,7 +75,7 @@ public class DaoContacto {
     public static Contacto getContacto(ResultSet rs) throws SQLException{
    
             Contacto con = new Contacto();
-            
+            con.setEncuesta(Integer.valueOf(rs.getString("encuesta")));
             con.setNumero_Telefono(rs.getString("numero_Telefono"));
             con.setBase(Integer.valueOf( rs.getString("banco")));
             con.setEstado(rs.getString("estado"));
@@ -174,32 +174,35 @@ public class DaoContacto {
         
     }
     
-    public static ArrayList<Contacto> getAllContacto_Encuesta(int encu){
-        ArrayList<Contacto> contact = new ArrayList<Contacto>();
+    public static List<Contacto> getAllContacto_Encuesta(int encu){
         
-         try (Connection conn =connect();
-                 CallableStatement pstmt = conn.prepareCall("{selectallcontactos ( ? )}");
-                 ){
-                pstmt.setInt(1, encu);
-                
-            boolean hadResults = pstmt.execute();
-            
-            while(hadResults){                
-                ResultSet rs = pstmt.getResultSet();
+        String SQL= "call selectallcontactos(?)";
+        
+        List<Contacto> op;
+        op = new ArrayList<Contacto>();
+        
+         try (Connection conn = connect();
+                PreparedStatement stmt = conn.prepareStatement(SQL)) {
+             stmt.setInt(1, encu);
+             
+             ResultSet rs = stmt.executeQuery(SQL);
+             System.out.print(rs.toString());
              while(rs.next()){
-                 
+                 op.add(getContacto(rs));
              }
-         } 
-        return contact;
-     
-    }   catch (SQLException ex) { 
-            Logger.getLogger(DaoContacto.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return op;
+        
+        
     }
     public static List<Contacto> getAllContacto_Base(String banco){
         List<Contacto> op = new Vector<Contacto>();
          
-        String sql = "select numero_Telefono,estado,banco,citaTelefonica from contacto where banco = ?";
+        String sql = "select numero_Telefono,estado,banco,citaTelefonica,encuesta from contacto where banco = ?";
         
         try (Connection conn =connect();
                  PreparedStatement pstmt = conn.prepareStatement(sql)){

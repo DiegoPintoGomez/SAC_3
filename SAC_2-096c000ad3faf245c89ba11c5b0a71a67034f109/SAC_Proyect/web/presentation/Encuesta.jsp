@@ -122,10 +122,15 @@
                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Eliminar Encuesta
                 </button>
+                <%if (habilitar(encuesta) == "true"){%>
                 <form id="Button2" method="GET" action="/presentation/Bancos.jsp">
-                    <button type="submit" id="Button2" class="btn btn-primary">Ver Bancos Telefonicos</button>
+                    <button disabled="true" type="submit" id="Button2" class="btn btn-primary">Ver Bancos Telefonicos</button>
                 </form>
-
+                <%} else {%>
+                <form id="Button2" method="GET" action="/presentation/Bancos.jsp">
+                    <button  type="submit" id="Button2" class="btn btn-primary">Ver Bancos Telefonicos</button>
+                </form>
+                <%}%>
 
             </div>
             <div class="modal fade" id="exampleModal"   tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

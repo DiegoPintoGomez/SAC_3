@@ -38,7 +38,7 @@
                 <table class="table table-bordered table-striped mb-0 " id="example"style="">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th id="colcorta" scope="col">#</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Muestra</th>
                             <th scope="col">Bancos</th>

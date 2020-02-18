@@ -36,8 +36,8 @@ and open the template in the editor.
 }
 
 #Button1 {
-  margin-left: auto;
-  /*margin-right: 15px;*/
+  margin-left: 2%;
+  margin-right: 2%;
    border-color: #ef384c;
   background-color: #cccccc;
   cursor: pointer;
@@ -46,18 +46,22 @@ and open the template in the editor.
 }
 
 #Button2 {
-  margin-left: 15px ;
-  /*margin-right: auto;*/
+  margin-left: 2%;
+  margin-right: 2%;
    border-color: #ef384c;
   background-color: #cccccc;
   cursor: pointer;
     color:black;
-
+    float: left;
 }
 
 #ContanerButtonsEncuesta {
   margin-left: auto;
   margin-right: auto;
   margin-top:40px;
-  width: 500px;
+  width: 40%;
+  overflow: hidden;
+}
+#colcorta{
+    width: 4%;
 }

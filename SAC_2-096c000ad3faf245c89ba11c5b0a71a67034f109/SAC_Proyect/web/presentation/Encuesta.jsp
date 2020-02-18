@@ -40,8 +40,8 @@
                                 <p id="cardheader-subtext"></p>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <p class="card-text sub-text-color"><%=encuesta.getMuestra()%></p>
+                        <div align-content: center class="card-body">
+                            <p style="color: black;" class="card-text sub-text-color"><%=encuesta.getMuestra()%></p>
                             <p class="card-text cardbody-sub-text" id="muestra"></p>
                         </div>
                     </div>
@@ -57,9 +57,8 @@
                         </div>
 
                         <div class="card-body">
-                            <p class="card-text sub-text-color"><%=encuesta.getListaBancosTelefonicos().size()%></p>
-
-
+                            <p style="color: black;" class="card-text sub-text-color"><%=encuesta.getListaBancosTelefonicos().size()%></p>
+                            <p class="card-text cardbody-sub-text" id="totalBancos"></p>
 
                         </div>
                     </div>
@@ -73,7 +72,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text sub-text-color"><%=BancosActivos(encuesta)%></p>
+                            <p style="color: black;" class="card-text sub-text-color"><%=BancosActivos(encuesta)%></p>
                             <p class="card-text cardbody-sub-text" id="bancosActivos"></p>
                         </div>
                     </div>
@@ -87,7 +86,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text sub-text-color"><%=BancosInactivos(encuesta)%></p>
+                            <p style="color: black;" class="card-text sub-text-color"><%=BancosInactivos(encuesta)%></p>
                             <p class="card-text cardbody-sub-text" id="bancosInactivos"></p>
                         </div>
                     </div>
@@ -102,7 +101,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text sub-text-color">???</p>
+                            <p style="color: black;" class="card-text sub-text-color">???</p>
                             <p class="card-text cardbody-sub-text" id="turnos"></p>
                         </div>
                     </div>
@@ -119,34 +118,36 @@
                 <%} else { %>
                 <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
                 <%}%>
-                <div class="modal fade" id="exampleModal"   tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                   Desea eliminar la encuesta?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
-                                <form method="GET" action="eliEncuesPerfil">
-                                    <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Eliminar Encuesta
                 </button>
-                <form method="GET" action="/presentation/Bancos.jsp">
-                                    <button type="submit" id="Button2" class="btn btn-primary">Ver Bancos Telefonicos</button>
-                                </form>
+                <form id="Button2" method="GET" action="/presentation/Bancos.jsp">
+                    <button type="submit" id="Button2" class="btn btn-primary">Ver Bancos Telefonicos</button>
+                </form>
 
+
+            </div>
+            <div class="modal fade" id="exampleModal"   tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Desea eliminar la encuesta?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                            <form method="GET" action="eliEncuesPerfil">
+                                <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -30,7 +30,7 @@
             <div style="text-align: left; margin-left: 125px;  margin-top: 20px" >
 
 
-                <button  title="Agregar Encuesta" data-toggle="modal"  class="btn btn-light text-left" type="button" style=" background: #5fbaa7" data-target="#Modall" class="btn btn-default" id="ButtonCrearEncuesta ">Crear Nueva Encuesta</button>
+                <button  title="Agregar Encuesta" data-toggle="modal"  class="btn btn-light text-left" type="button" data-target="#Modall" class="btn btn-default" id="CrearEncuesta">Crear Nueva Encuesta</button>
 
             </div>
             <div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 40px; margin-right: 40px; margin-bottom: 100px; ">      
@@ -62,13 +62,34 @@
                             <td style=" "><%= e.getListaBancosTelefonicos().size()%> </td>
                             <td style=" "><%= BancosActivos(e)%> </td>
                             <td >
-                                 <form method="GET" action="EliminaBancos">
-                                    <input type="text" name="DeleteEncuesta"style=" display:none;" value="<%= e.getNombreEncuesta()%>">
 
-                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
-                                </form>                                       
+                                
 
-                                                
+                                <button  data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
+                                <div class="modal fade" id="Modalll"   tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Desea eliminar la encuesta?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                                                <form method="GET" action="EliminaBancos">
+                                                    <input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                                    <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+
+
 
                             </td>
                             <td width="200">
@@ -89,7 +110,6 @@
 
         </div>
 
-
         <%@ include file="/presentation/Footer.jsp" %>
 
     </body>
@@ -108,12 +128,9 @@
 
     }
 
-private void DeleteEncuesta(){
+    private void DeleteEncuesta() {
 
-
-
-
-}
+    }
 %>
 
 <script>

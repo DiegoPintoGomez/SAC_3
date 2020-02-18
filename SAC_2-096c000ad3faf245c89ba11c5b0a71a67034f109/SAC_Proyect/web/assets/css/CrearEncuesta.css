@@ -36,11 +36,7 @@ and open the template in the editor.
  margin-right: auto;*/
 }
 
-#ButtonCrearEncuesta {
- 
-  border-color: #ef384c;
-  background-color: #cccccc;
-}
+
 .dataTables_filter {
    margin-right: 100px;
    

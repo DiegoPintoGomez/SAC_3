@@ -62,11 +62,7 @@
                             <td style=" "><%= e.getListaBancosTelefonicos().size()%> </td>
                             <td style=" "><%= BancosActivos(e)%> </td>
                             <td >
-
-                                
-
-                                <button  data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
-                                <div class="modal fade" id="Modalll"   tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                                <!--div class="modal fade" id="Modalll"   tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -87,10 +83,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                   
-
-
-
+                                </div> 
+                                <button  data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button-->
+                                <form method="GET" action="EliminaBancos">
+                                    <input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
+                                </form>
                             </td>
                             <td width="200">
 
@@ -158,11 +156,8 @@
 
             }
 
-
-
         });
     });
-
 
 
 

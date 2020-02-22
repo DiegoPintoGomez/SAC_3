@@ -49,10 +49,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% int i = 0;%>
+                        <%
+                            int i = 0;
 
-                        <% for (Encuesta e : list) {%>
-                        <% i++;%>
+                            for (Encuesta e : list) {
+                                i++;
+                        %>
 
 
                         <tr style="height: 10px">
@@ -62,33 +64,10 @@
                             <td style=" "><%= e.getListaBancosTelefonicos().size()%> </td>
                             <td style=" "><%= BancosActivos(e)%> </td>
                             <td >
-                                <!--div class="modal fade" id="Modalll"   tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Desea eliminar la encuesta?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
-                                                <form method="GET" action="EliminaBancos">
-                                                    <input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
-                                                    <button type="submit" id="Button2" class="btn btn-primary">Sí</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <button  data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button-->
-                                <form method="GET" action="EliminaBancos">
-                                    <input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
-                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
-                                </form>
+
+                                <button  type="button" onclick="enviar(<%=i%>);" data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
+                                <input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+
                             </td>
                             <td width="200">
 
@@ -109,6 +88,29 @@
         </div>
 
         <%@ include file="/presentation/Footer.jsp" %>
+
+        <div class="modal fade" id="Modalll"   tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Desea eliminar la encuesta?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                        <form method="GET" action="EliminaBancos">
+                            <%--input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>"--%>
+                            <button type="button" onclick="eliminar();" id="Button2" class="btn btn-primary">Sí</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
 
     </body>
 
@@ -158,7 +160,22 @@
 
         });
     });
-
+function eliminar() {
+        console.log("Confirmado el borrado...");
+        var formulario = event.target.parentElement.parentElement;
+        var llave = localStorage.getItem("encuesta_borrar_llave");
+        console.log(llave);
+        // formulario.submit();
+    }
+function enviar(nombre) {
+        console.log("Enviando solicitud al servlet...");
+        //documen.getElementby ID();
+        var formulario = event.target.parentElement.parentElement;
+        var llave = formulario.elements[1].value;
+        console.log(llave);
+        localStorage.setItem("encuesta_borrar_llave", llave);
+        formulario.submit();
+    }
 
 
 </script>

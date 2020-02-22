@@ -37,15 +37,16 @@
       <h2> Nombre Encuesta</h2>
       <table class="table table-bordered   " id=""style=" border: red">
           <tr>
-              <td>
-                  <div class="form-group" style="text-align: center;"><label class="reloj">Telefono Actual: <label>
-                      <span class="label info "  style="margin-top: 10px" >88 55 33 22</span>      
+              <td style="width: 33.3%" >
+                 <div class="form-group" style="text-align: center;"><label class="reloj">Telefono Actual: <label>
+                      <span class="label info "  style="margin-top: 10%" >88 55 33 22</span>      
                   </div>
                  
-                  
+
+
 
               </td> 
-               <td style="height: 30px" >  
+               <td style="width: 33.3%" >  
                     <div class="form-group" style="text-align: center; margin-left: ">
                   <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Registrar Llamada
@@ -53,14 +54,30 @@
 
                   </div>
 </td>
-              <td>
-                 <%@include file="/presentation/Clock.jsp" %>
+              <td style="width: 33.3%">
+                                 <%@include file="/presentation/Clock.jsp" %>
 
               </td>
           </tr>
          
           
       </table>
+         <table class="table table-bordered   " id=""style=" border: red">
+             <tr style="width: 50%">
+                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Registrar Llamada
+                </button>
+             </tr>
+             
+             <tr style="width: 50%>
+                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Registrar Llamada
+                </button> 
+             </tr>
+                                     
+                                     
+                                     
+         </table>
         <table class="table table-bordered table-striped mb-0  stripe hover" id="ContacosdeBancos"style="">
                     <thead>
                         <tr>

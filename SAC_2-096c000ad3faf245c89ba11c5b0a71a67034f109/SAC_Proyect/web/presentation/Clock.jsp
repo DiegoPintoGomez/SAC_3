@@ -1,8 +1,8 @@
 
 <link rel="stylesheet" href="/assets/css/clock.css">
-<div class=""">
-<div class="contenedor " style="">
-  <div class="widget">
+<div class="">
+
+  <div class="widget" style="text-align: center">
     <div class="fecha">
       <p id="diaSemana" class="diaSemana"></p>
       <p id="dia" class="dia"></p>
@@ -10,16 +10,18 @@
       <p id="mes" class="mes"></p>
       <p>del</p>
       <p id="anio" class="anio"></p>
+      <br>
+      <div style="text-align: center">
        <p id="horas" class="horas"></p>
       <p>:</p>
       <p id="minutos" class="minutos"></p>
       <p id="ampm" class="ampm"></p>
 
-    
+      </div>
     </div>
   
   </div>
-</div>
+
 </div>
     
 <script language="javascript" type="text/javascript">

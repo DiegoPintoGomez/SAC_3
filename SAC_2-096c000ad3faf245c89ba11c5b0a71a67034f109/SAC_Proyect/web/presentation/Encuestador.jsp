@@ -72,7 +72,7 @@
              
              <td style="width: 50%">
              <button type="button" id="" class="btn " data-toggle="modal" style="margin-left: 80%" data-target="#exampleModal">
-              <img  src="/assets/img/next.png"  style=" width: 100%; height: 100%;">
+              <img  src="/assets/img/next.png"  style="width: 100%; height: 100%;">
                 </button> 
              </td>
                                      
@@ -83,7 +83,7 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Numero Celular</th>
+                            <th scope="col">Numero Celular  </th>
                             <th scope="col">Intento</th>
                             <th scope="col">Estado</th>
                             <th scope="col">Observacion</th>

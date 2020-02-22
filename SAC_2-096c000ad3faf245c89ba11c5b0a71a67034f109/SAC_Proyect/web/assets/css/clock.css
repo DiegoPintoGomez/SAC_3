@@ -13,7 +13,6 @@ and open the template in the editor.
   width: 90%;
   height: 100%;
   position: relative;
-  max-width: 1000px;
  
  background-color: #red;
 margin-left: 0px;
@@ -21,30 +20,31 @@ margin-left: 0px;
 
 }
 .widget {
-  width: 40%;
-  height: 40%;
+/*  width: 40%;
+  height: 40%;*/
+ margin-right: 10%;
+ margin-left: 10%;
  
 }
 .widget p {
   display: inline-block;
   line-height: 1em;
+  
 }
 .fecha {
   font-family: arial;
-  text-align: right;
+  text-align:center;
   font-size: 1.5em;
   margin-bottom: 5px;
- background-color:#red;
+  background-color:#red;
 
-  padding: 20px;
-  width: 100%;
+
 }
 .reloj {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  width: 100%;
-  padding: 20px;
-  font-size: 1.5em;
-  text-align: center;
+ 
+  font-size: 1em;
+  
   background-color: #red;
 
 }

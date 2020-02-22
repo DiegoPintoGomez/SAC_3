@@ -83,7 +83,7 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Numero Celular  </th>
+                            <th scope="col">Numero Celular</th>
                             <th scope="col">Intento</th>
                             <th scope="col">Estado</th>
                             <th scope="col">Observacion</th>

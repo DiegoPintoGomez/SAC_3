@@ -143,7 +143,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            Desea eliminar la encuesta?
+                            Desea eliminar la encuesta ?
                         </div>
                         <div class="modal-footer">
                             <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>

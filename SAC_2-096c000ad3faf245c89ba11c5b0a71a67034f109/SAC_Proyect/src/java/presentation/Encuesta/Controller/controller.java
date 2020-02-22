@@ -164,7 +164,8 @@ protected void eliminaEncuesta(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException, SQLException {
             System.out.print("Elimina Encuesta");
-            Encuesta encuesta= Model.Model.instance().getEncuesta(request.getParameter("DeleteEncuesta"));
+            String st = request.getParameter("valorEncuestaBorrar");
+            Encuesta encuesta= Model.Model.instance().getEncuesta(request.getParameter("valorEncuestaBorrar"));
             Model.Model.instance().deleteAllEncuesta(encuesta);
            this.listadoEncuestas(request, response);
  }

@@ -65,9 +65,9 @@
                             <td style=" "><%= BancosActivos(e)%> </td>
                             <td >
 
-                                <button  type="button" onclick="enviar(<%=i%>);" data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
-                                <input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
-
+                                <button  type="button" onclick="enviar(<%=i%>)" data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
+                                <input type="text" id="enc<%=i%>" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                
                             </td>
                             <td width="200">
 
@@ -104,7 +104,7 @@
                     <div class="modal-footer">
                         <button type="button" id="Button1" class="btn btn-secondary" data-dismiss="modal">NO</button>
                         <form method="GET" action="EliminaBancos">
-                            <%--input type="text" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>"--%>
+                            <input type="text" id="valorEncuestaBorrar" name="valorEncuestaBorrar" style=" display:none;">
                             <button type="button" onclick="eliminar();" id="Button2" class="btn btn-primary">Sí</button>
                         </form>
                     </div>
@@ -162,19 +162,20 @@
     });
 function eliminar() {
         console.log("Confirmado el borrado...");
-        var formulario = event.target.parentElement.parentElement;
+        var formulario = event.target.parentElement;
         var llave = localStorage.getItem("encuesta_borrar_llave");
         console.log(llave);
-        // formulario.submit();
+        insertar = document.getElementById("valorEncuestaBorrar");
+        insertar.value = llave;
+        formulario.submit();
     }
 function enviar(nombre) {
         console.log("Enviando solicitud al servlet...");
-        //documen.getElementby ID();
-        var formulario = event.target.parentElement.parentElement;
-        var llave = formulario.elements[1].value;
+        formulario = document.getElementById("enc"+nombre);
+        llave = formulario.value;
         console.log(llave);
         localStorage.setItem("encuesta_borrar_llave", llave);
-        formulario.submit();
+        //formulario.submit();
     }
 
 

@@ -9,20 +9,20 @@ and open the template in the editor.
 */
 
 #ContanerTituloEncuesta {
-  margin-top: 40px;
-  /*border: outset;*/
-  /*border-color: #293352;*/
-  background-color: initial;
-  margin-left: auto;
-  margin-right: auto;
+    margin-top: 40px;
+    /*border: outset;*/
+    /*border-color: #293352;*/
+    background-color: initial;
+    margin-left: auto;
+    margin-right: auto;
 }
 #TituloEncuesta {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  text-transform: uppercase;
-  /*border-style: inset;*/
-  /*border-color: #293352;*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-transform: uppercase;
+    /*border-style: inset;*/
+    /*border-color: #293352;*/
 }
 
 #DivEncuesta{
@@ -32,36 +32,41 @@ and open the template in the editor.
 }
 
 #Button1 {
-  margin-left: 1%;
-  margin-right: 1%;
-   border-color: #ef384c;
-  background-color: #cccccc;
-  cursor: pointer;
-  color:black;
- 
+    margin-left: 25%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-color: #ef384c;
+    background-color: #cccccc;
+    cursor: pointer;
+    color:black;
+    float: left;
+
 }
 
 #Button2 {
-margin-left: 1%;
-margin-right: 1%;
-border-color: #ef384c;
-background-color: #cccccc;
-cursor: pointer;
-color:black;
- float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-color: #ef384c;
+    background-color: #cccccc;
+    cursor: pointer;
+    color:black;
+    float: left;
 }
 
 #ContanerButtonsEncuesta {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top:40px;
-  width: 40%;
-  align-content:  stretch;
-  overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:40px;
+    width: available;
+    overflow: hidden;
+    align-content: center;
 }
 #colcorta{
     width: 4%;
 }
 #CrearEncuesta {
- background-color: #5fbaa7;
+    background-color: #5fbaa7;
 }

@@ -87,7 +87,7 @@
                             <th scope="col">Intento</th>
                             <th scope="col">Estado</th>
                             <th scope="col">Observacion</th>
-                            <th scope="col">Guardar</th>
+                            <th scope="col">Seleccionar</th>
 
                             
 
@@ -105,8 +105,21 @@
                             <td width="200">88 88 88 88 </td>
                             <td style=" ">2</td>
                             <td style=" ">OCUPADO</td>
-                            <td style=" ">No contesta </td>
-                            <td style=" ">Aqui va botton </td>
+                            <td style=" ">
+                            <form method="GET" action="">
+                                    <input type="text" name="Observacion"style=" display:none;" value="">
+
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/Notes.png" style=" width: 30%; height: 25%;"></button>
+                                </form>
+                            </td>
+                            <td style=" ">
+                                  <form method="GET" action="">
+                                    <input type="text" name="Observacion"style=" display:none;" value="">
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/selectContact.png" style=" width: 30%; height: 25%;"></button>
+                                </form>
+                            </td>
+                            
+                            </td>
 
                         </tr>
                         <%}%>

@@ -60,7 +60,7 @@
              </tr>                      
                                      
          </table>
-        <table class="table table-bordered table-striped mb-0  stripe hover" id="ContacosdeBancos"style="">
+        <table class="table table-bordered table-striped mb-0  stripe hover" id="ContactosdeBancos"style="">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -119,10 +119,11 @@
 </html>
 <script>
   $(document).ready(function () {
-        $('#ContacosdeBancos').DataTable({
+        $('#ContactosdeBancos').DataTable({
             pageLength: 10,
             responsive: true,
-            lengthMenu: [[10, 20, 100, -1], ["10", "20", "100", "Todos"]],
+            info: false,
+            paginate: false, 
             language: {
 
                 search: "Buscar: ",

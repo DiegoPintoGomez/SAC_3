@@ -19,7 +19,7 @@
 
     <body>
         <%@ include file="/presentation/Header.jsp" %>
-        <a href="ListaEncuestas.jsp"></a>
+       
         <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
         <%List<Encuesta> list = (List<Encuesta>) request.getAttribute("listaEncuestas");%>      
 

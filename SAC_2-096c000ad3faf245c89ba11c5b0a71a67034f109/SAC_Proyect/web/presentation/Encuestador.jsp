@@ -34,12 +34,20 @@
 </nav>
 <div class="tab-content NavsCuerpo " id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              <%@include file="/presentation/BancoActualEncuestador.jsp" %>
+<%@include file="/presentation/BancoActualEncuestador.jsp" %>
 
      
 </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">22</div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">65</div>
+              
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+  <%@ include file="/presentation/BancosUsados.jsp" %>
+</div>
+                             
+<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+ <%@ include file="/presentation/CitasPendientes.jsp" %>
+                               
+</div>
+
 </div>
 
 

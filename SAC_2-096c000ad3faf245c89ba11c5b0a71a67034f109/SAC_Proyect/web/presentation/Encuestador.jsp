@@ -12,7 +12,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Operadoras</title>
+        <title>Encuestador</title>
         <%@include file="/presentation/Head.jsp"%>
     </head>
 
@@ -38,7 +38,7 @@
       <table class="table table-bordered   " id=""style=" border: red">
           <tr>
               <td style="width: 33.3%" >
-                 <div class="form-group" style="text-align: center;"><label class="reloj">Telefono Actual: <label>
+                 <div class="form-group" style="text-align: center; margin-top: 15%"><label class="reloj">Telefono Actual: <label>
                       <span class="label info "  style="margin-top: 10%" >88 55 33 22</span>      
                   </div>
                  
@@ -47,8 +47,8 @@
 
               </td> 
                <td style="width: 33.3%" >  
-                    <div class="form-group" style="text-align: center; margin-left: ">
-                  <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <div class="form-group" style="text-align: center; margin-top: 14%" ">
+                  <button type="button" id="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Registrar Llamada
                 </button>
 
@@ -62,20 +62,21 @@
          
           
       </table>
-         <table class="table table-bordered   " id=""style=" border: red">
-             <tr style="width: 50%">
-                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Registrar Llamada
+         <table class="table table-bordered   " id=""style=" border: red; height: 10%">
+             <tr>
+             <td style="width: 50%">
+                 <button type="button" id="" class="btn " style="margin-right: 80%" data-toggle="modal" data-target="#exampleModal">
+                    <img  src="/assets/img/back.png" style=" width: 100%; height: 100%;">  
                 </button>
-             </tr>
+             </td>
              
-             <tr style="width: 50%>
-                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Registrar Llamada
+             <td style="width: 50%">
+             <button type="button" id="" class="btn " data-toggle="modal" style="margin-left: 80%" data-target="#exampleModal">
+              <img  src="/assets/img/next.png"  style=" width: 100%; height: 100%;">
                 </button> 
-             </tr>
+             </td>
                                      
-                                     
+             </tr>                      
                                      
          </table>
         <table class="table table-bordered table-striped mb-0  stripe hover" id="ContacosdeBancos"style="">
@@ -132,7 +133,7 @@
         $('#ContacosdeBancos').DataTable({
         
             responsive: true,
-            "paging":   false,
+            
         
             "info":     false,
           

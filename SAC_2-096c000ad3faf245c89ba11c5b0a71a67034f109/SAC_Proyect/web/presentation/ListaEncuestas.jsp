@@ -164,6 +164,7 @@ function eliminar() {
         console.log("Confirmado el borrado...");
         var formulario = event.target.parentElement;
         var llave = localStorage.getItem("encuesta_borrar_llave");
+        localStorage.setItem("encuesta_borrar_llave", null);
         console.log(llave);
         insertar = document.getElementById("valorEncuestaBorrar");
         insertar.value = llave;

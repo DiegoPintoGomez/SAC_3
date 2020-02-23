@@ -18,7 +18,7 @@
            
 
     <body>
-        <table class="table table-bordered table-striped mb-0 " id="example" style="">
+        <table class="table table-bordered table-striped mb-0 " id="example"style="">
                    <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -50,19 +50,19 @@
                             <td style=" ">OCUPADO</td>
                             <td style=" ">
                             <form method="GET" action="">
-                                    <input type="text" name="Observacion" style=" display:none;" value="">
+                                    <input type="text" name="Observacion"style=" display:none;" value="">
 
                                     <button type="submit" class="btn btn-default"><img  src="/assets/img/Notes.png" style=" width: 30%; height: 25%;"></button>
                                 </form>
                             </td>
                             <td style=" ">
                                   <form method="GET" action="">
-                                    <input type="text" name="SeleccionarContac" style=" display:none;" value="">
+                                    <input type="text" name="SeleccionarContac"style=" display:none;" value="">
                                     <button type="submit" class="btn btn-default"><img  src="/assets/img/selectContact.png" style=" width: 30%; height: 25%;"></button>
                                 </form>
                             </td>
                             
-                          
+                            </td>
 
                         </tr>
                         <%}%>
@@ -71,7 +71,6 @@
                 </table>
     </body>
 </html>
-
 <script>
     $(document).ready(function () {
         $('#example').DataTable({

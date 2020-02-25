@@ -176,17 +176,18 @@ public class DaoContacto {
     
     public static List<Contacto> getAllContacto_Encuesta(int encu){
         
-        String SQL= "call selectallcontactos(?)";
-        
+        String SQL= "call selectallcontactos(%d)";
+        SQL=String.format(SQL, encu);
+        System.out.println(SQL);
         List<Contacto> op;
         op = new ArrayList<Contacto>();
         
          try (Connection conn = connect();
                 PreparedStatement stmt = conn.prepareStatement(SQL)) {
-             stmt.setInt(1, encu);
+ 
              
              ResultSet rs = stmt.executeQuery(SQL);
-             System.out.print(rs.toString());
+
              while(rs.next()){
                  op.add(getContacto(rs));
              }

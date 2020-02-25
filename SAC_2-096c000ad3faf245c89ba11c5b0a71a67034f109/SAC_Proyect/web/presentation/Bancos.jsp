@@ -21,7 +21,7 @@
 
         <div class="container container-fluid" id="containerCrearEncuesta" style="height: 500px ">
             <div class="" style="height: available; position: relative; margin-top: 0px;  margin-left: 30px; margin-right: 30px; margin-bottom: 100px; "> 
-            <h1 id="TituloEncuesta"> Bancos de <%= encuesta.getId()%></h1>
+            <h1 id="TituloEncuesta"> Bancos de <%= encuesta.getNombreEncuesta() %></h1>
 
             
                 <table id="example" class="table table-bordered table-striped mb-0 " style=" ">

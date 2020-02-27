@@ -36,7 +36,7 @@
             </div>
             <div class="" style="height: available; position: relative; margin-top: 20px;  margin-left: 40px; margin-right: 40px; margin-bottom: 100px; ">      
 
-                <table class="table table-bordered table-striped mb-0 " id="example"style="">
+                <table class="table table-bordered table-striped mb-0 " id="example" style="">
                     <thead>
                         <tr>
                             <th id="colcorta" scope="col">#</th>
@@ -73,7 +73,7 @@
                             <td width="200">
 
                                 <form method="GET" action="perfilEncuesta">
-                                    <input type="text" name="nomEncu"style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                    <input type="text" name="nomEncu" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
 
                                     <button type="submit" class="btn btn-default"><img  src="/assets/img/pencil7.png" style=" width: 50px; height: 50px;"></button>
                                 </form>

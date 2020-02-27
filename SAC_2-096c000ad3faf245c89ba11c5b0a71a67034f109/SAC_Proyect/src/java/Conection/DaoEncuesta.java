@@ -178,4 +178,25 @@ public class DaoEncuesta {
 
         return op;
     }
+     
+     public static List<Encuesta> getListactivas(){
+     List<Encuesta> encu;
+     encu = new ArrayList<Encuesta>();
+     
+     String SQL = "select nombreEncuesta, muestra ,IdEncuesta, activa"
+             + "from encuesta where activa = 'true'";
+     
+     try (Connection conn = connect();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(SQL)) {
+         while (rs.next()) {
+                encu.add(getEncuesta(rs));
+            }
+         
+     }  catch (SQLException ex) {
+            Logger.getLogger(DaoEncuesta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+     
+     }  
 }

@@ -9,6 +9,8 @@ import Conection.DaoBanco;
 import Conection.DaoContacto;
 import Conection.DaoEncuesta;
 import Conection.DaoOperadora;
+import Conection.DaoUsuario;
+import Users.Usuario;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -93,5 +95,9 @@ public class Model {
     
     public List<Contacto> getContacto_Encuesta(int encu){
     return DaoContacto.getAllContacto_Encuesta(encu);
+    }
+    
+    public Usuario getUsuario(String id, String password){
+    return DaoUsuario.usuarioGet(id, password);
     }
 }

@@ -200,18 +200,21 @@ public class DaoContacto {
         
         
     }
-    public static List<Contacto> getAllContacto_Base(String banco){
+    public static List<Contacto> getAllContacto_Base(String banco, int encuesta){
         List<Contacto> op = new Vector<Contacto>();
          
-        String sql = "select numero_Telefono,estado,banco,citaTelefonica,encuesta from contacto where banco = ?";
-        
+        String SQL= "call selectallcontactos(%d,%d)";
+        SQL=String.format(SQL, Integer.valueOf(banco));
         try (Connection conn =connect();
-                 PreparedStatement pstmt = conn.prepareStatement(sql)){
-                pstmt.setString(1, banco);
+                 PreparedStatement pstmt = conn.prepareStatement(SQL)){
+            
+                
                 ResultSet rs = pstmt.executeQuery();
+                
              while(rs.next()){
              op.add(getContacto(rs));
              }
+             
          } catch (SQLException ex) {
             Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
         }

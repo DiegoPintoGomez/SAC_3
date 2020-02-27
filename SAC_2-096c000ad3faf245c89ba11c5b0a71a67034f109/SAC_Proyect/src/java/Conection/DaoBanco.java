@@ -138,8 +138,8 @@ public class DaoBanco {
             op.setNombreBanco(rs.getString("base"));
             op.setEstado(Boolean.getBoolean(rs.getString("estado")));
             op.setEncu(rs.getString("encuesta"));
-            List<Contacto> LC = DaoContacto.getAllContacto_Base(rs.getString("base"));
-            op.setListaContacos((Vector<Contacto>) LC);
+           // List<Contacto> LC = DaoContacto.getAllContacto_Base(rs.getString("base"));
+           // op.setListaContacos((Vector<Contacto>) LC);
             return op;
         }       catch(SQLException ex){
             return new Bancos_Telefonicos();
@@ -172,7 +172,7 @@ public class DaoBanco {
        public static List<Bancos_Telefonicos> getAllBanco(int Encuesta){
         List<Bancos_Telefonicos> op = new ArrayList<Bancos_Telefonicos>();
         
-         String sql = "select base, encuesta, estado from banco where encuesta = ?";
+         String sql = "call getAllBanco(?)";
        
          try (Connection conn =connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)){

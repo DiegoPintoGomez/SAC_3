@@ -23,7 +23,7 @@ public class Contacto {
     private int encuesta;
     private int base;     
     private Calendar citaTelefonica;
-    private boolean ListaGris;
+    private boolean ListaGris;    
     //estos son para la base de datos
 
     public Contacto() {

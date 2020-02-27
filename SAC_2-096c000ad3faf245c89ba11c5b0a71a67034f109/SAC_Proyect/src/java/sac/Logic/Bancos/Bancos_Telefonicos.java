@@ -93,13 +93,5 @@ public class Bancos_Telefonicos {
     public String getBase() {
         return this.nombreBanco;
     }
-
-  
-
- 
-
-    
-    
-    
     
 }

@@ -33,24 +33,8 @@
                 </nav>
                 <div class="tab-content NavsCuerpo " id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                          <table class="table table-bordered   " id=""style=" border: red; height: 10%">
-        <tr>
-            <td style="width: 50%">
-                <button type="button" id="" class="btn " style="margin-right: 80%" data-toggle="modal" data-target="#exampleModal">
-                    <img  src="/assets/img/back.png" style=" width: 100%; height: 100%;">  
-                </button>
-            </td>
-
-            <td style="width: 50%">
-                <button type="button" class="btn " data-toggle="modal" style="margin-left: 80%; " data-target="#exampleModal">
-                    <img  src="/assets/img/next.png"  style="width: 100%; height: 100%;">
-                </button> 
-            </td>
-
-        </tr>                      
-
-    </table>
-    <table class="table table-bordered table-striped mb-0  stripe hover" id="ContactosdeBancos" style="">
+        
+    <table class="table table-bordered table-striped mb-0  stripe hover" id="EncuestasActivas" style="">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -73,7 +57,7 @@
                 <td style=" ">
                     <form method="GET" action="">
                         <input type="text" name="SeleccionarContac" style=" display:none;" value="">
-                        <button type="submit" class="btn btn-default"><img  src="/assets/img/selectContact.png" style=" width: 30%; height: 25%;"></button>
+                        <button type="submit" class="btn btn-default"><img  src="/assets/img/Enter.png" style=" width: 30%; height: 25%;"></button>
                     </form>
                 </td>
 
@@ -89,11 +73,11 @@
                     </div>
 
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <%@ include file="/presentation/BancosUsados.jsp" %>
+                    
                     </div>
 
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <%@ include file="/presentation/CitasPendientes.jsp" %>
+                      
 
                     </div>
 
@@ -108,3 +92,33 @@
         </body>
 
     </html>
+    
+    <script>
+    $(document).ready(function () {
+        $('#EncuestasActivas').DataTable({
+            pageLength: 10,
+            responsive: true,
+             info: false,
+            paginate: false,
+            language: {
+
+                search: "Buscar: ",
+                lengthMenu: "Elementos _MENU_  por pagina",
+
+                info: "Mostrando  _START_  a _END_ de _TOTAL_ elementos",
+
+                loadingRecords: "Cargando Elementos...",
+                zeroRecords: "No se encontraron elementos que coincidan con los parametros de busqueda",
+                emptyTable: "No hay elementos disponibles",
+                paginate: {
+                    first: "Primer",
+                    previous: "Anterior",
+                    next: "Siguiente",
+                    last: "Ultimo"
+                },
+
+            }
+
+        });
+    });
+    </script>

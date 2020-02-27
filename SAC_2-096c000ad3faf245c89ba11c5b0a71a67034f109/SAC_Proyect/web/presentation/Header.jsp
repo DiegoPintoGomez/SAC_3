@@ -6,13 +6,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean navbar-inverse navbar-fixed-top" id="" style="background-color: #ffffff; padding-right: auto;padding-left: auto; ">
+<nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean navbar-inverse navbar-fixed-top"  style="background-color: #ffffff; padding-right: auto;padding-left: auto; ">
     <div class="container">
         <div>
             <a class="navbar-brand" style="" href="/presentation/Principal.jsp"> 
                 <img id="LogoIdespo" src="/assets/img/logo.jpg" style="">
             </a>
-            <button data-toggle="collapse"class="navbar-toggler" data-target="#navcol-1">
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="navbar-toggler-icon"></span></button>
         </div>
 
@@ -24,11 +24,14 @@
                             Navegacion 
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                           <a class="dropdown-item" href="inicio" style="color:#ef384c" uk-scroll="offset:50">Encuestas</a>
-                           <a class="dropdown-item" href="/presentation/BarraLateral.jsp" style="color:#ef384c" uk-scroll="offset:50">Barra Lateral</a></form>
-                           <a class="dropdown-item" href="/presentation/Operadoras.jsp" style="color:#ef384c" uk-scroll="offset:50">Operadoras Telefonicas</a></form>
-                           <a class="dropdown-item" href="/presentation/Bancos.jsp" style="color:#ef384c" uk-scroll="offset:50">Bancos  </a></form>
-                           <a class="dropdown-item" href="/presentation/Encuestador.jsp" style="color:#ef384c" uk-scroll="offset:50">Encuestador  </a></form>
+                              <a class="dropdown-item" href="inicio" style="color:#ef384c" >Encuestas</a>
+                           <a class="dropdown-item" href="/presentation/BarraLateral.jsp" style="color:#ef384c" >Barra Lateral</a>
+                           <a class="dropdown-item" href="/presentation/Operadoras.jsp" style="color:#ef384c" >Operadoras Telefonicas</a>
+                           <a class="dropdown-item" href="/presentation/Bancos.jsp" style="color:#ef384c" >Bancos  </a>  
+                           <a class="dropdown-item" href="/presentation/Encuestador.jsp" style="color:#ef384c">Encuestador  </a>
+                            <a class="dropdown-item" href="/presentation/PERFIL.jsp" style="color:#ef384c">PERFIL </a>
+
+
 
 
                         </div>
@@ -43,7 +46,7 @@
                             Usuario
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                           <a class="dropdown-item" href="inicio" style="color:#ef384c" uk-scroll="offset:50">LogOut</a> <!-- R1 -->
+                           <a class="dropdown-item" href="inicio" style="color:#ef384c" >LogOut</a> <!-- R1 -->
                           
                         </div>
                     </div>

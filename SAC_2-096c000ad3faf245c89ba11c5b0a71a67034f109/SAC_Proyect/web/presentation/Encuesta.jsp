@@ -30,7 +30,6 @@
             </div>
             <div class="row space-rows" id="RowCards">
                 <div class="col" id="columna">
-                    
                     <div class="card cards-shadown cards-hover" data-aos="flip-left" data-aos-duration="950">
                         <div class="card-header" id="Card" style="background-color: #293352;" ><span class="space"> <a href=""></a></span>
                             <div class="cardheader-text">

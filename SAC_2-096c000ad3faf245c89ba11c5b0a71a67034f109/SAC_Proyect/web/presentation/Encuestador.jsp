@@ -2,6 +2,7 @@
     Document   : BancosEncuestador
     Created on : 14/02/2020, 09:18:46 PM
     Author     : Chris
+
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -50,11 +51,6 @@
 
                 </div>
 
-
-
-
-
-                <%@ include file="/presentation/Footer.jsp" %>
             </div>
         </body>
 

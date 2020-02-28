@@ -82,12 +82,6 @@
                     </div>
 
                 </div>
-
-
-
-
-
-                <%@ include file="/presentation/Footer.jsp" %>
             </div>
         </body>
 

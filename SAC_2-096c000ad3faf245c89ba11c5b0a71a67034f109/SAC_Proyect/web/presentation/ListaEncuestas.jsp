@@ -1,5 +1,4 @@
 
-
 <%@page import="sac.Logic.Bancos.Bancos_Telefonicos"%>
 <%@page import="sac.Logic.Bancos.Operadora"%>
 <%@page import="Conection.DaoOperadora"%>
@@ -87,8 +86,6 @@
             </div>
 
         </div>
-
-        <%@ include file="/presentation/Footer.jsp" %>
 
         <div class="modal fade" id="Modalll"   tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

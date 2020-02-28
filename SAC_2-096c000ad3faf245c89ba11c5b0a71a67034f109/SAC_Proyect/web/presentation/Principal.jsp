@@ -1,4 +1,3 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,14 +24,8 @@
             </div>
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-            <%@ include file="/presentation/Footer.jsp" %>
     </body> 
-
 </html>
-     
-
-            
-<%@ include file="/presentation/Footer.jsp" %>
     </body>
 
 </html>

@@ -76,7 +76,6 @@
             </div>
 
         </div>
-        <%@ include file="/presentation/Footer.jsp" %>
         <div class="modal fade" id="Modall2"   tabindex="-1" role="dialog" aria-labelledby="Modall2" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

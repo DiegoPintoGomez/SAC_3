@@ -61,7 +61,7 @@
                 </div>
 
                 <div style="margin-left: 10px; margin-right: 10px" class="form-group"><label>Numeros por banco</label>
-                    <input class="form-control" onkeyUp="return ValNumero(this);" style="border-color: #ef384c; width: 50%"  size="4"name="NumerosPorBanco" type="text" id="NumerosPorBanco" placeholder="Actualmente 10"></div>
+                    <input class="form-control" onkeyUp="return ValNumero(this);" style="border-color: #ef384c; width: 50%"  size="4"name="NumerosPorBanco" type="text" id="NumerosPorBanco" placeholder="Actualmente 10" ></div>
             </div>
             <div class="modal-footer">
                 <form action="creaBancos" method="post">

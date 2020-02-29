@@ -15,7 +15,7 @@
                                 <textarea class="form-control" aria-label="With textarea" name="NombreEncuesta" type="text" style="border-color: #ef384c" id="PlaceNameEncuesta" placeholder="Ejemplo: Idespo"></textarea>
                             </div>
                         </div>
-                        <div class="form-group"><label>Tamaño Muestra de Encuesta</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra"style="border-color: #ef384c" placeholder="Ejemplo: 2000" id="PlaceMuestra" ></div>
+                        <div class="form-group"><label>Tamaño Muestra de Encuesta</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra" style="border-color: #ef384c" placeholder="Ejemplo: 2000" id="PlaceMuestra" required ></div>
 
                     </div>
                     <div class="modal-footer">
@@ -24,7 +24,7 @@
                         <div id="cargando" style="visibility: hidden" class="spinner-grow text-danger" role="status">
                             <span class="sr-only"></span>
                         </div>
-                        <input type="text" name="cbe"style=" display:none;" value="">
+                        <input type="text" name="cbe" style=" display:none;" value="">
 
                     </div>
                 </div>

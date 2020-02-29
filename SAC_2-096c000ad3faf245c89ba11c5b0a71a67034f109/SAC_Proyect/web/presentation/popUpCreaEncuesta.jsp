@@ -12,7 +12,7 @@
                     <div class="modal-body" id="modBody">
                         <div class="form-group"><label>Nombre Encuesta</label>
                             <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" name="NombreEncuesta" type="text" style="border-color: #ef384c" id="PlaceNameEncuesta" placeholder="Ejemplo: Idespo"></textarea>
+                                <textarea class="form-control" aria-label="With textarea" name="NombreEncuesta"  style="border-color: #ef384c" id="PlaceNameEncuesta" placeholder="Ejemplo: Idespo" ></textarea>
                             </div>
                         </div>
                         <div class="form-group"><label>Tamaño Muestra de Encuesta</label><input class="form-control" onkeyUp="return ValNumero(this);" type="text" name="TamMuestra" style="border-color: #ef384c" placeholder="Ejemplo: 2000" id="PlaceMuestra" required ></div>

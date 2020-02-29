@@ -34,7 +34,7 @@ import sac.Logic.Bancos.Contacto;
  *
  * @author Chris
  */
-@WebServlet(name = "controller", urlPatterns = {"/controller", "/inicio", "/encuesta", "/creaBancos", "/EliminaBancos", "/perfilEncuesta","/eliEncuesPerfil" , "/buscaBancos"})
+@WebServlet(name = "controller", urlPatterns = {"/controller", "/inicio", "/encuesta", "/creaBancos", "/EliminaBancos", "/perfilEncuesta","/eliEncuesPerfil" , "/buscaBancos","/On-Off"})
 public class controller extends HttpServlet {
 
     /**
@@ -63,9 +63,16 @@ public class controller extends HttpServlet {
 
 
         }
+         
+           if (request.getServletPath().equals("/On-Off")) {
+            System.out.println("Llega al controller Encuesta");
+            this.ONOFF(request, response);
+            request.getRequestDispatcher("/presentation/Principal.jsp").forward(request, response);
+
+
+        }
         
-        
-        
+     
         if (request.getServletPath().equals("/encuesta")) {
             System.out.println("Llega al controller Encuesta");
             this.creaEncuesta(request, response);
@@ -108,6 +115,16 @@ public class controller extends HttpServlet {
  
             Model.Model.instance().deleteAllEncuesta(encuesta);
            this.listadoEncuestas(request, response);
+    }
+     
+     protected void ONOFF(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+           Encuesta encuesta= Model.Model.instance().getEncuesta(request.getParameter("On/Off"));
+                      request.getRequestDispatcher("/presentation/ListaEncuestas.jsp").forward(request, response);
+
+
+            
     }
 
     

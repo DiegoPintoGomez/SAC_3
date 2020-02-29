@@ -82,16 +82,16 @@
 
                             <td width="200">
                                 <%if (e.getActivo()) {%>
-                                <form method="GET" action="">
+                                <form method="GET" action="On/Off">
 
-                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getId() %>">
                                     <button type="submit" class="btn btn-default"> <img  src="/assets/img/ON.png" style=" width: 50px; height: 50px;"> </button>
 
                                 </form>
                                 <%} else {%>
-                                <form method="GET" action="">
+                                <form method="GET" action="On-Off">
 
-                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getId() %>">
                                     <button type="submit" class="btn btn-default"> <img  src="/assets/img/OFF.png" style=" width: 50px; height: 50px;"> </button>
 
                                 </form>

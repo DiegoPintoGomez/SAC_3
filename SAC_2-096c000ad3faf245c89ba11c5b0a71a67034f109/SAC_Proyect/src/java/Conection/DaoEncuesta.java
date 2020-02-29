@@ -186,13 +186,10 @@ public class DaoEncuesta {
      
      String SQL = "select nombreEncuesta, muestra ,IdEncuesta, activa"
              + "from encuesta where activa = 'true'";
-     System.out.println(SQL);
-      try (Connection conn = connect();
-                PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-         
-          
-           ResultSet rs = pstmt.executeQuery();
-           
+     
+     try (Connection conn = connect();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(SQL)) {
          while (rs.next()) {
                 encu.add(getEncuesta(rs));
             }
@@ -204,54 +201,8 @@ public class DaoEncuesta {
      
      }  
      
-     public static void activar_desactivarEncuesta(Encuesta encu){
-         if(encu.getActivo()== true){
-             encu.setActivo(false);
-         }
-         else encu.setActivo(true);
-         
-         
-     String SQL = "update encuesta"
-             + " set activa = ?"       
-             +" where IdEncuesta = ?";
-              try (Connection conn = connect();
-                PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-
-            pstmt.setString(1, String.valueOf(encu.getActivo()));
-            pstmt.setInt(2, encu.getId());
-           
-            ResultSet rs = pstmt.executeQuery();
-
-        
-        } catch (SQLException ex) {
-            Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
-        }
+     public static void activarEncuesta(Encuesta encu){
      
-       }
-     
-  
-     
-     public static Encuesta getEncuestaId (int id){
-        String SQL = "SELECT nombreEncuesta, muestra, IdEncuesta, activa "
-                + "FROM encuesta "
-                + "WHERE IdEncuesta = ?";
-
-        try (Connection conn = connect();
-                PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-
-            pstmt.setInt(1, id);
-            ResultSet rs = pstmt.executeQuery();
-
-            if (rs.next()) {
-               return getEncuesta(rs);
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(DaoOperadora.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return new Encuesta();
      }
-     
-  
      
 }

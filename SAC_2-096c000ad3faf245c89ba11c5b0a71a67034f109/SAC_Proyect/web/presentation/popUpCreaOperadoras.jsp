@@ -23,7 +23,7 @@
                             <span class="sr-only">Loading...</span>
                         </div>
 
-                        <input type="text" name="cbe"style=" display:none;" value="">
+                        <input type="text" name="cbe" style=" display:none;" value="">
 
                     </div>
                 </div>

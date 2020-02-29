@@ -23,7 +23,7 @@
         <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
         <%List<Encuesta> list = (List<Encuesta>) request.getAttribute("listaEncuestas");%>      
 
-        <div style=" " style="margin-top:10px">
+        <div style="margin-top:10px">
 
 
             <h1 id="TituloEncuesta" style=" margin-top:0px">Encuestas</h1>
@@ -45,6 +45,7 @@
                             <th scope="col">Bancos Activos</th>
                             <th scope="col">Eliminar</th>
                             <th scope="col">Crear Bancos</th>
+                            <th scope="col"> Activar / Desactivar</th>
 
                         </tr>
                     </thead>
@@ -75,6 +76,24 @@
                                     <input type="text" name="nomEncu" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
 
                                     <button type="submit" class="btn btn-default"><img  src="/assets/img/pencil7.png" style=" width: 50px; height: 50px;"></button>
+                                </form>
+                            </td>
+                            
+                            
+                             <td width="200">
+
+                                <form method="GET" action="">
+                                    <% if(e.getActivo()=="activo"){ %>
+                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                    
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/ON.png" style=" width: 50px; height: 50px;"></button>
+                                      <% } %>
+                                    
+                                    <% if(e.getActivo()=="inactivo"){ %>
+                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                    
+                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/OFF.png" style=" width: 50px; height: 50px;"></button>
+                                      <% } %>
                                 </form>
                             </td>
                         </tr>

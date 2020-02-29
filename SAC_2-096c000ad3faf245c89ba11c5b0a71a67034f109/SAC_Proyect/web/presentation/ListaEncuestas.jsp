@@ -81,20 +81,14 @@
                             
                             
                              <td width="200">
-
+                            
                                 <form method="GET" action="">
-                                    <% if(e.getActivo()=="activo"){ %>
+                                 
                                     <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
-                                    
-                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/ON.png" style=" width: 50px; height: 50px;"></button>
-                                      <% } %>
-                                    
-                                    <% if(e.getActivo()=="inactivo"){ %>
-                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
-                                    
-                                    <button type="submit" class="btn btn-default"><img  src="/assets/img/OFF.png" style=" width: 50px; height: 50px;"></button>
-                                      <% } %>
+                                    <button type="submit" class="btn btn-default"> <img  src="/assets/img/OFF.png" style=" width: 50px; height: 50px;"> </button>
+                                 
                                 </form>
+                                    
                             </td>
                         </tr>
                         <%}%>

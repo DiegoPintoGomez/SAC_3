@@ -184,8 +184,7 @@ public class DaoEncuesta {
      List<Encuesta> encu;
      encu = new ArrayList<Encuesta>();
      
-     String SQL = "select nombreEncuesta, muestra ,IdEncuesta, activa"
-             + "from encuesta where activa = 'true'";
+     String SQL = "call getEncuestasActivas()" ;
      
      try (Connection conn = connect();
                 Statement stmt = conn.createStatement();
@@ -199,10 +198,8 @@ public class DaoEncuesta {
         }
         return null;
      
-     }  
+
+
      
-     public static void activarEncuesta(Encuesta encu){
-     
-     }
-     
+}
 }

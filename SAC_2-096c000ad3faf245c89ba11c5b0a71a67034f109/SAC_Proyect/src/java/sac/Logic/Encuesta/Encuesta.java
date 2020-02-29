@@ -73,6 +73,11 @@ public class Encuesta {
     }
 
     public Encuesta() {
+    nombreEncuesta="";
+    ArrayList<Bancos_Telefonicos> ListaBancosTelefonicos= new ArrayList<>();
+    muestra=0;
+     id=0;
+     activo=false;
     }
 
  

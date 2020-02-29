@@ -34,6 +34,7 @@ public class DaoContacto {
         //luego lo podemos ver estoy en la playa
         String SQL ="CALL insertar_contacto (?,?,?)";
          long id = 0;
+         System.out.print(SQL);
         try(PreparedStatement pstmt = conn.prepareStatement(SQL,
                 Statement.RETURN_GENERATED_KEYS)){
                 pstmt.setString(1, conta.getNumero_Telefono());
@@ -200,6 +201,7 @@ public class DaoContacto {
         
         
     }
+    
     public static List<Contacto> getAllContacto_Base(String banco, int encuesta){
         List<Contacto> op = new Vector<Contacto>();
          

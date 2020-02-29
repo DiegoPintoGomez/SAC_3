@@ -100,4 +100,12 @@ public class Model {
     public Usuario getUsuario(String id, String password){
     return DaoUsuario.usuarioGet(id, password);
     }
+    
+    public Encuesta getEncuestaID(int id){
+    return DaoEncuesta.getEncuestaId(id);
+    }
+    
+    public void activarDesactivarEncuesta(Encuesta encu){
+    DaoEncuesta.activar_desactivarEncuesta(encu);
+    }
 }

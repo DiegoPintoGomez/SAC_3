@@ -22,9 +22,7 @@
                         <div class="form-group"><a class="btn btn-primary btn-block" style="background-color: #ef384c" href="inicio">Log In</a></div><a class="forgot" href="#">Forgot your email or password?</a></form>
                 </div>
             </div>
-            
     </body> 
+    
 </html>
-    </body>
 
-</html>

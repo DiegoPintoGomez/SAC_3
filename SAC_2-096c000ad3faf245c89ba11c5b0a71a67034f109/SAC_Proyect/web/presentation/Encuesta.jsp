@@ -112,13 +112,30 @@
                 <% if (encuesta.getListaBancosTelefonicos().isEmpty()) { %>
                 <button class="btn btn-primary" data-toggle="modal" id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
                 <%} else { %>
-                <button class="btn btn-primary" data-toggle="modal" disabled="true"  id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
+                <button class="btn btn-primary" data-toggle="modal" id="Button1" disabled="true"  id="Button1" type="button" data-target="#Modal">Generar Numeros Telefonicos</button>
                 <%}%>
 
                 <button type="button" id="Button2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Eliminar Encuesta
                 </button>
-                <%if (habilitar(encuesta) == "true"){%>
+
+                <%if (habilitar(encuesta) == "true") {%>
+                <form id="Button2" method="GET" action="">
+                    <button disabled="true" type="submit" id="Button2" class="btn btn-primary">Deshabilitada</button>
+                </form>
+                <%} else {
+                    if (encuesta.getActivo()) {%>
+                <form id="Button2" method="GET" action="">
+                    <button  type="submit" id="Button2" class="btn btn-primary">Desactivar Encuesta</button>
+                </form>
+                <%} else {%>
+                <form id="Button2" method="GET" action="">
+                    <button  type="submit" id="Button2" class="btn btn-primary">Activar Encuesta</button>
+                </form>
+                <%}
+                                 }%>
+
+                <%if (habilitar(encuesta) == "true") {%>
                 <form id="Button2" method="GET" action="/presentation/Bancos.jsp">
                     <button disabled="true" type="submit" id="Button2" class="btn btn-primary">Ver Bancos Telefonicos</button>
                 </form>

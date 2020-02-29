@@ -19,7 +19,7 @@
 
     <body>
         <%@ include file="/presentation/Header.jsp" %>
-       
+
         <%@include file="/presentation/popUpCreaEncuesta.jsp" %>
         <%List<Encuesta> list = (List<Encuesta>) request.getAttribute("listaEncuestas");%>      
 
@@ -68,7 +68,7 @@
 
                                 <button  type="button" onclick="enviar(<%=i%>)" data-toggle="modal" data-target="#Modalll" class="btn btn-default"><img  src="/assets/img/trash3.png"  style=" width: 50px; height: 50px;"></button>
                                 <input type="text" id="enc<%=i%>" name="DeleteEncuesta" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
-                                
+
                             </td>
                             <td width="200">
 
@@ -78,17 +78,24 @@
                                     <button type="submit" class="btn btn-default"><img  src="/assets/img/pencil7.png" style=" width: 50px; height: 50px;"></button>
                                 </form>
                             </td>
-                            
-                            
-                             <td width="200">
-                            
+
+
+                            <td width="200">
+                                <%if (e.getActivo()) {%>
                                 <form method="GET" action="">
-                                 
+
+                                    <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
+                                    <button type="submit" class="btn btn-default"> <img  src="/assets/img/ON.png" style=" width: 50px; height: 50px;"> </button>
+
+                                </form>
+                                <%} else {%>
+                                <form method="GET" action="">
+
                                     <input type="text" name="On/Off" style=" display:none;" value="<%= e.getNombreEncuesta()%>">
                                     <button type="submit" class="btn btn-default"> <img  src="/assets/img/OFF.png" style=" width: 50px; height: 50px;"> </button>
-                                 
+
                                 </form>
-                                    
+                                <%}%>
                             </td>
                         </tr>
                         <%}%>
@@ -172,7 +179,7 @@
 
         });
     });
-function eliminar() {
+    function eliminar() {
         console.log("Confirmado el borrado...");
         var formulario = event.target.parentElement;
         var llave = localStorage.getItem("encuesta_borrar_llave");
@@ -182,9 +189,9 @@ function eliminar() {
         insertar.value = llave;
         formulario.submit();
     }
-function enviar(nombre) {
+    function enviar(nombre) {
         console.log("Enviando solicitud al servlet...");
-        formulario = document.getElementById("enc"+nombre);
+        formulario = document.getElementById("enc" + nombre);
         llave = formulario.value;
         console.log(llave);
         localStorage.setItem("encuesta_borrar_llave", llave);

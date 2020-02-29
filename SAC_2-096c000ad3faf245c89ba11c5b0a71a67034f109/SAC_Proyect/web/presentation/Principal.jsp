@@ -9,7 +9,7 @@
         <%@include file="/presentation/Head.jsp"%>
     </head>
     <body>
-        
+
         <%@include file="/presentation/Header.jsp"%>
         <div class="row">
             <div class="col-md-12" id="CrearEncuesta">
@@ -22,10 +22,7 @@
                         <div class="form-group"><a class="btn btn-primary btn-block" style="background-color: #ef384c" href="inicio">Log In</a></div><a class="forgot" href="#">Forgot your email or password?</a></form>
                 </div>
             </div>
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        </div>
     </body> 
-</html>
-    </body>
 
 </html>

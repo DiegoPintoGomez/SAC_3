@@ -28,7 +28,6 @@ public class DaoRelacion_Usuario_Banco {
      public static boolean setBancoAUsuario(Encuesta encu, Usuario Usu){
   
          String SQL = "Select * from banco";
-                 
          
         // SQL = String.format(SQL,Integer.valueOf(encu.getId()));
          
@@ -40,8 +39,6 @@ public class DaoRelacion_Usuario_Banco {
          
          Usu.getLabor().add(getBanco(rs));
          
-         
-         
          return false;
          
      }   catch (SQLException ex) {
@@ -49,6 +46,7 @@ public class DaoRelacion_Usuario_Banco {
          }
          return false;
      }
+     
      public static Bancos_Telefonicos getBanco(ResultSet rs) throws SQLException{
          Bancos_Telefonicos BT = new Bancos_Telefonicos();
          BT.setEncu(rs.getString("encuesta"));
@@ -71,7 +69,13 @@ public class DaoRelacion_Usuario_Banco {
     }    catch (SQLException ex) {
              Logger.getLogger(DaoRelacion_Usuario_Banco.class.getName()).log(Level.SEVERE, null, ex);
          }
-     
 } 
+    
+    public static void darlebancoAUsuario(Encuesta encu,Bancos_Telefonicos banco,Usuario usuario ){
+    
+    
+        
+        
+    }
 
 }

@@ -28,14 +28,14 @@ public class DaoEncuesta {
     }
 
     public static long insertEncuesta(Encuesta ENCU) throws SQLException {
-        String SQL = "CALL insertar_encuesta(?,?)";
+        String SQL = "CALL insertar_encuesta(?,?,?)";
         long id = 0;
         try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(SQL,
                         Statement.RETURN_GENERATED_KEYS)) {
             pstmt.setString(1, ENCU.getNombreEncuesta());
             pstmt.setString(2, String.valueOf(ENCU.getMuestra()));
-
+            pstmt.setString(3, String.valueOf(ENCU.getActivo()));
             int affectedRows = pstmt.executeUpdate();
 
             if (affectedRows > 0) {
@@ -76,7 +76,7 @@ public class DaoEncuesta {
             op.setNombreEncuesta(rs.getString("nombreEncuesta"));
             op.setListaBancosTelefonicos((ArrayList<Bancos_Telefonicos>) DaoBanco.getAllBanco(Integer.valueOf(rs.getString("IdEncuesta"))));
             op.setId(Integer.valueOf(rs.getString("IdEncuesta")));
-            op.setActivo(rs.getString("activa"));
+            op.setActivo(rs.getBoolean("activa"));
             return op;
         } catch (SQLException ex) {
             return new Encuesta();

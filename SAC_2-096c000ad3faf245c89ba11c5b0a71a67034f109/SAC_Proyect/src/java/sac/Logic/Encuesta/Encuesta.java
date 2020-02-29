@@ -18,7 +18,7 @@ public class Encuesta {
     private  ArrayList<Bancos_Telefonicos> ListaBancosTelefonicos= new ArrayList<>();
     private int muestra;
     private int id;
-    private String activo;
+    private boolean activo;
 
     public String getNombreEncuesta() {
         return nombreEncuesta;
@@ -36,7 +36,7 @@ public class Encuesta {
         return id;
     }
 
-    public String getActivo() {
+    public boolean getActivo() {
         return activo;
     }
 
@@ -56,7 +56,7 @@ public class Encuesta {
         this.id = id;
     }
 
-    public void setActivo(String activo) {
+    public void setActivo(boolean activo) {
         this.activo = activo;
     }
 
@@ -65,7 +65,7 @@ public class Encuesta {
         this.muestra = muestra;
     }
 
-    public Encuesta(String nombreEncuesta, int muestra, int id, String activo) {
+    public Encuesta(String nombreEncuesta, int muestra, int id, boolean activo) {
         this.nombreEncuesta = nombreEncuesta;
         this.muestra = muestra;
         this.id = id;
